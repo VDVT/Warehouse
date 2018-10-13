@@ -54,6 +54,7 @@ class CoreexpertisesServiceProvider extends ServiceProvider
             $this->publishes([__DIR__ . '/../../resources/lang' => resource_path('lang/vendor/coreexpertises')], 'lang');
             $this->publishes([__DIR__ . '/../../config/coreexpertises.php' => config_path('coreexpertises.php')], 'config');
         }
+        return;
         Event::listen(SessionStarted::class, function () {
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-core-expertises',

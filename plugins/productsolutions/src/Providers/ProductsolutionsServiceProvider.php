@@ -55,6 +55,7 @@ class ProductsolutionsServiceProvider extends ServiceProvider
             $this->publishes([__DIR__ . '/../../config/productsolutions.php' => config_path('productsolutions.php')], 'config');
         }
 
+        return;
         Event::listen(SessionStarted::class, function () {
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-product-solutions',

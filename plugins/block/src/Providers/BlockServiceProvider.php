@@ -55,6 +55,7 @@ class BlockServiceProvider extends ServiceProvider
             $this->publishes([__DIR__ . '/../../config/block.php' => config_path('block.php')], 'config');
         }
 
+        return;
         Event::listen(SessionStarted::class, function () {
             dashboard_menu()->registerItem([
                 'id' => 'cms-plugins-block',

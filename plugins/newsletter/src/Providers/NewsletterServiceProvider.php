@@ -55,6 +55,7 @@ class NewsletterServiceProvider extends ServiceProvider
             $this->publishes([__DIR__ . '/../../config/newsletter.php' => config_path('newsletter.php')], 'config');
         }
 
+        return;
         Event::listen(SessionStarted::class, function () {
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-form-submission',

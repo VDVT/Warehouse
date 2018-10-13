@@ -88,6 +88,7 @@ class BlogServiceProvider extends ServiceProvider
         $this->app->register(RouteServiceProvider::class);
         $this->app->register(HookServiceProvider::class);
 
+        return;
         Event::listen(SessionStarted::class, function () {
             dashboard_menu()->registerItem([
                     'id' => 'cms-plugins-blog',

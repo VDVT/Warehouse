@@ -53,8 +53,9 @@ class TestimonialsServiceProvider extends ServiceProvider
             $this->publishes([__DIR__ . '/../../resources/views' => resource_path('views/vendor/testimonials')], 'views');
             $this->publishes([__DIR__ . '/../../resources/lang' => resource_path('lang/vendor/testimonials')], 'lang');
             $this->publishes([__DIR__ . '/../../config/testimonials.php' => config_path('testimonials.php')], 'config');
-        }
+        }   
 
+        return;
         Event::listen(SessionStarted::class, function () {
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-testimonial',
