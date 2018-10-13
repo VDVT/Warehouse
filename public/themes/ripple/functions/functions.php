@@ -1,0 +1,566 @@
+<?php
+
+register_page_template([
+    'default' => __('Default')
+]);
+
+add_shortcode('google-map', 'Google map', 'Custom map', 'add_google_map_shortcode');
+
+function add_google_map_shortcode ($shortcode) {
+    return Theme::partial('google-map', ['address' => $shortcode->content]);
+}
+
+shortcode()->setAdminConfig('google-map', Theme::partial('google-map-admin-config'));
+
+add_shortcode('youtube-video', 'Youtube video', 'Add youtube video', 'add_youtube_video_shortcode');
+
+function add_youtube_video_shortcode ($shortcode) {
+    return Theme::partial('video', ['url' => $shortcode->content]);
+}
+
+shortcode()->setAdminConfig('youtube-video', Theme::partial('youtube-admin-config'));
+
+theme_option()->setSection([
+    'title' => __('General'),
+    'desc' => __('General settings'),
+    'id' => 'opt-text-subsection-general',
+    'subsection' => true,
+    'icon' => 'fa fa-home',
+    'fields' => [
+        [
+            'id' => 'name',
+            'type' => 'text',
+            'label' => __('Name'),
+            'attributes' => [
+                'name' => 'name',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'address',
+            'type' => 'text',
+            'label' => __('Address'),
+            'attributes' => [
+                'name' => 'address',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'phone',
+            'type' => 'text',
+            'label' => __('Phone'),
+            'attributes' => [
+                'name' => 'phone',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'fax',
+            'type' => 'text',
+            'label' => __('Fax'),
+            'attributes' => [
+                'name' => 'fax',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ]
+    ],
+]);
+
+theme_option()->setSection([
+    'title' => __('Logo'),
+    'desc' => __('Change logo'),
+    'id' => 'opt-text-subsection-logo',
+    'subsection' => true,
+    'icon' => 'fa fa-image',
+    'fields' => [
+        [
+            'id' => 'logo',
+            'type' => 'mediaImage',
+            'label' => __('Logo'),
+            'attributes' => [
+                'name' => 'logo',
+                'value' => null,
+            ],
+        ],
+
+        [
+            'id' => 'logo_footer_1',
+            'type' => 'mediaImage',
+            'label' => __('Logo Footer 1'),
+            'attributes' => [
+                'name' => 'logo_footer_1',
+                'value' => null,
+            ],
+        ],
+        [
+            'id' => 'logo_footer_2',
+            'type' => 'mediaImage',
+            'label' => __('Logo Footer 2'),
+            'attributes' => [
+                'name' => 'logo_footer_2',
+                'value' => null,
+            ],
+        ],
+        [
+            'id' => 'logo_footer_3',
+            'type' => 'mediaImage',
+            'label' => __('Logo Footer 3'),
+            'attributes' => [
+                'name' => 'logo_footer_3',
+                'value' => null,
+            ],
+        ],
+        [
+            'id' => 'logo_footer_4',
+            'type' => 'mediaImage',
+            'label' => __('Logo Footer 4'),
+            'attributes' => [
+                'name' => 'logo_footer_4',
+                'value' => null,
+            ],
+        ],
+
+        [
+            'id' => 'logo_footer_link_1',
+            'type' => 'text',
+            'label' => __('Logo Footer Link 1'),
+            'attributes' => [
+                'name' => 'logo_footer_link_1',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'logo_footer_link_2',
+            'type' => 'text',
+            'label' => __('Logo Footer Link 2'),
+            'attributes' => [
+                'name' => 'logo_footer_link_2',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'logo_footer_link_3',
+            'type' => 'text',
+            'label' => __('Logo Footer Link 3'),
+            'attributes' => [
+                'name' => 'logo_footer_link_3',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'logo_footer_link_4',
+            'type' => 'text',
+            'label' => __('Logo Footer Link 4'),
+            'attributes' => [
+                'name' => 'logo_footer_link_4',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+    ],
+]);
+
+// theme_option()->setField([
+//     'id' => 'copyright',
+//     'section_id' => 'opt-text-subsection-general',
+//     'type' => 'text',
+//     'label' => __('Copyright'),
+//     'attributes' => [
+//         'name' => 'copyright',
+//         'value' => '© 2016 Botble Technologies. All right reserved. Designed by Nghia Minh',
+//         'options' => [
+//             'class' => 'form-control',
+//             'placeholder' => __('Change copyright'),
+//             'data-counter' => 120,
+//         ]
+//     ],
+//     'helper' => __('Copyright on footer of site'),
+// ]);
+
+theme_option()->setArgs(['debug' => false]);
+
+theme_option()->setSection([
+    'title' => __('Social'),
+    'desc' => __('Social settings'),
+    'id' => 'opt-text-subsection-social',
+    'subsection' => true,
+    'icon' => 'fa fa-users',
+    'fields' => [
+        [
+            'id' => 'facebook',
+            'type' => 'text',
+            'label' => __('Facebook'),
+            'attributes' => [
+                'name' => 'facebook',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => 'https://www.facebook.com/',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'google_plus',
+            'type' => 'text',
+            'label' => __('Google+'),
+            'attributes' => [
+                'name' => 'google_plus',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => 'https://plus.google.com/',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'linkedin',
+            'type' => 'text',
+            'label' => __('Linkedin'),
+            'attributes' => [
+                'name' => 'linkedin',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => 'https://www.linkedin.com/',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'yelp',
+            'type' => 'text',
+            'label' => __('Yelp'),
+            'attributes' => [
+                'name' => 'yelp',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => 'https://www.yelp.com/',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'instagram',
+            'type' => 'text',
+            'label' => __('Instagram'),
+            'attributes' => [
+                'name' => 'instagram',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => 'https://www.instagram.com/',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'twitter',
+            'type' => 'text',
+            'label' => __('Twitter'),
+            'attributes' => [
+                'name' => 'twitter',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => 'https://twitter.com/',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+    ],
+]);
+
+theme_option()->setSection([
+    'title' => __('Email List'),
+    'desc' => __('Email List Settings'),
+    'id' => 'opt-text-subsection-email',
+    'subsection' => true,
+    'icon' => 'fa fa-envelope-o',
+    'fields' => [
+        [
+            'id' => 'admin_email',
+            'type' => 'text',
+            'label' => __('Admin Email'),
+            'attributes' => [
+                'name' => 'admin_email',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'contact_account_manager_email',
+            'type' => 'text',
+            'label' => __('Get a Quote Email (separated by ",")'),
+            'attributes' => [
+                'name' => 'contact_account_manager_email',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'application_email',
+            'type' => 'text',
+            'label' => __('Application From Email (separated by ",")'),
+            'attributes' => [
+                'name' => 'application_email',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'donation_email',
+            'type' => 'text',
+            'label' => __('Donation Email (separated by ",")'),
+            'attributes' => [
+                'name' => 'donation_email',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'customer_service_email',
+            'type' => 'text',
+            'label' => __('Customer Service Email (separated by ",")'),
+            'attributes' => [
+                'name' => 'customer_service_email',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'order_inquires_email',
+            'type' => 'text',
+            'label' => __('Billing Email (separated by ",")'),
+            'attributes' => [
+                'name' => 'order_inquires_email',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+
+        [
+            'id' => 'part_request_email',
+            'type' => 'text',
+            'label' => __('Part Request Email (separated by ",")'),
+            'attributes' => [
+                'name' => 'part_request_email',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'sale_quote_email',
+            'type' => 'text',
+            'label' => __('Sale Quote Email (separated by ",")'),
+            'attributes' => [
+                'name' => 'sale_quote_email',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'photo_submission_email',
+            'type' => 'text',
+            'label' => __('Photo Submission Email (separated by ",")'),
+            'attributes' => [
+                'name' => 'photo_submission_email',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'project_completion_email',
+            'type' => 'text',
+            'label' => __('Project Completion Email (separated by ",")'),
+            'attributes' => [
+                'name' => 'project_completion_email',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+    ],
+]);
+
+theme_option()->setSection([
+    'title' => __('Other'),
+    // 'desc' => __('Change logo'),
+    'id' => 'opt-text-subsection-other',
+    'subsection' => true,
+    'icon' => 'fa fa-info',
+    'fields' => [
+        [
+            'id' => 'product_banner',
+            'type' => 'mediaImage',
+            'label' => __('Product Banner'),
+            'attributes' => [
+                'name' => 'product_banner',
+                'value' => null,
+            ],
+        ],
+        [
+            'id' => 'get_a_quote_success',
+            'type' => 'editor',
+            'label' => __('Get a quote success content'),
+            'attributes' => [
+                'name' => 'get_a_quote_success',
+                'value' => null,
+            ],
+        ],
+        [
+            'id' => 'find_us',
+            'type' => 'textarea',
+            'label' => __('Find us list'),
+            'attributes' => [
+                'name' => 'find_us',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => ''
+                ]
+            ],
+        ],
+        [
+            'id' => 'find_us_need_detail',
+            'type' => 'textarea',
+            'label' => __('Find us need details list'),
+            'attributes' => [
+                'name' => 'find_us_need_detail',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => ''
+                ]
+            ],
+        ],
+    ],
+]);
+
+// theme_option()->setSection([
+//     'title' => __('Contact Information'),
+//     'desc' => __('Contact Information Settings'),
+//     'id' => 'opt-text-subsection-contact',
+//     'subsection' => true,
+//     'icon' => 'fa fa-book',
+//     'fields' => [
+//         [
+//             'id' => 'address',
+//             'type' => 'text',
+//             'label' => __('Address'),
+//             'attributes' => [
+//                 'name' => 'address',
+//                 'value' => null,
+//                 'options' => [
+//                     'class' => 'form-control',
+//                     'placeholder' => '',
+//                     'data-counter' => 120,
+//                 ]
+//             ],
+//         ],
+//         [
+//             'id' => 'phone',
+//             'type' => 'text',
+//             'label' => __('Phone'),
+//             'attributes' => [
+//                 'name' => 'phone',
+//                 'value' => null,
+//                 'options' => [
+//                     'class' => 'form-control',
+//                     'placeholder' => '',
+//                     'data-counter' => 120,
+//                 ]
+//             ],
+//         ],
+//         [
+//             'id' => 'fax',
+//             'type' => 'text',
+//             'label' => __('Fax'),
+//             'attributes' => [
+//                 'name' => 'fax',
+//                 'value' => null,
+//                 'options' => [
+//                     'class' => 'form-control',
+//                     'placeholder' => '',
+//                     'data-counter' => 120,
+//                 ]
+//             ],
+//         ]
+//     ],
+// ]);

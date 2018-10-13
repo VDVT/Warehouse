@@ -1,0 +1,9 @@
+{
+    "name": "Testimonials",
+    "provider": "Botble\\Testimonials\\Providers\\TestimonialsServiceProvider",
+    "plugin": "Botble\\Testimonials\\Plugin",
+    "author": "Sang Nguyen",
+    "url": "http://sangnguyen.info",
+    "version": "1.0",
+    "description": "Testimonials"
+}

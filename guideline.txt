@@ -1,0 +1,5 @@
+- composer install
+- copy .env.example to .env
+- php artisan key:generate
+- setup vitual host (to public folder)
+- create new database, import umh.sql and enter db info in .env

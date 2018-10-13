@@ -1,0 +1,9 @@
+{
+    "name": "Industrials",
+    "provider": "Botble\\Industrials\\Providers\\IndustrialsServiceProvider",
+    "plugin": "Botble\\Industrials\\Plugin",
+    "author": "Sang Nguyen",
+    "url": "http://sangnguyen.info",
+    "version": "1.0",
+    "description": "Industrials"
+}

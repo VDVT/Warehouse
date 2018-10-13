@@ -1,0 +1,9 @@
+{
+    "name": "Faq",
+    "provider": "Botble\\Faq\\Providers\\FaqServiceProvider",
+    "plugin": "Botble\\Faq\\Plugin",
+    "author": "Sang Nguyen",
+    "url": "http://sangnguyen.info",
+    "version": "1.0",
+    "description": "Faq"
+}

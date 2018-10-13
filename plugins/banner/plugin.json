@@ -1,0 +1,9 @@
+{
+    "name": "Banner",
+    "provider": "Botble\\Banner\\Providers\\BannerServiceProvider",
+    "plugin": "Botble\\Banner\\Plugin",
+    "author": "Sang Nguyen",
+    "url": "http://sangnguyen.info",
+    "version": "1.0",
+    "description": "Banner"
+}

@@ -1,0 +1,46 @@
+.attribute-item{
+	border:1px dotted #ccc; margin-top: 20px; padding: 15px;position: relative;
+}
+.attribute-item .attr-item-left{
+	float: left; width: 26%; border-right: 1px dotted #ccc; box-sizing: border-box; text-align: center;
+	padding-right: 2%; margin-right: 2%;
+}
+.attribute-item .attr-item-left img{
+	max-width: 100px; max-height: 100px; margin-bottom: 10px;
+}
+.attribute-item .attr-item-left .btn-performance-image{
+	padding: 3px 6px;font-size: 11px;
+}
+.attribute-item .attr-item-left .btn-performance-remove-image{
+	color: #bf1a1a;cursor: pointer;font-size: 20px;line-height: 1;vertical-align: middle;margin-left: 5px;display: none;
+}
+.attribute-item .attr-item-right{
+	float: left; width: 60%;
+}
+.attribute-item .attr-item-drop{
+	position: absolute; width: 5%; background: #bf1a1a; height: 100%;
+	right: 0px; top: 0px; align-items: center; cursor: pointer;
+    display: flex;justify-content: center;
+}
+.attribute-item .attr-item-drop i{
+	color: #fff; font-size: 26px;
+}
+.autocomplete_product ul{padding-left: 0}
+.autocomplete_product li{
+	    list-style: none;
+    margin-top: 5px;
+    border: 1px dotted #ccc;
+    padding: 5px;
+}
+.autocomplete_product li .drag-product-related-item{
+	cursor: all-scroll; margin-right: 10px; float: right;line-height: 1.4;
+}
+.autocomplete_product .rm-product-related-item{
+	color: #bf1a1a; cursor: pointer;
+}
+.document-name-preview span{
+	margin-bottom:10px;display:block;color: #518ca3;
+}
+.document-name-preview span i{
+	color: #518ca3;
+}

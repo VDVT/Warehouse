@@ -1,0 +1,9 @@
+{
+    "name": "Projectcompletion",
+    "provider": "Botble\\Projectcompletion\\Providers\\ProjectcompletionServiceProvider",
+    "plugin": "Botble\\Projectcompletion\\Plugin",
+    "author": "Sang Nguyen",
+    "url": "http://sangnguyen.info",
+    "version": "1.0",
+    "description": "Projectcompletion"
+}

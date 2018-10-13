@@ -1,0 +1,9 @@
+{
+    "name": "Donation",
+    "provider": "Botble\\Donation\\Providers\\DonationServiceProvider",
+    "plugin": "Botble\\Donation\\Plugin",
+    "author": "Sang Nguyen",
+    "url": "http://sangnguyen.info",
+    "version": "1.0",
+    "description": "Donation"
+}

@@ -1,0 +1,99 @@
+#carouselExampleIndicators .carousel-inner .carousel-item .carousel-caption .title p{margin-bottom: 0}
+#footer ul.list-unstyled li a{text-transform: capitalize;}
+
+
+.bg_core{background-size: cover;background-position: 100%;background-repeat: no-repeat;}
+#recent_project2 .pagination a.disable{cursor: not-allowed;}
+
+.entry, .entry p,.entry span{font-family: 'FranklinGothic Book';}
+.entry h1,.entry h2,.entry h3,.entry h4,.entry h5,.entry h6, .entry strong{font-weight: 500;font-family: 'FranklinGothic Medium';}
+.entry a{color: #f7941d;}
+.entry h1{font-size: 28px;}
+.entry h2{font-size: 24px;}
+.entry h3{font-size: 20px;}
+.entry h4, .entry h5, .entry h6{font-size: 20px;}
+.entry img{max-width: 100%}
+
+.donation .block-1 .btn:hover{color: #e7661f}
+
+.recent_project .card .card-img-top{min-height: 425px;}
+.contact_acc_manager .has-error .form-control, .has-error .form-control:focus{border:1px solid #ed5565;}
+.has-error .help-block{color: #a94442;font-size: 14px;padding-left: 15px;}
+
+.block_1 .owl-carousel .item img{max-width: 80px;max-height: 80px;width: auto;}
+
+#block_contact .card .card-body .form-group .form-control.c1, #block_contact .card .card-body .form-group .form-control.c2{color: #f2f2f2}
+
+.img-fit{-o-object-fit: cover;object-fit: cover;}
+
+.bg_career_3 .section-3 .col-left{height: 670px}
+
+.donation .block-4 .form-group .op:last-child .content-op span{margin-left:5px;}
+
+.page_product_detail .content-product .form-product input:disabled,
+.page_product_detail .content-product .form-product select:disabled{border:1px solid #e6e2e2; cursor:not-allowed;}
+.page_product_detail .content-product .form-product select:focus,
+.page_product_detail .content-product .form-product input:focus{box-shadow: none;}
+
+.box-relative{position: relative;}
+.box-relative .cm-loading-bg{
+	position: absolute; top: 0px; left: 0px; height: 100%; width: 100%;background: #cccccccc;
+	align-items:center; justify-content:space-around; display:none; z-index: 99;
+}
+.box-relative .cm-loading-bg i{color: #999}
+.box-quality .box-2, .box-total{display: none}
+.btn-reset, .page_product_detail .content-product .form-product .btn-submit{cursor: pointer;}
+
+.bg_project .card{background-color: rgba(255, 255, 255, 0.8);}
+
+#share-buttons{margin-bottom: 20px}
+#share-buttons img {
+    width: 35px; padding: 5px; border: 0; box-shadow: 0; display: inline;
+}
+
+.navbar-light .navbar-brand img{max-width: 150px;}
+.card{overflow: hidden;}
+#header .top{padding: 8px 0;}
+@media (max-width: 768px){
+	.recent_project .card .card-img-top{min-height: auto;}	
+	.donation .block-4 .form-group .op:last-child .content-op span{margin-left:0px;}
+}
+
+@media (min-width: 769px){
+	#header .navbar .navbar-nav .dropdown-menu .box_mega .box{flex: none;width: 50%;}
+	#header .navbar .navbar-nav .dropdown-menu .box_mega .box.box-resource{flex: 1;width: auto;}
+	#header .navbar .navbar-nav .dropdown-menu .box_mega .img-fluid{width: 50%;height: 300px;-o-object-fit: cover;object-fit: cover;}
+}
+@media (min-width: 1025px){
+	.list_blog .card .card-img-top {
+	    width:300px; height: 300px;
+	}
+	.list_blog.banner_blog .card .card-img-top {
+	    width:250px; height: 380px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+	.list_blog .card {
+	    flex-direction: column;
+	}
+}
+.bg_blog .card .card-body .date{
+	left: auto; right: 0;
+}
+.bg_blog .card .card-body {
+    padding-top: 90px;
+}
+.datepicker-dropdown {padding: 10px !important;}
+.datepicker>div {display: inherit;}
+.datepicker td, .datepicker th {width:30px;height:30px;}
+
+/*@media (max-width: 768px){
+	.recent_project .card .card-img-top{min-height: auto;}	
+}*/
+
+.img-product-small img{border: 1px solid #999; cursor: pointer;}
+.img-product-small img.active{border: 1px solid #e7661f}
+.footer-logo .img-thumbnail{background:transparent;}
+#block_contact .card .card-body .form-group .form-control.c1{margin-top: 17px;padding: 4px 0;}
+.bg_about_us_4 .row .col-md-3 .card .card-body .owl-nav{top: -25px;}

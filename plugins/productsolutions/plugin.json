@@ -1,0 +1,9 @@
+{
+    "name": "Productsolutions",
+    "provider": "Botble\\Productsolutions\\Providers\\ProductsolutionsServiceProvider",
+    "plugin": "Botble\\Productsolutions\\Plugin",
+    "author": "Sang Nguyen",
+    "url": "http://sangnguyen.info",
+    "version": "1.0",
+    "description": "Productsolutions"
+}

@@ -1,0 +1,9 @@
+{
+    "name": "Projects",
+    "provider": "Botble\\Projects\\Providers\\ProjectsServiceProvider",
+    "plugin": "Botble\\Projects\\Plugin",
+    "author": "Sang Nguyen",
+    "url": "http://sangnguyen.info",
+    "version": "1.0",
+    "description": "Projects"
+}

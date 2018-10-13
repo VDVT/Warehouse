@@ -1,0 +1,9 @@
+{
+    "name": "Coreexpertises",
+    "provider": "Botble\\Coreexpertises\\Providers\\CoreexpertisesServiceProvider",
+    "plugin": "Botble\\Coreexpertises\\Plugin",
+    "author": "Sang Nguyen",
+    "url": "http://sangnguyen.info",
+    "version": "1.0",
+    "description": "Coreexpertises"
+}

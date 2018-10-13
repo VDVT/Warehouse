@@ -1,0 +1,9 @@
+{
+    "name": "Contactaccountmanager",
+    "provider": "Botble\\Contactaccountmanager\\Providers\\ContactaccountmanagerServiceProvider",
+    "plugin": "Botble\\Contactaccountmanager\\Plugin",
+    "author": "Sang Nguyen",
+    "url": "http://sangnguyen.info",
+    "version": "1.0",
+    "description": "Contactaccountmanager"
+}

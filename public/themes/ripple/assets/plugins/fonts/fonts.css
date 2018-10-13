@@ -1,0 +1,39 @@
+/*================================[FranklinGothic]================================*/
+@font-face{
+    font-family:'FranklinGothic Medium';
+    src: url('FranklinGothic/framd.eot');
+    src: url('FranklinGothic/framd.eot?#iefix') format('embedded-opentype'),
+         url('FranklinGothic/FRAMD.ttf') format('truetype'),
+         url('FranklinGothic/framd.woff') format('woff');         
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face{
+    font-family:'FranklinGothic Book';
+    /*src:url('FranklinGothic/ITC Franklin Gothic Book.otf') format('truetype');*/
+    src: url('FranklinGothic/FRABK.eot');
+    src: url('FranklinGothic/FRABK.eot?#iefix') format('embedded-opentype'), 
+         url('FranklinGothic/FRABK.ttf') format('truetype'),
+         url('FranklinGothic/FranklinGothic-Book-webfont.woff') format('woff');
+         
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face{
+    font-family:'FranklinGothic Demi';
+    src: url('FranklinGothic/FRADM.eot');
+    src: url('FranklinGothic/FRADM.eot?#iefix') format('embedded-opentype'),
+         url('FranklinGothic/Franklin Gothic Demi Regular.ttf') format('truetype'),
+         url('FranklinGothic/Franklin-Gothic-demi-normal.woff') format('woff');
+    font-weight:normal;
+    font-style:normal;
+}
+@font-face{
+    font-family:'FranklinGothic Book Italic';
+    src: url('FranklinGothic/FRABKIT.eot');
+    src: url('FranklinGothic/FRABKIT.eot?#iefix') format('embedded-opentype'), 
+         url('FranklinGothic/FRABKIT.ttf') format('truetype'),
+         url('FranklinGothic/FRABKIT.woff') format('woff');
+    font-weight:normal;
+    font-style:normal;
+}

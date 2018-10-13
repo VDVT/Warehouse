@@ -1,0 +1,43 @@
+<?php
+
+return [
+	'menu' => 'Donations',
+    'name' => 'Donation',
+    'create' => 'New donation',
+    'edit' => 'Donation',
+    'list' => 'List donation',
+    'view' => 'View Details',
+    'forms' => [
+    	'event_date' => 'Event Date',
+    	'date_donation' => 'Date Donation Needed By',
+    	'company_name' => 'Company Name',
+    	'tax' => 'Tax Exempt',
+    	'organize_type' => 'Organization Type',
+    	// 'organize_type_other' => '',
+    	'donation_address' => 'Donation Address',
+    	'city' => 'City',
+    	'state' => 'State',
+    	'zipcode' => 'Zip Code',
+    	'delivery_phone' => 'Delivery Phone',
+    	'contact_name' => 'Contact Name',
+    	'contact_phone' => 'Contact Phone',
+    	'contact_email' => 'Contact Email',
+    	'event_name' => 'Event Name',
+    	'number_of_attendeee' => 'Expected number of event attendees',
+    	'event_location' => 'Event Location',
+    	'salary_desired' => 'Salary Desired',
+    	'event_description' => 'Event Description',
+    	'donation_request' => 'Donation(s) Requested',
+    	'promoted' => 'How will United Material Handling, INC. be promoted at the event?',
+    	// 'opportunity' => '',
+    	'is_radio' => 'Radio exposure?',
+    	// 'radio_where' => '',
+    	'is_tv' => 'TV exposure?',
+    	// 'tv_where' => '',
+    	'is_print' => 'Print exposure?',
+    	// 'print_where' => '',
+    	'is_web' => 'Web Link & Logo?',
+    	// 'web_where' => '',
+    	'advertising' => 'Advertising'
+    ]
+];

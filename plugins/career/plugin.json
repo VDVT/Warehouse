@@ -1,0 +1,9 @@
+{
+    "name": "Career",
+    "provider": "Botble\\Career\\Providers\\CareerServiceProvider",
+    "plugin": "Botble\\Career\\Plugin",
+    "author": "Sang Nguyen",
+    "url": "http://sangnguyen.info",
+    "version": "1.0",
+    "description": "Career"
+}
