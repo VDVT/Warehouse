@@ -52,6 +52,12 @@ class PageController extends Controller
     public function getAboutUs()
     {
         SeoHelper::setTitle( 'About Us' );
+
+        /* custom css and js for page */
+        Theme::asset()->usePath()->add('style-aboutus-detail', 'css/page/aboutus/aboutus.css', ['style']);
+        // Theme::asset()->container('footer')->usePath()->add('js-aboutus-detail', 'js/page/aboutus/aboutus.js', ['gtt-main-js']);
+        /* end custom css and js for page */
+
         return Theme::scope('page.about_us')->render();
     }
 
