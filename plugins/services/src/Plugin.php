@@ -22,26 +22,74 @@ class Plugin implements PluginInterface
                 'flag' => 'services.list',
                 'is_feature' => true,
             ],
+
+            /* add permission carrer */
+            [
+                'name' => 'Manage Service Carrer',
+                'flag' => 'services_carrer.list',
+                'parent_flag' => 'services.list',
+            ],
             [
                 'name' => 'Create',
-                'flag' => 'services.create',
-                'parent_flag' => 'services.list',
+                'flag' => 'services_carrer.create',
+                'parent_flag' => 'services_carrer.list',
             ],
             [
                 'name' => 'Edit',
-                'flag' => 'services.edit',
-                'parent_flag' => 'services.list',
+                'flag' => 'services_carrer.edit',
+                'parent_flag' => 'services_carrer.list',
             ],
             [
                 'name' => 'Delete',
-                'flag' => 'services.delete',
+                'flag' => 'services_carrer.delete',
+                'parent_flag' => 'services_carrer.list',
+            ],
+
+
+            /* add permission customer */
+            [
+                'name' => 'Manage Service Carrer',
+                'flag' => 'services_customer.list',
                 'parent_flag' => 'services.list',
             ],
             [
-                'name' => 'Test',
-                'flag' => 'services.test',
+                'name' => 'Create',
+                'flag' => 'services_customer.create',
+                'parent_flag' => 'services_customer.list',
+            ],
+            [
+                'name' => 'Edit',
+                'flag' => 'services_customer.edit',
+                'parent_flag' => 'services_customer.list',
+            ],
+            [
+                'name' => 'Delete',
+                'flag' => 'services_customer.delete',
+                'parent_flag' => 'services_customer.list',
+            ],
+
+            /* add permission vendor */
+            [
+                'name' => 'Manage Service Carrer',
+                'flag' => 'services_vendor.list',
                 'parent_flag' => 'services.list',
+            ],
+            [
+                'name' => 'Create',
+                'flag' => 'services_vendor.create',
+                'parent_flag' => 'services_vendor.list',
+            ],
+            [
+                'name' => 'Edit',
+                'flag' => 'services_vendor.edit',
+                'parent_flag' => 'services_vendor.list',
+            ],
+            [
+                'name' => 'Delete',
+                'flag' => 'services_vendor.delete',
+                'parent_flag' => 'services_vendor.list',
             ]
+            
         ];
     }
 

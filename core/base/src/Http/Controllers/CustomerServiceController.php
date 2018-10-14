@@ -4,13 +4,22 @@ namespace Botble\Base\Http\Controllers;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
+use Botble\Services\Repositories\Interfaces\CustomerInterface;
+use Botble\Base\Request\SubmitCustomerFormRequest;
 use SeoHelper;
 use Theme;
 
 class CustomerServiceController extends Controller
 {
-    public function __construct()
+
+    /**
+     * @var CarrerInterface
+     */
+    protected $customerRepository;
+
+    public function __construct(CustomerInterface $customerRepository)
     {
+        $this->customerRepository = $customerRepository;
     }
 
     /**
@@ -24,6 +33,21 @@ class CustomerServiceController extends Controller
     }
 
     /**
+     * Show Carrer Form
+     * @return view
+     */
+    public function submitCarrerForm(Request $request)
+    {
+        SeoHelper::setTitle( '' );
+
+        $dataForm = $request->all();
+
+        // $this->carrerRepository->create($dataForm);
+
+        return redirect()->back()->with('success_msg', 'Your message has been successfully sent.');
+    }
+
+    /**
      * Show Customer Form
      * @return view
      */
@@ -31,6 +55,22 @@ class CustomerServiceController extends Controller
     {
         SeoHelper::setTitle( '' );
         return Theme::scope('services.customer-info')->render();
+    }
+
+    /**
+     * Show Customer Form
+     * @return view
+     */
+    public function submitCustomerForm(SubmitCustomerFormRequest $request)
+    {
+        SeoHelper::setTitle( '' );
+        
+        $dataForm = $request->all();
+        $form = $this->customerRepository->create($dataForm);
+
+        /* SendMail */
+
+        return redirect()->back()->with('success_msg', 'Your message has been successfully sent.');
     }
 
     /**

@@ -200,13 +200,28 @@ Route::group(['namespace' => 'Botble\Base\Http\Controllers', 'middleware' => 'we
                 'uses' => 'CustomerServiceController@showCarrerForm',
             ]);
 
+            Route::post('/carrer-oppotunities', [
+                'as'   => 'public.services.carrer-oppotunities-post',
+                'uses' => 'CustomerServiceController@submitCarrerForm',
+            ]);
+
             Route::get('/customer-info', [
                 'as'   => 'public.services.customer-info',
                 'uses' => 'CustomerServiceController@showCustomerForm',
             ]);
 
+            Route::post('/customer-info', [
+                'as'   => 'public.services.customer-info-post',
+                'uses' => 'CustomerServiceController@submitCustomerForm',
+            ]);
+
             Route::get('/vendor-package', [
                 'as'   => 'public.services.vendor-package',
+                'uses' => 'CustomerServiceController@showVendorForm',
+            ]);
+
+            Route::post('/vendor-package', [
+                'as'   => 'public.services.vendor-package-post',
                 'uses' => 'CustomerServiceController@showVendorForm',
             ]);
         });

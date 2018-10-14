@@ -176,8 +176,6 @@ Route::group(['namespace' => 'Botble\Services\Http\Controllers', 'middleware' =>
                 'uses' => 'VendorController@postChangeStatus',
             ]);
         });
-
-
     });
     
 });

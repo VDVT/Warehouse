@@ -2,11 +2,18 @@
 
 namespace Botble\Services\Providers;
 
-use Botble\Services\Models\Services;
 use Illuminate\Support\ServiceProvider;
+
+use Botble\Services\Models\Services;
 use Botble\Services\Repositories\Caches\ServicesCacheDecorator;
 use Botble\Services\Repositories\Eloquent\ServicesRepository;
 use Botble\Services\Repositories\Interfaces\ServicesInterface;
+
+use Botble\Services\Models\Customer;
+use Botble\Services\Repositories\Caches\CustomerCacheDecorator;
+use Botble\Services\Repositories\Eloquent\CustomerRepository;
+use Botble\Services\Repositories\Interfaces\CustomerInterface;
+
 use Botble\Support\Services\Cache\Cache;
 use Botble\Base\Supports\Helper;
 use Botble\Base\Events\SessionStarted;
@@ -28,9 +35,18 @@ class ServicesServiceProvider extends ServiceProvider
             $this->app->singleton(ServicesInterface::class, function () {
                 return new ServicesCacheDecorator(new ServicesRepository(new Services()), new Cache($this->app['cache'], ServicesRepository::class));
             });
+
+            $this->app->singleton(CustomerInterface::class, function () {
+                return new CustomerCacheDecorator(new CustomerRepository(new Customer()), new Cache($this->app['cache'], CustomerRepository::class));
+            });
+
         } else {
             $this->app->singleton(ServicesInterface::class, function () {
                 return new ServicesRepository(new Services());
+            });
+
+            $this->app->singleton(CustomerInterface::class, function () {
+                return new CustomerRepository(new Customer());
             });
         }
 
