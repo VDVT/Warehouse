@@ -1,0 +1,122 @@
+Searching 33947 files for "CORE COMPETENCIES"
+
+/Users/dinhnhung/Documents/LHT/Project/umh/public/themes/ripple/views/page/about_us.blade.php:
+   55              <div class="card">
+   56                  <div class="card-body">
+   57:                     <h4 class="card-title text-uppercase">CORE COMPETENCIES</h4>
+   58                      <div class="owl-carousel owl-theme">
+   59                          <div class="content-strength item" data="{{$source}}/about_us/installation.png">
+
+/Users/dinhnhung/Documents/LHT/Project/umh/storage/framework/views/a2f6350a1df46759121cb6f28222e32bd651aaf8.php:
+   55              <div class="card">
+   56                  <div class="card-body">
+   57:                     <h4 class="card-title text-uppercase">CORE COMPETENCIES</h4>
+   58                      <div class="owl-carousel owl-theme">
+   59                          <div class="content-strength item" data="<?php echo e($source); ?>/about_us/installation.png">
+
+2 matches across 2 files
+
+
+Searching 33947 files for "public.page.aboutus"
+
+/Users/dinhnhung/Documents/LHT/Project/umh/core/base/routes/web.php:
+   94          ]);
+   95          Route::get('/about-us', [
+   96:             'as' => 'public.page.aboutus',
+   97              'uses' => 'PageController@getAboutUs',
+   98          ]);
+
+1 match in 1 file
+
+
+Searching 33948 files for "public.product_category.list"
+
+/Users/dinhnhung/Documents/LHT/Project/umh/core/base/routes/web.php:
+  158          Route::group(['prefix' => 'product-category'], function () {
+  159              Route::get('/', [
+  160:                 'as' => 'public.product_category.list',
+  161                  'uses' => 'ProductController@productCategoryList',
+  162              ]);
+
+/Users/dinhnhung/Documents/LHT/Project/umh/public/themes/ripple/partials/header.blade.php:
+   23                                  <li class="mobile"><a href="#" id="toggle-menu-mobile"><span class="fa fa-bars"></span></a></li>
+   24                                  <li><a href="{{ route('public.page.aboutus') }}">About Us</a></li>
+   25:                                 <li><a href="{{ route('public.product_category.list') }}">Products</a></li>
+   26                                  <li class="has-children">
+   27                                      <a href="#">Customer Service</a>
+
+/Users/dinhnhung/Documents/LHT/Project/umh/storage/framework/views/a7682fabfe631de82d5f639e48e72c59265170af.php:
+   25                                  <li class="mobile"><a href="#" id="toggle-menu-mobile"><span class="fa fa-bars"></span></a></li>
+   26                                  <li><a href="<?php echo e(route('public.page.aboutus')); ?>">About Us</a></li>
+   27:                                 <li><a href="<?php echo e(route('public.product_category.list')); ?>">Products</a></li>
+   28                                  <li class="has-children">
+   29                                      <a href="#">Customer Service</a>
+
+3 matches across 3 files
+
+
+Searching 33952 files for "form-product box-relative"
+
+/Users/dinhnhung/Documents/LHT/Project/umh/public/themes/ripple/views/product/categories/details.blade.php:
+  113                      <hr> -->
+  114                      <?php //} ?>
+  115:                     <form class="form-product box-relative" type="post" data-category="{{ $product_category->id }}">
+  116                          <div class="cm-loading-bg"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></div>
+  117                          <p class="error alert s-hidden alert-danger" style="display:none;">We currently do not have any used.</p>
+
+/Users/dinhnhung/Documents/LHT/Project/umh/storage/framework/views/1115c423a4f82f2df0a9db82e5e3dab7cf5f56e8.php:
+  114                      <hr> -->
+  115                      <?php //} ?>
+  116:                     <form class="form-product box-relative" type="post" data-category="<?php echo e($product_category->id); ?>">
+  117                          <div class="cm-loading-bg"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></div>
+  118                          <p class="error alert s-hidden alert-danger" style="display:none;">We currently do not have any used.</p>
+
+2 matches across 2 files
+
+
+Searching 33952 files for "img-product-small"
+
+/Users/dinhnhung/Documents/LHT/Project/umh/public/themes/ripple/assets/css/cm_style.css:
+   93  }*/
+   94  
+   95: .img-product-small img{border: 1px solid #999; cursor: pointer;}
+   96: .img-product-small img.active{border: 1px solid #e7661f}
+   97  .footer-logo .img-thumbnail{background:transparent;}
+   98  #block_contact .card .card-body .form-group .form-control.c1{margin-top: 17px;padding: 4px 0;}
+
+/Users/dinhnhung/Documents/LHT/Project/umh/public/themes/ripple/assets/js/functions.js:
+  517      });
+  518  
+  519:     $('.img-product-small img').on('click', function(event) {
+  520          event.preventDefault();
+  521:         $('.img-product-small img').removeClass('active');
+  522          $(this).addClass('active');
+  523          const src = $(this).attr('src');
+  ...
+  528          event.preventDefault();
+  529          const type = $(this).attr('type');
+  530:         const num = parseFloat( $('.img-product-small img.active').attr('data-num') );
+  531          let current;
+  532          if(type == 'next'){
+  ...
+  535              current = (num<=1) ? 3 : num-1;
+  536          }
+  537:         $('.img-product-small img[data-num='+current+']').trigger('click');
+  538      });
+  539  });
+
+/Users/dinhnhung/Documents/LHT/Project/umh/public/themes/ripple/views/product/categories/details.blade.php:
+    9                      <a href="" class="arrow arrow-right" type="next"><i class="fa fa-arrow-circle-right"></i></a>
+   10                  </div>
+   11:                 <div class="img-product-small mt-4 mb-4">
+   12                      <div class="row">
+   13                          @if(!empty($product_category->image))
+
+/Users/dinhnhung/Documents/LHT/Project/umh/storage/framework/views/1115c423a4f82f2df0a9db82e5e3dab7cf5f56e8.php:
+    9                      <a href="" class="arrow arrow-right" type="next"><i class="fa fa-arrow-circle-right"></i></a>
+   10                  </div>
+   11:                 <div class="img-product-small mt-4 mb-4">
+   12                      <div class="row">
+   13                          <?php if(!empty($product_category->image)): ?>
+
+8 matches across 4 files

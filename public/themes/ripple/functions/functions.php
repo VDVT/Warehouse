@@ -102,6 +102,15 @@ theme_option()->setSection([
                 'value' => null,
             ],
         ],
+        [
+            'id' => 'banner_homepage',
+            'type' => 'mediaImage',
+            'label' => __('Banner Homepage'),
+            'attributes' => [
+                'name' => 'banner_homepage',
+                'value' => null,
+            ],
+        ],
 
         [
             'id' => 'logo_footer_1',
@@ -194,23 +203,6 @@ theme_option()->setSection([
         ],
     ],
 ]);
-
-// theme_option()->setField([
-//     'id' => 'copyright',
-//     'section_id' => 'opt-text-subsection-general',
-//     'type' => 'text',
-//     'label' => __('Copyright'),
-//     'attributes' => [
-//         'name' => 'copyright',
-//         'value' => '© 2016 Botble Technologies. All right reserved. Designed by Nghia Minh',
-//         'options' => [
-//             'class' => 'form-control',
-//             'placeholder' => __('Change copyright'),
-//             'data-counter' => 120,
-//         ]
-//     ],
-//     'helper' => __('Copyright on footer of site'),
-// ]);
 
 theme_option()->setArgs(['debug' => false]);
 
@@ -308,6 +300,7 @@ theme_option()->setSection([
     ],
 ]);
 
+/* theme option email of warehouse */
 theme_option()->setSection([
     'title' => __('Email List'),
     'desc' => __('Email List Settings'),
@@ -344,11 +337,11 @@ theme_option()->setSection([
             ],
         ],
         [
-            'id' => 'application_email',
+            'id' => 'amount_more_than_50_email',
             'type' => 'text',
-            'label' => __('Application From Email (separated by ",")'),
+            'label' => __('Email Receipt Amount More Than $50.000'),
             'attributes' => [
-                'name' => 'application_email',
+                'name' => 'amount_more_than_50_email',
                 'value' => null,
                 'options' => [
                     'class' => 'form-control',
@@ -358,96 +351,11 @@ theme_option()->setSection([
             ],
         ],
         [
-            'id' => 'donation_email',
+            'id' => 'amount_less_than_50_email',
             'type' => 'text',
-            'label' => __('Donation Email (separated by ",")'),
+            'label' => __('Email Receipt Amount Less Than $50.000'),
             'attributes' => [
-                'name' => 'donation_email',
-                'value' => null,
-                'options' => [
-                    'class' => 'form-control',
-                    'placeholder' => '',
-                    'data-counter' => 120,
-                ]
-            ],
-        ],
-        [
-            'id' => 'customer_service_email',
-            'type' => 'text',
-            'label' => __('Customer Service Email (separated by ",")'),
-            'attributes' => [
-                'name' => 'customer_service_email',
-                'value' => null,
-                'options' => [
-                    'class' => 'form-control',
-                    'placeholder' => '',
-                    'data-counter' => 120,
-                ]
-            ],
-        ],
-        [
-            'id' => 'order_inquires_email',
-            'type' => 'text',
-            'label' => __('Billing Email (separated by ",")'),
-            'attributes' => [
-                'name' => 'order_inquires_email',
-                'value' => null,
-                'options' => [
-                    'class' => 'form-control',
-                    'placeholder' => '',
-                    'data-counter' => 120,
-                ]
-            ],
-        ],
-
-        [
-            'id' => 'part_request_email',
-            'type' => 'text',
-            'label' => __('Part Request Email (separated by ",")'),
-            'attributes' => [
-                'name' => 'part_request_email',
-                'value' => null,
-                'options' => [
-                    'class' => 'form-control',
-                    'placeholder' => '',
-                    'data-counter' => 120,
-                ]
-            ],
-        ],
-        [
-            'id' => 'sale_quote_email',
-            'type' => 'text',
-            'label' => __('Sale Quote Email (separated by ",")'),
-            'attributes' => [
-                'name' => 'sale_quote_email',
-                'value' => null,
-                'options' => [
-                    'class' => 'form-control',
-                    'placeholder' => '',
-                    'data-counter' => 120,
-                ]
-            ],
-        ],
-        [
-            'id' => 'photo_submission_email',
-            'type' => 'text',
-            'label' => __('Photo Submission Email (separated by ",")'),
-            'attributes' => [
-                'name' => 'photo_submission_email',
-                'value' => null,
-                'options' => [
-                    'class' => 'form-control',
-                    'placeholder' => '',
-                    'data-counter' => 120,
-                ]
-            ],
-        ],
-        [
-            'id' => 'project_completion_email',
-            'type' => 'text',
-            'label' => __('Project Completion Email (separated by ",")'),
-            'attributes' => [
-                'name' => 'project_completion_email',
+                'name' => 'amount_more_than_50_email',
                 'value' => null,
                 'options' => [
                     'class' => 'form-control',
@@ -458,74 +366,20 @@ theme_option()->setSection([
         ],
     ],
 ]);
-
-theme_option()->setSection([
-    'title' => __('Other'),
-    // 'desc' => __('Change logo'),
-    'id' => 'opt-text-subsection-other',
-    'subsection' => true,
-    'icon' => 'fa fa-info',
-    'fields' => [
-        [
-            'id' => 'product_banner',
-            'type' => 'mediaImage',
-            'label' => __('Product Banner'),
-            'attributes' => [
-                'name' => 'product_banner',
-                'value' => null,
-            ],
-        ],
-        [
-            'id' => 'get_a_quote_success',
-            'type' => 'editor',
-            'label' => __('Get a quote success content'),
-            'attributes' => [
-                'name' => 'get_a_quote_success',
-                'value' => null,
-            ],
-        ],
-        [
-            'id' => 'find_us',
-            'type' => 'textarea',
-            'label' => __('Find us list'),
-            'attributes' => [
-                'name' => 'find_us',
-                'value' => null,
-                'options' => [
-                    'class' => 'form-control',
-                    'placeholder' => ''
-                ]
-            ],
-        ],
-        [
-            'id' => 'find_us_need_detail',
-            'type' => 'textarea',
-            'label' => __('Find us need details list'),
-            'attributes' => [
-                'name' => 'find_us_need_detail',
-                'value' => null,
-                'options' => [
-                    'class' => 'form-control',
-                    'placeholder' => ''
-                ]
-            ],
-        ],
-    ],
-]);
-
+/* theme option emails of cm UnitedMH*/
 // theme_option()->setSection([
-//     'title' => __('Contact Information'),
-//     'desc' => __('Contact Information Settings'),
-//     'id' => 'opt-text-subsection-contact',
+//     'title' => __('Email List'),
+//     'desc' => __('Email List Settings'),
+//     'id' => 'opt-text-subsection-email',
 //     'subsection' => true,
-//     'icon' => 'fa fa-book',
+//     'icon' => 'fa fa-envelope-o',
 //     'fields' => [
 //         [
-//             'id' => 'address',
+//             'id' => 'admin_email',
 //             'type' => 'text',
-//             'label' => __('Address'),
+//             'label' => __('Admin Email'),
 //             'attributes' => [
-//                 'name' => 'address',
+//                 'name' => 'admin_email',
 //                 'value' => null,
 //                 'options' => [
 //                     'class' => 'form-control',
@@ -535,11 +389,11 @@ theme_option()->setSection([
 //             ],
 //         ],
 //         [
-//             'id' => 'phone',
+//             'id' => 'contact_account_manager_email',
 //             'type' => 'text',
-//             'label' => __('Phone'),
+//             'label' => __('Get a Quote Email (separated by ",")'),
 //             'attributes' => [
-//                 'name' => 'phone',
+//                 'name' => 'contact_account_manager_email',
 //                 'value' => null,
 //                 'options' => [
 //                     'class' => 'form-control',
@@ -549,11 +403,11 @@ theme_option()->setSection([
 //             ],
 //         ],
 //         [
-//             'id' => 'fax',
+//             'id' => 'application_email',
 //             'type' => 'text',
-//             'label' => __('Fax'),
+//             'label' => __('Application From Email (separated by ",")'),
 //             'attributes' => [
-//                 'name' => 'fax',
+//                 'name' => 'application_email',
 //                 'value' => null,
 //                 'options' => [
 //                     'class' => 'form-control',
@@ -561,6 +415,159 @@ theme_option()->setSection([
 //                     'data-counter' => 120,
 //                 ]
 //             ],
-//         ]
+//         ],
+//         [
+//             'id' => 'donation_email',
+//             'type' => 'text',
+//             'label' => __('Donation Email (separated by ",")'),
+//             'attributes' => [
+//                 'name' => 'donation_email',
+//                 'value' => null,
+//                 'options' => [
+//                     'class' => 'form-control',
+//                     'placeholder' => '',
+//                     'data-counter' => 120,
+//                 ]
+//             ],
+//         ],
+//         [
+//             'id' => 'customer_service_email',
+//             'type' => 'text',
+//             'label' => __('Customer Service Email (separated by ",")'),
+//             'attributes' => [
+//                 'name' => 'customer_service_email',
+//                 'value' => null,
+//                 'options' => [
+//                     'class' => 'form-control',
+//                     'placeholder' => '',
+//                     'data-counter' => 120,
+//                 ]
+//             ],
+//         ],
+//         [
+//             'id' => 'order_inquires_email',
+//             'type' => 'text',
+//             'label' => __('Billing Email (separated by ",")'),
+//             'attributes' => [
+//                 'name' => 'order_inquires_email',
+//                 'value' => null,
+//                 'options' => [
+//                     'class' => 'form-control',
+//                     'placeholder' => '',
+//                     'data-counter' => 120,
+//                 ]
+//             ],
+//         ],
+
+//         [
+//             'id' => 'part_request_email',
+//             'type' => 'text',
+//             'label' => __('Part Request Email (separated by ",")'),
+//             'attributes' => [
+//                 'name' => 'part_request_email',
+//                 'value' => null,
+//                 'options' => [
+//                     'class' => 'form-control',
+//                     'placeholder' => '',
+//                     'data-counter' => 120,
+//                 ]
+//             ],
+//         ],
+//         [
+//             'id' => 'sale_quote_email',
+//             'type' => 'text',
+//             'label' => __('Sale Quote Email (separated by ",")'),
+//             'attributes' => [
+//                 'name' => 'sale_quote_email',
+//                 'value' => null,
+//                 'options' => [
+//                     'class' => 'form-control',
+//                     'placeholder' => '',
+//                     'data-counter' => 120,
+//                 ]
+//             ],
+//         ],
+//         [
+//             'id' => 'photo_submission_email',
+//             'type' => 'text',
+//             'label' => __('Photo Submission Email (separated by ",")'),
+//             'attributes' => [
+//                 'name' => 'photo_submission_email',
+//                 'value' => null,
+//                 'options' => [
+//                     'class' => 'form-control',
+//                     'placeholder' => '',
+//                     'data-counter' => 120,
+//                 ]
+//             ],
+//         ],
+//         [
+//             'id' => 'project_completion_email',
+//             'type' => 'text',
+//             'label' => __('Project Completion Email (separated by ",")'),
+//             'attributes' => [
+//                 'name' => 'project_completion_email',
+//                 'value' => null,
+//                 'options' => [
+//                     'class' => 'form-control',
+//                     'placeholder' => '',
+//                     'data-counter' => 120,
+//                 ]
+//             ],
+//         ],
+//     ],
+// ]);
+
+// theme_option()->setSection([
+//     'title' => __('Other'),
+//     // 'desc' => __('Change logo'),
+//     'id' => 'opt-text-subsection-other',
+//     'subsection' => true,
+//     'icon' => 'fa fa-info',
+//     'fields' => [
+//         [
+//             'id' => 'product_banner',
+//             'type' => 'mediaImage',
+//             'label' => __('Product Banner'),
+//             'attributes' => [
+//                 'name' => 'product_banner',
+//                 'value' => null,
+//             ],
+//         ],
+//         [
+//             'id' => 'get_a_quote_success',
+//             'type' => 'editor',
+//             'label' => __('Get a quote success content'),
+//             'attributes' => [
+//                 'name' => 'get_a_quote_success',
+//                 'value' => null,
+//             ],
+//         ],
+//         [
+//             'id' => 'find_us',
+//             'type' => 'textarea',
+//             'label' => __('Find us list'),
+//             'attributes' => [
+//                 'name' => 'find_us',
+//                 'value' => null,
+//                 'options' => [
+//                     'class' => 'form-control',
+//                     'placeholder' => ''
+//                 ]
+//             ],
+//         ],
+//         [
+//             'id' => 'find_us_need_detail',
+//             'type' => 'textarea',
+//             'label' => __('Find us need details list'),
+//             'attributes' => [
+//                 'name' => 'find_us_need_detail',
+//                 'value' => null,
+//                 'options' => [
+//                     'class' => 'form-control',
+//                     'placeholder' => ''
+//                 ]
+//             ],
+//         ],
 //     ],
 // ]);

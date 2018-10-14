@@ -31,6 +31,19 @@ return [
                     ],
                 ],
             ],
+            [
+                'label' => trans('settings::setting.general.banner_homepage_content'),
+                'type' => 'text',
+                'attributes' => [
+                    'name' => 'banner_homepage_content',
+                    'value' => null,
+                    'options' => [
+                        'class' => 'form-control',
+                        'placeholder' => trans('settings::setting.general.placeholder.banner_homepage_content'),
+                        'data-counter' => 120,
+                    ],
+                ],
+            ],
             // [
             //     'label' => trans('settings::setting.general.admin_email'),
             //     'type' => 'text',

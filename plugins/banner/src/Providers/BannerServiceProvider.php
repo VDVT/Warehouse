@@ -55,8 +55,6 @@ class BannerServiceProvider extends ServiceProvider
             $this->publishes([__DIR__ . '/../../config/banner.php' => config_path('banner.php')], 'config');
         }
 
-        return;
-
         Event::listen(SessionStarted::class, function () {
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-banner',

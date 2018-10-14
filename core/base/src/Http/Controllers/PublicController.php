@@ -24,9 +24,9 @@ class PublicController extends Controller
      */
     public function getIndex()
     {
-        $banners      = get_banners();
-        $testimonials = get_testimonials();
-        $industrials  = $this->industrialRepository->getIndustrials();
+        $banners = get_banners();
+        // $testimonials = get_testimonials();
+        // $industrials  = $this->industrialRepository->getIndustrials();
         $states = State::orderBy('ordering', 'asc')->get()->pluck('name', 'id')->toArray();
         Theme::breadcrumb()->add(__('Home'), route('public.index'));
         return Theme::scope('index', compact('banners', 'testimonials', 'industrials', 'states'))->render();

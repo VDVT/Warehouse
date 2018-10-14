@@ -59,6 +59,11 @@ class ProductController extends Controller
         $widths = $product_category->products->where('width', '!=', '')->pluck('width')->unique()->toArray();
         $heights = $product_category->products->where('height', '!=', '')->pluck('height')->unique()->toArray();
 
+
+        /* custom css and js for page */
+        Theme::asset()->usePath()->add('style-product-detail', 'css/page/product/detail.css', ['style']);
+        Theme::asset()->container('footer')->usePath()->add('js-product-detail', 'js/page/product/detail.js', ['gtt-main-js']);
+        /* end custom css and js for page */
         return Theme::scope('product.categories.details', compact('product_category', 'sizes', 'colors', 'widths', 'heights'))->render();
     }
 

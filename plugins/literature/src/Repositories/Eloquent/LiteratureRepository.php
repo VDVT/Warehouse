@@ -23,4 +23,13 @@ class LiteratureRepository extends RepositoriesAbstract implements LiteratureInt
         $this->resetModel();
         return $data;
 	}
+
+    /**
+     * func only get literatures for homepage
+     * @return collect
+     */
+    public function getLiteraturesHomepage()
+    {
+        return $this->getLiteratures(2);
+    }
 }

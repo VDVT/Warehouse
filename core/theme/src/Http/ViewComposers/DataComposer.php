@@ -47,7 +47,7 @@ class DataComposer
             'product_solutions' => $this->productSolutionsRepository->getProductSolutions(),
             'industrials' => $this->industrialRepository->getIndustrials(),
             'core_expertises' => $this->coreExpertisesRepository->getCoreExpertises(),
-            'list_literatures' => $this->literatureRepository->getLiteratures(3),
+            'list_literatures' => $this->literatureRepository->getLiteratures(2),
         ]);
     }
 }

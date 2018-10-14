@@ -42,30 +42,33 @@ return [
         'beforeRenderTheme' => function ($theme) {
             // You may use this event to set up your assets.
             $theme->asset()->container('header')->usePath()->add('jquery', '/vendor/jquery/jquery.min.js');
-            $theme->asset()->container('footer')->usePath()->add('bootstrap-bundle', '/vendor/jquery/bootstrap.bundle.min.js');
-            $theme->asset()->container('footer')->usePath()->add('jquery-easing', '/vendor/jquery/jquery.easing.min.js');
+            // $theme->asset()->container('footer')->usePath()->add('bootstrap-bundle', '/vendor/jquery/bootstrap.bundle.min.js');
+            // $theme->asset()->container('footer')->usePath()->add('jquery-easing', '/vendor/jquery/jquery.easing.min.js');
             $theme->asset()->container('footer')->usePath()->add('popper', '/vendor/jquery/popper.min.js');
             $theme->asset()->container('footer')->usePath()->add('bootstrap-js', 'vendor/bootstrap/js/bootstrap.min.js');
-            $theme->asset()->container('footer')->usePath()->add('owl-carousel-js', 'plugins/OwlCarousel2-2.2.1/dist/owl.carousel.js');
-            $theme->asset()->container('footer')->usePath()->add('slick-js', 'plugins/slick-1.8.0/slick/slick.min.js');
-            $theme->asset()->container('footer')->usePath()->add('scombobox', 'js/jquery.scombobox.min.js');
-            $theme->asset()->container('footer')->usePath()->add('wow-js', 'js/wow.min.js');
-            $theme->asset()->container('footer')->usePath()->add('bootstrap-datepicker', 'js/bootstrap-datepicker.min.js');
-            $theme->asset()->container('footer')->usePath()->add('functions-js', 'js/functions.js', ['jquery']);
+            // $theme->asset()->container('footer')->usePath()->add('owl-carousel-js', 'plugins/OwlCarousel2-2.2.1/dist/owl.carousel.js');
+            $theme->asset()->container('footer')->usePath()->add('slick-js', 'plugins/slick/slick.min.js');
+            // $theme->asset()->container('footer')->usePath()->add('scombobox', 'js/jquery.scombobox.min.js');
+            // $theme->asset()->container('footer')->usePath()->add('wow-js', 'js/wow.min.js');
+            // $theme->asset()->container('footer')->usePath()->add('bootstrap-datepicker', 'js/bootstrap-datepicker.min.js');
+            // $theme->asset()->container('footer')->usePath()->add('functions-js', 'js/functions.js', ['jquery']);
+
+            /* add js design GTT */
+            $theme->asset()->container('footer')->usePath()->add('gtt-main-js', 'js/main.js', ['jquery']);
 
 
             $theme->asset()->usePath()->add('font-awesome', 'vendor/font-awesome/css/font-awesome.min.css');
             $theme->asset()->usePath()->add('bootstrap-css', 'vendor/bootstrap/css/bootstrap.min.css');
-            $theme->asset()->usePath()->add('owl-carousel', 'plugins/OwlCarousel2-2.2.1/dist/assets/owl.carousel.css');
-            $theme->asset()->usePath()->add('owl-theme', 'plugins/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.css');
-            $theme->asset()->usePath()->add('slick', 'plugins/slick-1.8.0/slick/slick.css');
-            $theme->asset()->usePath()->add('slick-theme', 'plugins/slick-1.8.0/slick/slick-theme.css');
-            $theme->asset()->usePath()->add('animate', 'css/animate.css');
-            $theme->asset()->usePath()->add('animate-theme', 'css/theme-animate.css');
+            // $theme->asset()->usePath()->add('owl-carousel', 'plugins/OwlCarousel2-2.2.1/dist/assets/owl.carousel.css');
+            // $theme->asset()->usePath()->add('owl-theme', 'plugins/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.css');
+            $theme->asset()->usePath()->add('slick', 'plugins/slick/slick.css');
+            $theme->asset()->usePath()->add('slick-theme', 'plugins/slick/slick-theme.css');
+            // $theme->asset()->usePath()->add('animate', 'css/animate.css');
+            // $theme->asset()->usePath()->add('animate-theme', 'css/theme-animate.css');
             $theme->asset()->usePath()->add('font', 'plugins/fonts/fonts.css');
-            $theme->asset()->usePath()->add('bootstrap-datepicker', 'css/bootstrap-datepicker.min.css');
-            $theme->asset()->usePath()->add('style', 'css/style.css');
-            $theme->asset()->usePath()->add('cm_style', 'css/cm_style.css');
+            // $theme->asset()->usePath()->add('bootstrap-datepicker', 'css/bootstrap-datepicker.min.css');
+            $theme->asset()->usePath()->add('style', 'css/style.min.css');
+            // $theme->asset()->usePath()->add('cm_style', 'css/cm_style.css');
             // $theme->asset()->usePath()->add('ripple.css', 'css/ripple.css');
             // $theme->asset()->usePath()->add('lightgallery-css', 'css/lightgallery.min.css');
             // $theme->asset()->usePath()->add('owl-transitions', 'plugins/owl-carousel/owl.transitions.css');

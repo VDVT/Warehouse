@@ -1,0 +1,143 @@
+.page_product_detail {
+  background: #f0f0f0; }
+  .page_product_detail .img-product {
+    background: #fff; }
+    .page_product_detail .img-product img {
+      max-width: 100%; }
+  .page_product_detail .content-product {
+    padding: 60px; }
+    .page_product_detail .content-product .title {
+      font-size: 48px;
+      color: #2e3133;
+      font-family: "FranklinGothic Demi"; }
+    .page_product_detail .content-product .short-des {
+      font-family: "FranklinGothic Book";
+      border-left: 5px solid #e7661f;
+      padding-left: 20px;
+      margin: 30px 0;
+      color: #ababab; }
+      .page_product_detail .content-product .short-des .title-short {
+        font-size: 16px;
+        color: #888;
+        font-family: "FranklinGothic Medium"; }
+      .page_product_detail .content-product .short-des a {
+        color: #ababab; }
+        .page_product_detail .content-product .short-des a:hover {
+          color: #e7661f; }
+    .page_product_detail .content-product .form-product select, .page_product_detail .content-product .form-product input {
+      border: none; }
+    .page_product_detail .content-product .form-product option {
+      font-size: 13px; }
+    .page_product_detail .content-product .form-product .box-more-opt {
+      padding: 10px 0;
+      font-size: 16px;
+      font-family: "FranklinGothic Medium";
+      color: #888; }
+      .page_product_detail .content-product .form-product .box-more-opt .btn {
+        cursor: pointer; }
+    .page_product_detail .content-product .form-product .part-type .item {
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      margin-bottom: 20px;
+      padding: 20px; }
+      .page_product_detail .content-product .form-product .part-type .item .title {
+        color: #2e3133;
+        font-family: "FranklinGothic Medium";
+        font-size: 16px;
+        margin-bottom: 0; }
+      .page_product_detail .content-product .form-product .part-type .item .des {
+        font-size: 16px;
+        font-family: "FranklinGothic Book";
+        color: #888;
+        margin-bottom: 0; }
+      .page_product_detail .content-product .form-product .part-type .item.choose {
+        background-color: #fff;
+        border-color: #fff; }
+      .page_product_detail .content-product .form-product .part-type .item:hover {
+        background-color: #fff;
+        border-color: #fff;
+        cursor: pointer; }
+    .page_product_detail .content-product .form-product .box-quality .box-1 .input-number {
+      max-width: 200px; }
+    .page_product_detail .content-product .form-product .box-quality .box-1 p {
+      margin-bottom: 0;
+      margin-left: 20px;
+      color: #ababab; }
+    .page_product_detail .content-product .form-product .box-quality .box-2 .title {
+      font-size: 16px;
+      font-family: "FranklinGothic Book";
+      color: #ababab;
+      margin-bottom: 0; }
+    .page_product_detail .content-product .form-product .box-quality .box-2 .total {
+      color: #888;
+      font-family: "FranklinGothic Demi";
+      font-size: 32px;
+      margin-bottom: 0; }
+    .page_product_detail .content-product .form-product .box-total .box-1 .input-number {
+      max-width: 200px; }
+    .page_product_detail .content-product .form-product .box-total .box-1 p {
+      margin-bottom: 0;
+      margin-left: 20px;
+      color: #ababab; }
+    .page_product_detail .content-product .form-product .box-total .box-2 .title {
+      font-size: 16px;
+      font-family: "FranklinGothic Book";
+      color: #ababab;
+      margin-bottom: 0; }
+    .page_product_detail .content-product .form-product .box-total .box-2 .total {
+      color: #e7661f;
+      font-family: "FranklinGothic Demi";
+      font-size: 32px;
+      margin-bottom: 0; }
+    .page_product_detail .content-product .form-product .btn-submit {
+      width: 100%;
+      background: #e7661f;
+      color: #fff;
+      text-transform: uppercase; }
+
+.img-product{position: relative;}
+.img-product .arrow{
+    position: absolute;
+    color: #999;opacity: .6;
+    margin-top: -25px;top: 50%;
+}
+.img-product .arrow i{
+    font-size: 50px;
+}
+.img-product .arrow.arrow-left{
+    left: 15px; 
+}
+.img-product .arrow.arrow-right{
+    right: 15px;
+}
+ .product-carousel img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    max-height: 450px;
+}
+.product-thumbnails li {
+    display: inline-block;
+    margin: 0 3px 10px;
+}
+.product-thumbnails li>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #f6d6cd;
+    -webkit-transition: border-color .25s;
+    -moz-transition: border-color .25s;
+    -o-transition: border-color .25s;
+    -ms-transition: border-color .25s;
+    transition: border-color .25s;
+    border: 1px solid #fff;
+}
+.product-thumbnails li>a>img {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.img-product-small img{border: 1px solid #999; cursor: pointer;}
+.img-product-small img.active{border: 1px solid #e7661f}

@@ -1,30 +1,4 @@
 <?php $source = Theme::asset()->url('images'); ?>
-<!-- <div class="bg_about_us_1 d-flex align-items-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 text-center">
-                <h4 class="count">08</h4>
-                <h5>Industries</h5>
-                <span class="divider"></span>
-            </div>
-            <div class="col-md-3 text-center">
-                <h4 class="count">10</h4>
-                <h5>Solutions</h5>
-                <span class="divider"></span>
-            </div>
-            <div class="col-md-3 text-center">
-                <h4 class="count">65</h4>
-                <h5>Years Experience</h5>
-                <span class="divider"></span>
-            </div>
-            <div class="col-md-3 text-center">
-                <h4 class="count">625</h4>
-                <h5>Clients</h5>
-                <span class="divider"></span>
-            </div>
-        </div>
-    </div>
-</div> -->
 <div class="bg_about_us_2 d-flex align-items-center" style="background: url('{{$source}}/about_us/rectangle2.png');">
     <div class="container">
         <h2 class="title text-uppercase text-center">experience</h2>

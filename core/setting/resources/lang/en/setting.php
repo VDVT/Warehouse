@@ -44,6 +44,7 @@ return [
                 'seo_keywords' => 'SEO Keywords (maximum 60 characters, separate by "," character)',
                 'google_analytics' => 'Google Analytics',
                 'google_site_verification' => 'Google Site Verification',
+                'banner_homepage_content' => 'Content Banner Homepage',
             ],
             'enable_change_admin_theme' => 'Enable change admin theme?',
             'enable_multi_language_in_admin' => 'Enable multi language in admin area?',
@@ -51,6 +52,7 @@ return [
             'disable' => 'Disable',
             'enable_cache' => 'Enable cache?',
             'cache_time' => 'Cache time',
-            'cache_time_site_map' => 'Cache Time Site map'
+            'cache_time_site_map' => 'Cache Time Site map',
+            'banner_homepage_content' => 'Content Banner Homepage',
         ],
 ];
