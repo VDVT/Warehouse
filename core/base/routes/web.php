@@ -194,6 +194,23 @@ Route::group(['namespace' => 'Botble\Base\Http\Controllers', 'middleware' => 'we
             ]);
         });
 
+        Route::group(['prefix' => 'customer-services'], function () {
+            Route::get('/carrer-oppotunities', [
+                'as'   => 'public.services.carrer-oppotunities',
+                'uses' => 'CustomerServiceController@showCarrerForm',
+            ]);
+
+            Route::get('/customer-info', [
+                'as'   => 'public.services.customer-info',
+                'uses' => 'CustomerServiceController@showCustomerForm',
+            ]);
+
+            Route::get('/vendor-package', [
+                'as'   => 'public.services.vendor-package',
+                'uses' => 'CustomerServiceController@showVendorForm',
+            ]);
+        });
+
 
         Route::get('/', [
             'as' => 'public.index',

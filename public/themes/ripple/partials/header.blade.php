@@ -26,9 +26,9 @@
                                 <li class="has-children">
                                     <a href="#">Customer Service</a>
                                     <ul class="sub-menu">
-                                        <li><a href="#">Lorem Ip sum</a></li>
-                                        <li><a href="#">Lorem Ip sum</a></li>
-                                        <li><a href="#">Lorem Ip sum</a></li>
+                                        <li><a href="{{ route('public.services.carrer-oppotunities') }}">Carrer Oppotunities</a></li>
+                                        <li><a href="{{ route('public.services.customer-info') }}">Customer Info Form</a></li>
+                                        <li><a href="{{ route('public.services.vendor-package') }}">New Vendor Packet Form</a></li>
                                     </ul>
                                 </li>
                                 <li class="logo"><a href="/"><img src="{{ url(theme_option('logo')) }}" alt="{{ setting('site_title') }}"></a></li>

@@ -1,0 +1,9 @@
+{
+    "name": "CustomerServices",
+    "provider": "Botble\\CustomerServices\\Providers\\CustomerServicesServiceProvider",
+    "plugin": "Botble\\CustomerServices\\Plugin",
+    "author": "Sang Nguyen",
+    "url": "http://sangnguyen.info",
+    "version": "1.0",
+    "description": "CustomerServices"
+}
