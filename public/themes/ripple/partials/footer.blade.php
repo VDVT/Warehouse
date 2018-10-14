@@ -60,7 +60,7 @@
         </div>
     </div>
 </footer>
-<!-- <div class="go-up" style="right: -60px"><i class="fa fa-arrow-up" aria-hidden="true"></i></div> -->
+<div class="go-up" style="right: -60px"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
 
 <!-- JS Library-->
 {!! Theme::footer() !!}
@@ -114,6 +114,30 @@
         });
     });
 </script>
+<style type="text/css">
+    .go-up {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 17px;
+      right: -60px;
+      bottom: 20px;
+      cursor: pointer;
+      text-align: center;
+      -moz-transition: all 0.2s linear;
+      -webkit-transition: all 0.2s linear;
+      -o-transition: all 0.2s linear;
+      -ms-transition: all 0.2s linear;
+      transition: all 0.2s linear;
+      z-index: 998;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+      background-color: #e7661f;
+      color: #fff;
+      z-index: 999; }
+</style>
 </main>
 </body>
 </html>

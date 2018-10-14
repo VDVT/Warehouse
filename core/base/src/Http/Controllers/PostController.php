@@ -21,11 +21,17 @@ class PostController extends Controller
 	public function getList()
     {
         $posts = $this->postRepository->getAllPosts(7);
+        /* custom css and js for page */
+        Theme::asset()->usePath()->add('style-blog', 'css/page/blog/blog.css', ['style']);
+        // Theme::asset()->container('footer')->usePath()->add('js-aboutus-detail', 'js/page/aboutus/aboutus.js', ['gtt-main-js']);
         return Theme::scope('post.list', compact('posts'))->render();
     }
 
 	public function details($slug, PostInterface $postRepository)
     {
+        /* custom css and js for page */
+        Theme::asset()->usePath()->add('style-blog-detail', 'css/page/blog/detail.css', ['style']);
+
         $post = $postRepository->getBySlug($slug, true);
         if (empty($post)) abort(404);
         Helper::handleViewCount($post, 'viewed_post');

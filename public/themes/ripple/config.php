@@ -51,8 +51,7 @@ return [
             // $theme->asset()->container('footer')->usePath()->add('scombobox', 'js/jquery.scombobox.min.js');
             // $theme->asset()->container('footer')->usePath()->add('wow-js', 'js/wow.min.js');
             // $theme->asset()->container('footer')->usePath()->add('bootstrap-datepicker', 'js/bootstrap-datepicker.min.js');
-            // $theme->asset()->container('footer')->usePath()->add('functions-js', 'js/functions.js', ['jquery']);
-
+            $theme->asset()->container('footer')->usePath()->add('support-js', 'js/support.js', ['jquery']);
             /* add js design GTT */
             $theme->asset()->container('footer')->usePath()->add('gtt-main-js', 'js/main.js', ['jquery']);
 
