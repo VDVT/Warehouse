@@ -64,6 +64,9 @@ class PageController extends Controller
     public function getContactUs()
     {
         SeoHelper::setTitle( 'Contact Us' );
+        /* custom css and js for page */
+        Theme::asset()->usePath()->add('style-contactus-detail', 'css/page/contactus/contactus.css', ['style']);
+        Theme::asset()->container('footer')->usePath()->add('js-contactus-detail', 'js/page/contactus/contactus.js', ['gtt-main-js']);
         return Theme::scope('page.contact_us')->render();
     }
     public function getContactAccountManager()

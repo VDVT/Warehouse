@@ -1,0 +1,194 @@
+.bg_contact_us {
+  width: 100%;
+  min-height: 576px;
+  background-size: cover !important;
+  background-position: center !important; }
+  .bg_contact_us .title {
+    margin-bottom: 20px; }
+  .bg_contact_us .desc {
+    font-size: 15px;
+    font-family: 'FranklinGothic Book'; }
+  .bg_contact_us .card {
+    border: none; }
+    .bg_contact_us .card:before {
+      content: '';
+      min-width: 100px;
+      height: 3px;
+      background-color: #e7661f;
+      position: absolute;
+      top: 0;
+      left: calc((100% - 100px)/2); }
+    .bg_contact_us .card .card-body .media i.fa {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #ebebeb;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      font-size: 18px;
+      color: #e7661f; }
+    .bg_contact_us .card .card-body .media .media-body {
+      font-size: 14px; }
+      .bg_contact_us .card .card-body .media .media-body address {
+        font-family: 'FranklinGothic Book'; }
+      .bg_contact_us .card .card-body .media .media-body .phone-number {
+        color: #e7661f; }
+      .bg_contact_us .card .card-body .media .media-body .mt-0 {
+        font-size: 15px;
+        font-family: 'FranklinGothic Medium'; }
+      .bg_contact_us .card .card-body .media .media-body .desc {
+        font-family: 'FranklinGothic Book'; }
+#block_contact {
+  position: relative; }
+  #block_contact iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%; }
+  #block_contact .card {
+    background-color: #e7661f;
+    border: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0; }
+    #block_contact .card .card-body {
+      padding: 50px 45px; }
+      #block_contact .card .card-body .card-title {
+        font-size: 18px;
+        margin-bottom: 30px;
+        position: relative;
+        padding-left: 10px; }
+        #block_contact .card .card-body .card-title:before {
+          content: '';
+          position: absolute;
+          width: 2px;
+          height: 90%;
+          background-color: #fff;
+          top: calc((100% - 90%)/2);
+          left: 0; }
+      #block_contact .card .card-body .form-group {
+        position: relative;
+        width: 100%;
+        margin-bottom: 15px; }
+        #block_contact .card .card-body .form-group.active .label-control:after {
+          -webkit-transform: translate3d(0%, 0, 0);
+          transform: translate3d(0%, 0, 0); }
+        #block_contact .card .card-body .form-group.active .label-control .label-text {
+          opacity: 1;
+          -webkit-transform: scale(0.9);
+          -moz-transform: scale(0.9);
+          transform: scale(0.9);
+          color: #fff !important; }
+        #block_contact .card .card-body .form-group .scombobox-display {
+          background-color: transparent;
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          color: #fff;
+          font-size: 14px;
+          padding-left: 0; }
+        #block_contact .card .card-body .form-group .scombobox-dropdown-background {
+          background-color: transparent;
+          border: none; }
+        #block_contact .card .card-body .form-group .scombobox-dropdown-arrow {
+          background: none; }
+          #block_contact .card .card-body .form-group .scombobox-dropdown-arrow:before {
+            content: "\f078";
+            font: normal normal normal 14px/1 FontAwesome;
+            color: #fff;
+            font-size: 11px; }
+        #block_contact .card .card-body .form-group .scombobox-list {
+          font-size: 14px;
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          border-radius: 0;
+          border: none; }
+        #block_contact .card .card-body .form-group.x1 {
+          overflow: hidden; }
+        #block_contact .card .card-body .form-group .label-control {
+          color: #888;
+          display: block;
+          font-size: 14px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding: 0;
+          width: 100%;
+          pointer-events: none;
+          height: 100%; }
+          #block_contact .card .card-body .form-group .label-control:before {
+            border-bottom: 1px solid #dedede;
+            transition: -webkit-transform 0.3s;
+            -o-transition: transform 0.3s;
+            transition: transform 0.3s;
+            transition: transform 0.3s, -webkit-transform 0.3s;
+            -webkit-transition: -webkit-transform 0.3s; }
+          #block_contact .card .card-body .form-group .label-control:after {
+            border-bottom: 1px solid #888888;
+            -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+            -webkit-transition: -webkit-transform 0.3s;
+            transition: -webkit-transform 0.3s;
+            -o-transition: transform 0.3s;
+            transition: transform 0.3s;
+            transition: transform 0.3s, -webkit-transform 0.3s; }
+          #block_contact .card .card-body .form-group .label-control:before, #block_contact .card .card-body .form-group .label-control:after {
+            content: "";
+            left: 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%; }
+          #block_contact .card .card-body .form-group .label-control .label-text {
+            -webkit-transform: translate3d(0, 26px, 0) scale(1);
+            -moz-transform: translate3d(0, 26px, 0) scale(1);
+            transform: translate3d(0, 26px, 0) scale(1);
+            -webkit-transform-origin: left top;
+            -moz-transform-origin: left top;
+            -ms-transform-origin: left top;
+            transform-origin: left top;
+            -webkit-transition: 0.3s;
+            -moz-transition: 0.3s;
+            -o-transition: 0.3s;
+            transition: 0.3s;
+            position: absolute;
+            font-size: 13px;
+            font-family: 'FranklinGothic Book';
+            color: #fff; }
+        #block_contact .card .card-body .form-group .form-control {
+          background-color: transparent;
+          font-size: 14px;
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          border-radius: 0; }
+          #block_contact .card .card-body .form-group .form-control.c1 {
+            border: none;
+            border-radius: 0;
+            margin-top: 10px;
+            padding: 10px 0;
+            width: 100%;
+            font-size: 14px;
+            outline: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+            color: #888888; }
+          #block_contact .card .card-body .form-group .form-control.c2 {
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            padding-left: 0;
+            padding-right: 0; }
+            #block_contact .card .card-body .form-group .form-control.c2::-webkit-input-placeholder {
+              color: #fff;
+              font-size: 13px; }
+      #block_contact .card .card-body button[type="submit"] {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        background-color: #fff;
+        color: #e7661f; }
