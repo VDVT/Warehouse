@@ -18,11 +18,11 @@ class LiteratureController extends Controller
 
 	public function getList()
     {
-        // $banners           = get_banners();
-        // $product_solutions = get_product_solutions();
-        // $testimonials      = get_testimonials();
-        // Theme::share('product_solutions', $product_solutions);
-        // Theme::breadcrumb()->add(__('Home'), route('public.index'));
+        /* custom css and js for page */
+        Theme::asset()->usePath()->add('style-literature-detail', 'css/page/literature/literature.css', ['style']);
+        // Theme::asset()->container('footer')->usePath()->add('js-literature-detail', 'js/page/literature/detail.js', ['gtt-main-js']);
+        /* end custom css and js for page */
+
         $literatures = $this->literatureRepository->getLiteratures();
         return Theme::scope('literature.list', compact('literatures'))->render();
     }
