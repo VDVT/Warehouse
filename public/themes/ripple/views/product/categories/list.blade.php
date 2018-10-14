@@ -3,15 +3,8 @@
 ?>
 
 <!-- Add source template products -->
-<div class="container fluid" style="background: url('{{ $productBanner }}')">
-    <div class="p-t-6 p-b-2">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">Products</li>
-            </ol>
-        </nav>
-        <h1 class="text-muted1 font-1-demi">Products</h1>
-    </div>
+<div class="bg-overlay bg-size-cover" style="background: url('{{ $productBanner }}'); min-height: 351px;" layer-bg="black">
+    <h1 class="bg-overlay-title text-uppercase text-center text-white">products</h1>
 </div>
 <div class="clearfix" style="background-color: #f7f7f7;" >
     <div class="container">

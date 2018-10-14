@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="img-product text-center">
-                    <img src="{{ $product_category->image }}" alt="{{ $product_category->name }}">
+                    <img src="{{ $product_category->image }}" alt="{{ $product_category->name }}"  class="main-img-product">
                     <a href="" class="arrow arrow-left" type="prev"><i class="fa fa-arrow-circle-left"></i></a>
                     <a href="" class="arrow arrow-right" type="next"><i class="fa fa-arrow-circle-right"></i></a>
                 </div>
@@ -41,20 +41,3 @@
     </div>    
 </div>
 </section>
-<script>
-    $(document).ready(function() {
-        $("#slider").slick({
-            dots: true,
-            arrows: true,
-            asNavFor: "#thumbnail_slider"
-          });
-        $("#thumbnail_slider").slick({
-            asNavFor: "#slider",
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            dots: true,
-            centerMode: true,
-            focusOnSelect: true
-        });
-    });
-</script>

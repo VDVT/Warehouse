@@ -5,10 +5,14 @@
                 <div class="col-md-6 m-b-md-3">
                     <div class="footer-title">Stay In Touch</div>
                     <div class="footer-content">
-                        <div class="form-group">
-                            <input type="text" placeholder="Enter your email address" class="form-control no-line">
-                        </div>
-                        <button class="btn btn-outline-custom-i btn-round">Send</button>
+                        <form class="newsletter-form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Enter your email address" name="email" class="form-control no-line" id="email-send-newsletter">
+                            </div>
+                            <div class="noti success" style="font-size:13px;color:green;padding-top:5px;"></div>
+                            <div class="noti error" style="font-size:13px;color:red;padding-top:5px;"></div>
+                            <button class="btn btn-outline-custom-i btn-round" id="send-newsletter" style="display: none">Send</button>
+                        </form>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -60,6 +64,56 @@
 
 <!-- JS Library-->
 {!! Theme::footer() !!}
+
+<script type="text/javascript">
+    setTimeout(function() {
+        $('.newsletter-form .success').fadeOut('fast');
+        $('.newsletter-form .error').fadeOut('fast');
+    }, 10000);
+    
+    $(document).ready(function($) {
+
+        $('#email-send-newsletter').on('input',function(e){
+            let email = $(this).val();
+            if(email)
+                $('#send-newsletter').css("display","");
+            else
+                $('#send-newsletter').css("display","none");
+        });
+
+        $('#send-newsletter:enabled').click(function(event) {
+            event.preventDefault();
+            const self = this;
+            const el = $(self);
+            beginLoadingBtn(self, false);
+            $('.newsletter-form .noti').html('');
+
+            $.ajax({
+                url : "/newsletter-send",
+                type : "post",
+                data : {
+                    _token : _token,
+                    email : $("#email-send-newsletter").val()
+                },
+                success : function (data){
+                    if(data.status){
+                        $('#email-send-newsletter').val('');
+                        $('#send-newsletter').css("display","none");
+                        $('.newsletter-form .success').html(data.msg);
+                    }else{
+                        $('.newsletter-form .error').html(data.msg);
+                    }
+                },
+                error: function(xhr) { // if error occured
+                    $('.newsletter-form .error').html('Error! Try again or contact IT support.');
+                },
+                complete: function() {
+                    endLoadingBtn(self, 'SEND', false);
+                }
+            });
+        });
+    });
+</script>
 </main>
 </body>
 </html>

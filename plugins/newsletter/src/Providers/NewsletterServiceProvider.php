@@ -55,7 +55,6 @@ class NewsletterServiceProvider extends ServiceProvider
             $this->publishes([__DIR__ . '/../../config/newsletter.php' => config_path('newsletter.php')], 'config');
         }
 
-        return;
         Event::listen(SessionStarted::class, function () {
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-form-submission',
@@ -65,52 +64,52 @@ class NewsletterServiceProvider extends ServiceProvider
                 'icon'        => 'fa fa-leanpub',
                 'url'         => route('newsletter.list'),
                 'permissions' => ['newsletter.list'],
-            ])
-            ->registerItem([
-                'id'          => 'cms-plugins-newsletter',
-                'priority'    => 1,
-                'parent_id'   => 'cms-plugins-form-submission',
-                'name'        => trans('newsletter::newsletter.menu'),
-                // 'icon'        => 'fa fa-leanpub',
-                'url'         => route('newsletter.list'),
-                'permissions' => ['newsletter.list'],
-            ])
-            ->registerItem([
-                'id'          => 'cms-plugins-donation',
-                'priority'    => 2,
-                'parent_id'   => 'cms-plugins-form-submission',
-                'name'        => trans('donation::donation.menu'),
-                // 'icon'        => 'fa fa-image',
-                'url'         => route('donation.list'),
-                'permissions' => ['donation.list'],
-            ])
-            ->registerItem([
-                'id' => 'cms-plugins-career-applicationform',
-                'priority' => 3,
-                'parent_id' => 'cms-plugins-form-submission',
-                'name' => trans('career::applicationform.menu'),
-                'icon' => null,
-                'url' => route('applicationform.list'),
-                'permissions' => ['application.list'],
-            ])
-            ->registerItem([
-                'id'          => 'cms-plugins-contact',
-                'priority'    => 4,
-                'parent_id'   => 'cms-plugins-form-submission',
-                'name'        => trans('contact::contact.menuss'),
-                // 'icon'        => 'fa fa-image',
-                'url'         => route('contacts.list'),
-                'permissions' => ['contacts.list'],
-            ])
-            ->registerItem([
-                'id'          => 'cms-plugins-project-completion',
-                'priority'    => 5,
-                'parent_id'   => 'cms-plugins-form-submission',
-                'name'        => trans('projectcompletion::projectcompletion.menu'),
-                // 'icon'        => 'fa fa-image',
-                'url'         => route('projectcompletion.list'),
-                'permissions' => ['projectcompletion.list'],
             ]);
+            // ->registerItem([
+            //     'id'          => 'cms-plugins-newsletter',
+            //     'priority'    => 1,
+            //     'parent_id'   => 'cms-plugins-form-submission',
+            //     'name'        => trans('newsletter::newsletter.menu'),
+            //     // 'icon'        => 'fa fa-leanpub',
+            //     'url'         => route('newsletter.list'),
+            //     'permissions' => ['newsletter.list'],
+            // ])
+            // ->registerItem([
+            //     'id'          => 'cms-plugins-donation',
+            //     'priority'    => 2,
+            //     'parent_id'   => 'cms-plugins-form-submission',
+            //     'name'        => trans('donation::donation.menu'),
+            //     // 'icon'        => 'fa fa-image',
+            //     'url'         => route('donation.list'),
+            //     'permissions' => ['donation.list'],
+            // ])
+            // ->registerItem([
+            //     'id' => 'cms-plugins-career-applicationform',
+            //     'priority' => 3,
+            //     'parent_id' => 'cms-plugins-form-submission',
+            //     'name' => trans('career::applicationform.menu'),
+            //     'icon' => null,
+            //     'url' => route('applicationform.list'),
+            //     'permissions' => ['application.list'],
+            // ])
+            // ->registerItem([
+            //     'id'          => 'cms-plugins-contact',
+            //     'priority'    => 4,
+            //     'parent_id'   => 'cms-plugins-form-submission',
+            //     'name'        => trans('contact::contact.menuss'),
+            //     // 'icon'        => 'fa fa-image',
+            //     'url'         => route('contacts.list'),
+            //     'permissions' => ['contacts.list'],
+            // ])
+            // ->registerItem([
+            //     'id'          => 'cms-plugins-project-completion',
+            //     'priority'    => 5,
+            //     'parent_id'   => 'cms-plugins-form-submission',
+            //     'name'        => trans('projectcompletion::projectcompletion.menu'),
+            //     // 'icon'        => 'fa fa-image',
+            //     'url'         => route('projectcompletion.list'),
+            //     'permissions' => ['projectcompletion.list'],
+            // ]);
         });
     }
 }
