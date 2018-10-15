@@ -97,10 +97,10 @@ class VendorsDataTable extends DataTableAbstract
     public function buttons()
     {
         $buttons = [
-            'create' => [
-                'link' => route('vendors.create'),
-                'text' => view('bases::elements.tables.actions.create')->render(),
-            ],
+            // 'create' => [
+            //     'link' => route('vendors.create'),
+            //     'text' => view('bases::elements.tables.actions.create')->render(),
+            // ],
         ];
         return apply_filters(BASE_FILTER_DATATABLES_BUTTONS, $buttons, VENDORS_MODULE_SCREEN_NAME);
     }

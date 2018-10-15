@@ -1,6 +1,5 @@
 @extends('bases::layouts.master')
 @section('content')
-    
     <div class="main-form">
         <div class="form-body">
 
@@ -148,8 +147,6 @@
                 <label for="yourself" class="control-label">{{ trans('career::applicationform.forms.yourself') }}</label>
                 {!! Form::textarea('yourself', $application->yourself, ['class' => 'form-control', 'disabled'=>'disabled', 'rows' => 10, 'id' => 'yourself']) !!}
             </div>
-
         </div>
     </div>
-        
 @stop

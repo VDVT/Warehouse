@@ -62,6 +62,7 @@ class VendorsServiceProvider extends ServiceProvider
                 'parent_id'   => null,
                 'name'        => trans('Customer Services'),
                 'icon'        => 'fa fa-product-hunt',
+                'permissions' => ['customers.list'],
             ])
             ->registerItem([
                 'id' => 'cms-plugins-services-customer',

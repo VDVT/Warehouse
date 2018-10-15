@@ -48,10 +48,6 @@ class CustomerServiceController extends Controller
      */
     public function submitCustomerForm(SubmitCustomerFormRequest $request)
     {
-        // return redirect()->back()->withInput();
-        echo "<pre>"; 
-            print_r($request->all()); 
-        echo "</pre>"; die;
         SeoHelper::setTitle( '' );
         
         $dataForm = $request->all();
@@ -89,8 +85,8 @@ class CustomerServiceController extends Controller
         /* copy create application form */
         $cv = $request->attachment;
         $name = $request->vendor_name . '_' . date('mdY') . '_' . time() . '.' . $cv->getClientOriginalExtension();
-        $path = $cv->storeAs('resume', $name);
-        $data['attachment'] = $path;
+        $path = $cv->storeAs('customers', $name);
+        $dataForm['attachment'] = $path;
         /* end copy */
 
         $form = $this->vendorRepository->createOrUpdate($dataForm);
