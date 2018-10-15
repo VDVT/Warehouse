@@ -47,6 +47,7 @@ class SubmitCustomerFormRequest extends FormRequest
             'bank_name'    => 'required|string|max:255',
             'bank_address' => 'required|string|max:255',
             'is_amount'    => 'required|in:true,false,0,1',
+            'check_terms'    => 'required|in:true,1',
     	];
     }
 }

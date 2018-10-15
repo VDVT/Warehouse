@@ -18,21 +18,21 @@
                         <div class="row">
                             <div class="form-group col-sm-6">
                                 <label class="text-muted1 text-uppercase">Vendor Name</label>
-                                <input type="text" class="form-control @if($errors->has('vendor_name')) is-invalid @endif" placeholder="Vendor Name" name="vendor_name">
+                                <input type="text" value="{{ old('vendor_name') }}" class="form-control @if($errors->has('vendor_name')) is-invalid @endif" placeholder="Vendor Name" name="vendor_name">
                                 @if ($errors->has('vendor_name'))
                                     <span class="invalid-feedback">{{ $errors->first('vendor_name') }}</span>
                                 @endif
                             </div>
                             <div class="form-group col-sm-6">
                                 <label class="text-muted1 text-uppercase">Vendor Address</label>
-                                <input type="text" class="form-control @if($errors->has('address')) is-invalid @endif" placeholder="Vendor Address" name="address">
+                                <input type="text" value="{{ old('address') }}" class="form-control @if($errors->has('address')) is-invalid @endif" placeholder="Vendor Address" name="address">
                                 @if ($errors->has('address'))
                                     <span class="invalid-feedback">{{ $errors->first('address') }}</span>
                                 @endif
                             </div>
                             <div class="form-group col-sm-12">
                                 <label class="text-muted1 text-uppercase">Remittance Address (If different from above)</label>
-                                <input type="text" class="form-control @if($errors->has('remittance_address')) is-invalid @endif" placeholder="Remittance Address" name="remittance_address">
+                                <input type="text" value="{{ old('remittance_address') }}" class="form-control @if($errors->has('remittance_address')) is-invalid @endif" placeholder="Remittance Address" name="remittance_address">
                                 @if ($errors->has('remittance_address'))
                                     <span class="invalid-feedback">{{ $errors->first('remittance_address') }}</span>
                                 @endif
@@ -41,31 +41,31 @@
                                 <label class="text-muted1 text-uppercase">Contact Information</label>
                                 <div class="row">
                                     <div class="form-group col-sm-12">
-                                        <input type="text" class="form-control @if($errors->has('contact_name')) is-invalid @endif" placeholder="Name" name="contact_name">
+                                        <input type="text" value="{{ old('contact_name') }}" class="form-control @if($errors->has('contact_name')) is-invalid @endif" placeholder="Name" name="contact_name">
                                         @if ($errors->has('contact_name'))
                                             <span class="invalid-feedback">{{ $errors->first('contact_name') }}</span>
                                         @endif
                                     </div>
                                     <div class="form-group col-sm-6">
-                                        <input type="text" class="form-control @if($errors->has('phone')) is-invalid @endif" placeholder="Phone" name="phone">
+                                        <input type="text" value="{{ old('phone') }}" class="form-control @if($errors->has('phone')) is-invalid @endif" placeholder="Phone" name="phone">
                                         @if ($errors->has('phone'))
                                             <span class="invalid-feedback">{{ $errors->first('phone') }}</span>
                                         @endif
                                     </div>
                                     <div class="form-group col-sm-6">
-                                        <input type="text" class="form-control @if($errors->has('fax')) is-invalid @endif" placeholder="Fax" name="fax">
+                                        <input type="text" value="{{ old('fax') }}" class="form-control @if($errors->has('fax')) is-invalid @endif" placeholder="Fax" name="fax">
                                         @if ($errors->has('fax'))
                                             <span class="invalid-feedback">{{ $errors->first('fax') }}</span>
                                         @endif
                                     </div>
                                     <div class="form-group col-sm-6">
-                                        <input type="text" class="form-control @if($errors->has('email')) is-invalid @endif" placeholder="Email" name="email">
+                                        <input type="text" value="{{ old('email') }}" class="form-control @if($errors->has('email')) is-invalid @endif" placeholder="Email" name="email">
                                         @if ($errors->has('email'))
                                             <span class="invalid-feedback">{{ $errors->first('email') }}</span>
                                         @endif
                                     </div>
                                     <div class="form-group col-sm-6">
-                                        <input type="text" class="form-control @if($errors->has('website')) is-invalid @endif" placeholder="Website" name="website">
+                                        <input type="text" value="{{ old('website') }}" class="form-control @if($errors->has('website')) is-invalid @endif" placeholder="Website" name="website">
                                         @if ($errors->has('website'))
                                             <span class="invalid-feedback">{{ $errors->first('website') }}</span>
                                         @endif
@@ -74,7 +74,7 @@
                             </div>
                             <div class="form-group col-sm-12">
                                 <label><span class="text-custom">What type of items or service will this vendor be supplying?</span> (See vendor categories list)</label>
-                                <textarea class="form-control @if($errors->has('service_type')) is-invalid @endif" rows="3" name="service_type"></textarea>
+                                <textarea class="form-control @if($errors->has('service_type')) is-invalid @endif" rows="3" name="service_type">{{ old('service_type') }}</textarea>
                                 @if ($errors->has('service_type'))
                                     <span class="invalid-feedback">{{ $errors->first('service_type') }}</span>
                                 @endif

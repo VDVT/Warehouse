@@ -71,6 +71,7 @@ class CareerServiceProvider extends ServiceProvider
 
         $this->mergeConfigFrom(__DIR__ . '/../../config/application.php', 'application');
 
+        return;
         Event::listen(SessionStarted::class, function () {
             dashboard_menu()->registerItem([
                 'id'          => 'cms-plugins-career',

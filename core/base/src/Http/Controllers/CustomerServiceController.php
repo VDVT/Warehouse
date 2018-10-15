@@ -48,6 +48,10 @@ class CustomerServiceController extends Controller
      */
     public function submitCustomerForm(SubmitCustomerFormRequest $request)
     {
+        // return redirect()->back()->withInput();
+        echo "<pre>"; 
+            print_r($request->all()); 
+        echo "</pre>"; die;
         SeoHelper::setTitle( '' );
         
         $dataForm = $request->all();
