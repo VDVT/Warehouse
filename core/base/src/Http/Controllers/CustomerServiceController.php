@@ -10,6 +10,8 @@ use Botble\Vendors\Repositories\Interfaces\VendorsInterface;
 use Botble\Customers\Repositories\Interfaces\CustomersInterface;
 use SeoHelper;
 use Theme;
+use App\Mail\CustomerSent;
+use Mail;
 
 class CustomerServiceController extends Controller
 {
@@ -53,7 +55,8 @@ class CustomerServiceController extends Controller
         $form = $this->customerRepository->createOrUpdate($dataForm);
 
         /* SendMail */
-
+        Mail::send(new CustomerSent($form));
+        
         return redirect()->route('public.services.customer-info')
                     ->withSuccess(trans('Submit success customer form.'));
 

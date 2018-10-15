@@ -33,7 +33,6 @@ class Customers extends Eloquent
 		'contact_phone',
 		'contact_fax',
 		'contact_email',
-		'status',
 
     	'tax_number',
 		'duns_number',
