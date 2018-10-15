@@ -138,6 +138,12 @@
       color: #fff;
       z-index: 999; }
 </style>
+<script>
+    $('.close-alert').on('click', function(event) {
+        event.preventDefault();
+        $(this).closest('#close-alert').hide("slow");
+    });
+</script>
 </main>
 </body>
 </html>

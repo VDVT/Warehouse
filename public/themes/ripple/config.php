@@ -48,6 +48,7 @@ return [
             $theme->asset()->container('footer')->usePath()->add('bootstrap-js', 'vendor/bootstrap/js/bootstrap.min.js');
             // $theme->asset()->container('footer')->usePath()->add('owl-carousel-js', 'plugins/OwlCarousel2-2.2.1/dist/owl.carousel.js');
             $theme->asset()->container('footer')->usePath()->add('slick-js', 'plugins/slick/slick.min.js');
+            $theme->asset()->container('footer')->usePath()->add('toastr-js', 'plugins/toastr/build/toastr.min.js',['jquery']);
             // $theme->asset()->container('footer')->usePath()->add('scombobox', 'js/jquery.scombobox.min.js');
             // $theme->asset()->container('footer')->usePath()->add('wow-js', 'js/wow.min.js');
             // $theme->asset()->container('footer')->usePath()->add('bootstrap-datepicker', 'js/bootstrap-datepicker.min.js');
@@ -62,6 +63,7 @@ return [
             // $theme->asset()->usePath()->add('owl-theme', 'plugins/OwlCarousel2-2.2.1/dist/assets/owl.theme.default.css');
             $theme->asset()->usePath()->add('slick', 'plugins/slick/slick.css');
             $theme->asset()->usePath()->add('slick-theme', 'plugins/slick/slick-theme.css');
+            $theme->asset()->usePath()->add('toastr-css', 'plugins/toastr/build/toastr.min.css');
             // $theme->asset()->usePath()->add('animate', 'css/animate.css');
             // $theme->asset()->usePath()->add('animate-theme', 'css/theme-animate.css');
             $theme->asset()->usePath()->add('font', 'plugins/fonts/fonts.css');

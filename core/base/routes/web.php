@@ -195,15 +195,6 @@ Route::group(['namespace' => 'Botble\Base\Http\Controllers', 'middleware' => 'we
         });
 
         Route::group(['prefix' => 'customer-services'], function () {
-            Route::get('/carrer-oppotunities', [
-                'as'   => 'public.services.carrer-oppotunities',
-                'uses' => 'CustomerServiceController@showCarrerForm',
-            ]);
-
-            Route::post('/carrer-oppotunities', [
-                'as'   => 'public.services.carrer-oppotunities-post',
-                'uses' => 'CustomerServiceController@submitCarrerForm',
-            ]);
 
             Route::get('/customer-info', [
                 'as'   => 'public.services.customer-info',
@@ -222,7 +213,7 @@ Route::group(['namespace' => 'Botble\Base\Http\Controllers', 'middleware' => 'we
 
             Route::post('/vendor-package', [
                 'as'   => 'public.services.vendor-package-post',
-                'uses' => 'CustomerServiceController@showVendorForm',
+                'uses' => 'CustomerServiceController@submitVendorForm',
             ]);
         });
 

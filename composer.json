@@ -92,7 +92,8 @@
             "Botble\\Faq\\": "plugins/faq/src",
             "Botble\\Donation\\": "plugins/donation/src",
             "Botble\\Projectcompletion\\": "plugins/projectcompletion/src",
-            "Botble\\Services\\": "plugins/services/src"
+            "Botble\\Vendors\\": "plugins/vendors/src",
+            "Botble\\Customers\\": "plugins/customers/src"
         }
     },
     "autoload-dev": {

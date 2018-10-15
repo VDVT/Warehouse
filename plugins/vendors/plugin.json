@@ -1,0 +1,9 @@
+{
+    "name": "Vendors",
+    "provider": "Botble\\Vendors\\Providers\\VendorsServiceProvider",
+    "plugin": "Botble\\Vendors\\Plugin",
+    "author": "Sang Nguyen",
+    "url": "http://sangnguyen.info",
+    "version": "1.0",
+    "description": "Vendors"
+}

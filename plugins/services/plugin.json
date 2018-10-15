@@ -1,9 +1,0 @@
-{
-    "name": "Services",
-    "provider": "Botble\\Services\\Providers\\ServicesServiceProvider",
-    "plugin": "Botble\\Services\\Plugin",
-    "author": "Sang Nguyen",
-    "url": "http://sangnguyen.info",
-    "version": "1.0",
-    "description": "Services"
-}

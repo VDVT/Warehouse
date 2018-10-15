@@ -148,6 +148,9 @@ class PageController extends Controller
 
     public function getCareer()
     {
+        /* custom css and js for page */
+        Theme::asset()->usePath()->add('style-career', 'css/page/career/career.css', ['style']);
+
         $careers = $this->careerRepository->getCareers();
         SeoHelper::setTitle( 'Career Opportunities' );
         return Theme::scope('page.career', compact('careers'))->render();
@@ -155,6 +158,9 @@ class PageController extends Controller
 
     public function getApplicationForm()
     {
+        /* custom css and js for page */
+        Theme::asset()->usePath()->add('style-career-form', 'css/page/career/form.css', ['style']);
+
         $states = State::orderBy('ordering', 'asc')->get()->pluck('name', 'id')->toArray();
         $careers = $this->careerRepository->getCareers();
         SeoHelper::setTitle( 'Application Form' );

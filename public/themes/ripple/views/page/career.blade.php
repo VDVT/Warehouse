@@ -67,13 +67,6 @@
                                 }
                             }
                         ?>
-                        <!-- <li data="{{ $source }}/career/Logistic.png">Logistic</li>
-                        <li data="{{ $source }}/career/Sales.png">Sales</li>
-                        <li data="{{ $source }}/career/Safety.png">Marketing</li>
-                        <li data="{{ $source }}/career/Technicaldesign.png">Technical Design</li>
-                        <li data="{{ $source }}/career/Projectmanagement.png">Project Management</li>
-                        <li data="{{ $source }}/career/QualityAssurance.png">Quality Assurance</li>
-                        <li data="{{ $source }}/career/Safety.png">Safety</li> -->
                     </ul>
                 </div>
                 <div class="box-right d-flex align-items-center justify-content-center">

@@ -1,0 +1,50 @@
+.contact_acc_manager {
+  background-color: #f3f3f3;
+  padding: 80px 0;
+  padding-top: 80px; }
+  .contact_acc_manager .title {
+    font-size: 30px;
+    font-family: 'FranklinGothic Demi';
+    margin-bottom: 60px;
+    color: #e7661f; }
+  .contact_acc_manager .form-group .form-control {
+    font-size: 14px;
+    font-family: 'FranklinGothic Book';
+    border: none; }
+  .contact_acc_manager .form-group input.form-control {
+    height: 44px; }
+  .contact_acc_manager .form-group select.form-control {
+    height: 44px; }
+  .contact_acc_manager .btn {
+    background-color: transparent;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border-width: 2px;
+    font-family: 'FranklinGothic Medium';
+    font-size: 14px;
+    border-color: #e7661f;
+    color: #e7661f;
+    padding-right: 25px;
+    padding-left: 25px;
+    text-transform: uppercase; }
+  .contact_acc_manager #exampleFormControlFile1 {
+    padding-left: 15px; }
+
+.title1 {
+  color: #e7661f;
+  font-size: 17px;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.check1 {
+  margin-bottom: 20px; }
+  .check1 input[type='checkbox'] {
+    margin-left: 0; }
+  .check1 .form-check-label {
+    font-size: 14px !important;
+    padding-left: 25px; }
+
+.form-check {
+    position: relative;
+    display: block;}

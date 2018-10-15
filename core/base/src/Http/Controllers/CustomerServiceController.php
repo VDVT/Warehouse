@@ -4,8 +4,10 @@ namespace Botble\Base\Http\Controllers;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
-use Botble\Services\Repositories\Interfaces\CustomerInterface;
 use Botble\Base\Request\SubmitCustomerFormRequest;
+use Botble\Base\Request\SubmitVendorFormRequest;
+use Botble\Vendors\Repositories\Interfaces\VendorsInterface;
+use Botble\Customers\Repositories\Interfaces\CustomersInterface;
 use SeoHelper;
 use Theme;
 
@@ -17,34 +19,15 @@ class CustomerServiceController extends Controller
      */
     protected $customerRepository;
 
-    public function __construct(CustomerInterface $customerRepository)
-    {
-        $this->customerRepository = $customerRepository;
-    }
-
     /**
-     * Show Carrer Form
-     * @return view
+     * @var CarrerInterface
      */
-    public function showCarrerForm()
+    protected $vendorRepository;
+
+    public function __construct(VendorsInterface $vendor, CustomersInterface $customer)
     {
-        SeoHelper::setTitle( '' );
-        return Theme::scope('services.carrer-oppotunities')->render();
-    }
-
-    /**
-     * Show Carrer Form
-     * @return view
-     */
-    public function submitCarrerForm(Request $request)
-    {
-        SeoHelper::setTitle( '' );
-
-        $dataForm = $request->all();
-
-        // $this->carrerRepository->create($dataForm);
-
-        return redirect()->back()->with('success_msg', 'Your message has been successfully sent.');
+        $this->customerRepository = $customer;
+        $this->vendorRepository   = $vendor;
     }
 
     /**
@@ -66,11 +49,14 @@ class CustomerServiceController extends Controller
         SeoHelper::setTitle( '' );
         
         $dataForm = $request->all();
-        $form = $this->customerRepository->create($dataForm);
+
+        $form = $this->customerRepository->createOrUpdate($dataForm);
 
         /* SendMail */
 
-        return redirect()->back()->with('success_msg', 'Your message has been successfully sent.');
+        return redirect()->route('public.services.customer-info')
+                    ->withSuccess(trans('Submit success customer form.'));
+
     }
 
     /**
@@ -81,6 +67,30 @@ class CustomerServiceController extends Controller
     {
         SeoHelper::setTitle( '' );
         return Theme::scope('services.vendor-package')->render();
+    }
+
+    /**
+     * Show Vendor Form
+     * @return view
+     */
+    public function submitVendorForm(SubmitVendorFormRequest $request)
+    {
+        SeoHelper::setTitle( '' );
+
+        $dataForm = $request->all();
+
+        /* copy create application form */
+        $cv = $request->attachment;
+        $name = $request->vendor_name . '_' . date('mdY') . '_' . time() . '.' . $cv->getClientOriginalExtension();
+        $path = $cv->storeAs('resume', $name);
+        $data['attachment'] = $path;
+        /* end copy */
+
+        $form = $this->vendorRepository->createOrUpdate($dataForm);
+
+        return redirect()->route('public.services.vendor-package')
+                    ->withSuccess(trans('Submit success vendor form.'));
+
     }
 
 }
