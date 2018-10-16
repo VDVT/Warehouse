@@ -3,7 +3,7 @@
     @parent
     <style>
         #name_ifr{height: 100px!important}
-        .editor-action-item, #mceu_0, #mceu_13, #mceu_14, #mceu_15, #mceu_16, #mceu_17{display: none;}
+        .editor-action-item{display: none;}
     </style>
 @endsection
 @section('content')

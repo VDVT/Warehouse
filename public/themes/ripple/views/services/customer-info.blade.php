@@ -540,7 +540,6 @@
                                             <a target="_blank" href="http://umhwholesale.tinyprovider.us/uploads/4/1-umh-new-customer-form-updated.pdf">Check here if you agree with our terms and conditions*</a>
                                         </label>
                                     </div>
-                                    <div>Date <span class="text-muted2">MM/DD/YY</span></div>
                                 </div>
                                 @if ($errors->has('check_terms'))
                                     <span class="invalid-feedback" style="display: block;">{{ $errors->first('check_terms') }}</span>

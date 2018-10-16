@@ -8,7 +8,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Botble\Customers\Models\Customers;
 
-class ApplicationSent extends Mailable
+class CustomerSent extends Mailable
 {
     use Queueable, SerializesModels;
 
