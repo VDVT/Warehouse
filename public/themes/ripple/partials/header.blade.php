@@ -32,7 +32,7 @@
                                     </ul>
                                 </li>
                                 <li class="logo"><a href="/"><img src="{{ url(theme_option('logo')) }}" alt="{{ setting('site_title') }}"></a></li>
-                                <li><a href="#">Gallery</a></li>
+                                <li><a href="{{ route('public.gallery.index') }}">Gallery</a></li>
                                 <li><a href="{{ route('public.post.list') }}">News</a></li>
                                 <li><a href="{{ route('public.literature.list') }}">Literature</a></li>
                                 <li><a href="{{ route('public.page.contactus') }}">Contact Us</a></li>

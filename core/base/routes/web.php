@@ -217,6 +217,21 @@ Route::group(['namespace' => 'Botble\Base\Http\Controllers', 'middleware' => 'we
             ]);
         });
 
+        Route::group(['prefix' => 'gallery'], function () {
+
+            Route::get('/', [
+                'as'   => 'public.gallery.index',
+                'uses' => 'GalleryController@showGalleryForm',
+            ]);
+
+            Route::post('/detail', [
+                'as'   => 'public.gallery.detail',
+                'uses' => 'GalleryController@submitCustomerForm',
+            ]);
+
+            
+        });
+
 
         Route::get('/', [
             'as' => 'public.index',
