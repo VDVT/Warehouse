@@ -1,8 +1,3 @@
-window.onload = function() {
-    $('.form-group .form-control').on('focus blur', function (e) {
-        $(this).parents('.form-group').toggleClass('active', (e.type === 'focus' || this.value.length > 0));
-    }).trigger('blur');
-};
 $(document).ready(function() {
     var body                    = $('body'),
         nav_menu_ul             = $('.header-menu .navigation'),
@@ -17,7 +12,8 @@ $(document).ready(function() {
         initSidebar  : function() {
             nav_menu_li.each(function(index, el) {
                 // If el is Last element
-                if (index == nav_menu_li.length - 1) return;
+                // if (index == nav_menu_li.length - 1) return;
+                if ($(el).hasClass('search-form')) return;
 
                 // Don't Clone elelemt is mobile button
                 $(el).hasClass('mobile') || $(el).hasClass('logo') ? $(el) : $(el).clone().appendTo(nav_mobile_ul);

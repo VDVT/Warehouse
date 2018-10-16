@@ -97,10 +97,10 @@ class CustomersDataTable extends DataTableAbstract
     public function buttons()
     {
         $buttons = [
-            'create' => [
-                'link' => route('customers.create'),
-                'text' => view('bases::elements.tables.actions.create')->render(),
-            ],
+            // 'create' => [
+            //     'link' => route('customers.create'),
+            //     'text' => view('bases::elements.tables.actions.create')->render(),
+            // ],
         ];
         return apply_filters(BASE_FILTER_DATATABLES_BUTTONS, $buttons, CUSTOMERS_MODULE_SCREEN_NAME);
     }
