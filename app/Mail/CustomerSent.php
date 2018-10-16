@@ -31,7 +31,7 @@ class CustomerSent extends Mailable
     public function build()
     {
 
-        $amount = $customer->is_amount;
+        $amount = $this->customer->is_amount;
         
         if($amount)
         {
