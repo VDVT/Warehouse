@@ -355,7 +355,7 @@ theme_option()->setSection([
             'type' => 'text',
             'label' => __('Customer Info Form - Less than 50K'),
             'attributes' => [
-                'name' => 'amount_more_than_50_email',
+                'name' => 'amount_less_than_50_email',
                 'value' => null,
                 'options' => [
                     'class' => 'form-control',

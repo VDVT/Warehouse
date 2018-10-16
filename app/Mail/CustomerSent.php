@@ -50,6 +50,6 @@ class CustomerSent extends Mailable
         return $this->subject( 'New Customer Submission' )
                     ->from( config('mail.from.address'), setting('site_title') )
                     ->to( $email )
-                    ->view('theme::mail.application-form');
+                    ->view('theme::mail.customer-form');
     }
 }
