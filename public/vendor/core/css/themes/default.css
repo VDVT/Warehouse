@@ -9,7 +9,6 @@
 #cms-plugins-industrials,
 #navbar-icons > li:nth-child(2), #navbar-icons > li:nth-child(3), 
 #widget_analytics_general, #widget_analytics_page, #widget_analytics_browser, #widget_analytics_referrer, #widget_audit_logs,
-#widget_request_errors, #widget_posts_recent, .manage-widget,
-.dt-buttons a{
+#widget_request_errors, #widget_posts_recent, .manage-widget{
 	display: none;
 }
