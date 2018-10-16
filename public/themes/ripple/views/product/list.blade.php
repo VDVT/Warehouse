@@ -255,7 +255,7 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <p>Not sure what you need ? <span>We're here to help!</span></p>
-                    <a href="contact_us.php" class="btn btn-warning btn-effect text-uppercase">Contact Us</a>
+                    <a href="{{ route('public.page.contactus') }}" class="btn btn-warning btn-effect text-uppercase">Contact Us</a>
                 </div>
             </div>
         </div>

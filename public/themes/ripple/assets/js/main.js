@@ -1,3 +1,8 @@
+window.onload = function() {
+    $('.form-group .form-control').on('focus blur', function (e) {
+        $(this).parents('.form-group').toggleClass('active', (e.type === 'focus' || this.value.length > 0));
+    }).trigger('blur');
+};
 $(document).ready(function() {
     var body                    = $('body'),
         nav_menu_ul             = $('.header-menu .navigation'),

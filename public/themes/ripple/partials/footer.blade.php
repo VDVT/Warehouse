@@ -33,10 +33,12 @@
             <div class="row">
                 <div class="col-md-6 m-b-sm-3">
                     <div class="footer-social">
-                        <a href="{{ theme_option('facebook') }}"><i class="fab fa-facebook-f"></i></a>
-                        <a href="{{ theme_option('google_plus') }}"><i class="fab fa-google-plus-g"></i></a>
-                        <a href="{{ theme_option('linkedin') }}"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="{{ theme_option('yelp') }}"><i class="fab fa-yelp"></i></a>
+                        <a target="_blank" href="{{ theme_option('instagram') }}"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a target="_blank" href="{{ theme_option('twitter') }}"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a target="_blank" href="{{ theme_option('facebook') }}"><i class="fab fa-facebook-f"></i></a>
+                        <a target="_blank" href="{{ theme_option('google_plus') }}"><i class="fab fa-google-plus-g"></i></a>
+                        <a target="_blank" href="{{ theme_option('linkedin') }}"><i class="fab fa-linkedin-in"></i></a>
+                        <a target="_blank" href="{{ theme_option('yelp') }}"><i class="fab fa-yelp"></i></a>
                         <a class="address"><i class="fas fa-map-marker-alt m-r-1"></i>{{ theme_option('address') }}</a>
                     </div>
                 </div>

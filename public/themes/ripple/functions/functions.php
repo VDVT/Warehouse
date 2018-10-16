@@ -339,7 +339,7 @@ theme_option()->setSection([
         [
             'id' => 'amount_more_than_50_email',
             'type' => 'text',
-            'label' => __('Email Receipt Amount More Than $50.000'),
+            'label' => __('Customer Info Form - More than 50K'),
             'attributes' => [
                 'name' => 'amount_more_than_50_email',
                 'value' => null,
@@ -353,23 +353,9 @@ theme_option()->setSection([
         [
             'id' => 'amount_less_than_50_email',
             'type' => 'text',
-            'label' => __('Email Receipt Amount Less Than $50.000'),
+            'label' => __('Customer Info Form - Less than 50K'),
             'attributes' => [
                 'name' => 'amount_more_than_50_email',
-                'value' => null,
-                'options' => [
-                    'class' => 'form-control',
-                    'placeholder' => '',
-                    'data-counter' => 120,
-                ]
-            ],
-        ],
-        [
-            'id' => 'donation_email',
-            'type' => 'text',
-            'label' => __('Donation Email (separated by ",")'),
-            'attributes' => [
-                'name' => 'donation_email',
                 'value' => null,
                 'options' => [
                     'class' => 'form-control',
@@ -440,20 +426,6 @@ theme_option()->setSection([
             'label' => __('Photo Submission Email (separated by ",")'),
             'attributes' => [
                 'name' => 'photo_submission_email',
-                'value' => null,
-                'options' => [
-                    'class' => 'form-control',
-                    'placeholder' => '',
-                    'data-counter' => 120,
-                ]
-            ],
-        ],
-        [
-            'id' => 'project_completion_email',
-            'type' => 'text',
-            'label' => __('Project Completion Email (separated by ",")'),
-            'attributes' => [
-                'name' => 'project_completion_email',
                 'value' => null,
                 'options' => [
                     'class' => 'form-control',

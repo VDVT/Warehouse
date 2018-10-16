@@ -5,7 +5,7 @@
                 <li class="breadcrumb-item active" aria-current="page">Customer Services</li>
             </ol>
         </nav>
-        <h1 class="text-muted1 font-1-demi">Register</h1>
+        <h1 class="text-muted1 font-1-demi">Customer Info Form</h1>
     </div>
 </div>
 <div class="clearfix" style="background-color: #f7f7f7;">
@@ -263,7 +263,7 @@
                                                 <div class="checkbox checkbox-circle checkbox-custom">
                                                     <input id="checkbox-circle-0" name="is_amount" type="radio" checked="" value="true">
                                                     <label for="checkbox-circle-0">
-                                                        More than 50000 USD
+                                                        More than 50,000 USD
                                                     </label>
                                                 </div>
                                             </div>
@@ -271,7 +271,7 @@
                                                 <div class="checkbox checkbox-circle checkbox-custom">
                                                     <input id="checkbox-circle-1" name="is_amount" type="radio" value="false">
                                                     <label for="checkbox-circle-1">
-                                                        Less than 50000 USD
+                                                        Less than 50,000 USD
                                                     </label>
                                                 </div>
                                             </div>
@@ -546,8 +546,6 @@
                                 @endif
                             </div>
                         </div>
-
-
                         <div class="text-right">
                             <button class="btn btn-outline-custom-i btn-round" type="submit">Submit</button>
                         </div>

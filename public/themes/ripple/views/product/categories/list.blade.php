@@ -31,7 +31,7 @@
     <div class="container">
         <div class="text-center p-y-5">
             <div class="h4 m-b-2 text-muted1">Not sure what you need ? <span class="text-custom">We're here to help!</span></div>
-            <button class="btn btn-outline-custom btn-round">Contact Us</button>
+            <a href="{{ route('public.page.contactus') }}" class="btn btn-outline-custom btn-round">Contact Us</a>
         </div>
     </div>
 </div>
