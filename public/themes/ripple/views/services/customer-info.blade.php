@@ -537,11 +537,9 @@
                                     <div class="checkbox checkbox-circle checkbox-custom m-b-sm-1">
                                         <input id="checkbox-circle-03" class="@if($errors->has('check_terms')) is-invalid @endif" type="checkbox" name="check_terms" value="true" {{ old('check_terms') ? 'checked' : '' }}>
                                         <label for="checkbox-circle-03" class="mb-0">
-                                            <a href="#">Check here if you agree with our terms and conditions*</a>
+                                            <a target="_blank" href="http://umhwholesale.tinyprovider.us/uploads/4/1-umh-new-customer-form-updated.pdf">Check here if you agree with our terms and conditions*</a>
                                         </label>
-                                        
                                     </div>
-                                    
                                     <div>Date <span class="text-muted2">MM/DD/YY</span></div>
                                 </div>
                                 @if ($errors->has('check_terms'))

@@ -52,13 +52,16 @@ class CustomerServiceController extends Controller
         
         $dataForm = $request->all();
 
+        $dataForm['is_amount'] = filter_var($request->get('is_amount'), FILTER_VALIDATE_BOOLEAN);
+        $dataForm['is_check_cod'] = filter_var($request->get('is_check_cod'), FILTER_VALIDATE_BOOLEAN);
+
         $form = $this->customerRepository->createOrUpdate($dataForm);
 
         /* SendMail */
         Mail::send(new CustomerSent($form));
         
         return redirect()->route('public.services.customer-info')
-                    ->withSuccess(trans('Submit success customer form.'));
+                    ->withSuccess(trans(' New customer form has been submitted successfully'));
 
     }
 
@@ -92,7 +95,7 @@ class CustomerServiceController extends Controller
         $form = $this->vendorRepository->createOrUpdate($dataForm);
 
         return redirect()->route('public.services.vendor-package')
-                    ->withSuccess(trans('Submit success vendor form.'));
+                    ->withSuccess(trans('New vendor form has been submitted successfully'));
 
     }
 

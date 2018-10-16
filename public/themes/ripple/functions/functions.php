@@ -323,11 +323,11 @@ theme_option()->setSection([
             ],
         ],
         [
-            'id' => 'contact_account_manager_email',
+            'id' => 'application_email',
             'type' => 'text',
-            'label' => __('Get a Quote Email (separated by ",")'),
+            'label' => __('Application From Email (separated by ",")'),
             'attributes' => [
-                'name' => 'contact_account_manager_email',
+                'name' => 'application_email',
                 'value' => null,
                 'options' => [
                     'class' => 'form-control',

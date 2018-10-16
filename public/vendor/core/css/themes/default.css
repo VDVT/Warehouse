@@ -1,0 +1,15 @@
+#cms-plugins-custom-field,
+#cms-plugins-gallery,
+#cms-plugins-block,
+#cms-core-appearance #cms-core-theme, #cms-core-appearance #cms-core-menu,
+#cms-core-plugins,
+#cms-core-widget,
+#cms-plugins-language,
+#cms-core-platform-administration,
+#cms-plugins-industrials,
+#navbar-icons > li:nth-child(2), #navbar-icons > li:nth-child(3), 
+#widget_analytics_general, #widget_analytics_page, #widget_analytics_browser, #widget_analytics_referrer, #widget_audit_logs,
+#widget_request_errors, #widget_posts_recent, .manage-widget,
+.dt-buttons a{
+	display: none;
+}

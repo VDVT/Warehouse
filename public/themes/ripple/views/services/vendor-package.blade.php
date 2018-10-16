@@ -80,7 +80,7 @@
                                 @endif
                             </div>
                             <div class="form-group col-sm-12">
-                                <label class="text-custom text-uppercase mr-2">All vendors must complete and submit form w-9</label> <a href="#">Attachments</a>
+                                <label class="text-custom text-uppercase mr-2">All vendors must complete and submit form w-9</label> <a target="_blank" href="http://umhwholesale.tinyprovider.us/uploads/4/fw9.pdf">Download W-9 form</a>
                                 <input type="file" id="attachment" name="attachment" class="form-control @if($errors->has('attachment')) is-invalid @endif">
                                 @if ($errors->has('attachment'))
                                     <span class="invalid-feedback">{{ $errors->first('attachment') }}</span>
