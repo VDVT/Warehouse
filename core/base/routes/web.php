@@ -224,12 +224,11 @@ Route::group(['namespace' => 'Botble\Base\Http\Controllers', 'middleware' => 'we
                 'uses' => 'GalleryController@showGalleryForm',
             ]);
 
-            Route::post('/detail', [
+            Route::get('/detail/{id?}', [
                 'as'   => 'public.gallery.detail',
-                'uses' => 'GalleryController@submitCustomerForm',
+                'uses' => 'GalleryController@detailGalleryForm',
             ]);
 
-            
         });
 
 

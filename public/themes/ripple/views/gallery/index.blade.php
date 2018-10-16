@@ -19,7 +19,7 @@
                         <div class="gallery-thumb">
                             <img class="content" src="{{ $gallery->image }}" alt=""/>
                             <div class="gallery-backdrop">
-                                <a href="#" class="text-white h1"><img src="assets/img/icon/search-plus.png" class="w-100"></a>
+                                <a href="{{ route('public.gallery.detail',['id' => $gallery->id]) }}" class="text-white h1"><img src="assets/img/icon/search-plus.png" class="w-100"></a>
                             </div>
                         </div>
                         <div class="gallery-title">{{ $gallery->description }}</div>

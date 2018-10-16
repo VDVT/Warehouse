@@ -43,12 +43,13 @@ class GalleryController extends Controller
     public function showGalleryForm(){
 
         $galleries = $this->galleryRepository->all();
-
-        // echo "<pre>"; 
-        //     print_r($galleries->toArray()); 
-        // echo "</pre>"; die;
-
         return Theme::scope('gallery.index',compact('galleries'))->render();
+    }
+
+    public function detailGalleryForm(){
+
+        $galleries = $this->galleryRepository->all();
+        return Theme::scope('gallery.detail',compact('galleries'))->render();
     }
 
     /**
