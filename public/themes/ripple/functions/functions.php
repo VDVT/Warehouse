@@ -364,6 +364,104 @@ theme_option()->setSection([
                 ]
             ],
         ],
+        [
+            'id' => 'donation_email',
+            'type' => 'text',
+            'label' => __('Donation Email (separated by ",")'),
+            'attributes' => [
+                'name' => 'donation_email',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'customer_service_email',
+            'type' => 'text',
+            'label' => __('Customer Service Email (separated by ",")'),
+            'attributes' => [
+                'name' => 'customer_service_email',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'order_inquires_email',
+            'type' => 'text',
+            'label' => __('Billing Email (separated by ",")'),
+            'attributes' => [
+                'name' => 'order_inquires_email',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'part_request_email',
+            'type' => 'text',
+            'label' => __('Part Request Email (separated by ",")'),
+            'attributes' => [
+                'name' => 'part_request_email',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'sale_quote_email',
+            'type' => 'text',
+            'label' => __('Sale Quote Email (separated by ",")'),
+            'attributes' => [
+                'name' => 'sale_quote_email',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'photo_submission_email',
+            'type' => 'text',
+            'label' => __('Photo Submission Email (separated by ",")'),
+            'attributes' => [
+                'name' => 'photo_submission_email',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
+            'id' => 'project_completion_email',
+            'type' => 'text',
+            'label' => __('Project Completion Email (separated by ",")'),
+            'attributes' => [
+                'name' => 'project_completion_email',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
     ],
 ]);
 /* theme option emails of cm UnitedMH*/
@@ -458,7 +556,6 @@ theme_option()->setSection([
 //                 ]
 //             ],
 //         ],
-
 //         [
 //             'id' => 'part_request_email',
 //             'type' => 'text',

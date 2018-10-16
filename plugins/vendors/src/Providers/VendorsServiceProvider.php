@@ -74,6 +74,15 @@ class VendorsServiceProvider extends ServiceProvider
                 'permissions' => ['customers.list'],
             ])
             ->registerItem([
+                'id' => 'cms-plugins-career-applicationform',
+                'priority' => 3,
+                'parent_id' => 'cms-plugins-services',
+                'name' => trans('career::applicationform.menu'),
+                'icon' => null,
+                'url' => route('applicationform.list'),
+                'permissions' => ['customers.list'],
+            ])
+            ->registerItem([
                 'id' => 'cms-plugins-services-vendor',
                 'priority' => 2,
                 'parent_id' => 'cms-plugins-services',

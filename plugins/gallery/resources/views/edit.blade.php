@@ -11,10 +11,10 @@
                         {!! Form::text('name', $gallery->name, ['class' => 'form-control', 'id' => 'name', 'placeholder' => trans('bases::forms.name_placeholder'), 'data-counter' => 120]) !!}
                         {!! Form::error('name', $errors) !!}
                     </div>
-                    <div class="form-group">
+                    <!-- <div class="form-group">
                         {!! Form::permalink('slug', $gallery->slug, $gallery->id, route('galleries.create.slug'), route('public.gallery', config('cms.slug.pattern')), url('/gallery/')) !!}
                         {!! Form::error('slug', $errors) !!}
-                    </div>
+                    </div> -->
                     <div class="form-group @if ($errors->has('description')) has-error @endif">
                         <label for="description" class="control-label required">{{ trans('bases::forms.description') }}</label>
                         {!! Form::textarea('description', $gallery->description, ['class' => 'form-control', 'rows' => 4, 'id' => 'description', 'placeholder' => trans('bases::forms.description'), 'data-counter' => 400]) !!}

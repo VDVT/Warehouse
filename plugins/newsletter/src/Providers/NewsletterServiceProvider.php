@@ -60,20 +60,20 @@ class NewsletterServiceProvider extends ServiceProvider
                 'id'          => 'cms-plugins-form-submission',
                 'priority'    => 120,
                 'parent_id'   => null,
-                'name'        => trans('newsletter::newsletter.form_submission_menu'),
+                'name'        => 'Email Newsletter',
                 'icon'        => 'fa fa-leanpub',
                 'url'         => route('newsletter.list'),
                 'permissions' => ['newsletter.list'],
-            ])
-            ->registerItem([
-                'id'          => 'cms-plugins-newsletter',
-                'priority'    => 1,
-                'parent_id'   => 'cms-plugins-form-submission',
-                'name'        => trans('newsletter::newsletter.menu'),
-                // 'icon'        => 'fa fa-leanpub',
-                'url'         => route('newsletter.list'),
-                'permissions' => ['newsletter.list'],
-            ])
+            ]);
+            // ->registerItem([
+            //     'id'          => 'cms-plugins-newsletter',
+            //     'priority'    => 1,
+            //     'parent_id'   => 'cms-plugins-form-submission',
+            //     'name'        => trans('newsletter::newsletter.menu'),
+            //     // 'icon'        => 'fa fa-leanpub',
+            //     'url'         => route('newsletter.list'),
+            //     'permissions' => ['newsletter.list'],
+            // ])
             // ->registerItem([
             //     'id'          => 'cms-plugins-donation',
             //     'priority'    => 2,
@@ -83,15 +83,6 @@ class NewsletterServiceProvider extends ServiceProvider
             //     'url'         => route('donation.list'),
             //     'permissions' => ['donation.list'],
             // ])
-            ->registerItem([
-                'id' => 'cms-plugins-career-applicationform',
-                'priority' => 3,
-                'parent_id' => 'cms-plugins-form-submission',
-                'name' => trans('career::applicationform.menu'),
-                'icon' => null,
-                'url' => route('applicationform.list'),
-                'permissions' => ['application.list'],
-            ]);
             // ->registerItem([
             //     'id'          => 'cms-plugins-contact',
             //     'priority'    => 4,
