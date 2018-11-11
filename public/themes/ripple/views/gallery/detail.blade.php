@@ -14,6 +14,16 @@
         <div class="p-y-6">
             <h4 class="text-uppercase text-center m-b-2">building on your priorities</h4>
             <div class="gallery-slider">
+
+                @if(!empty($gallery))
+                    <div class="slider-item">
+                        <img class="m-b-2" src="{{ $gallery->image }}" alt="{{ $gallery->name }}">
+                        <div class="text-center">
+                            <a href="{{ $gallery->image }}" target="_blank" class="text-custom"><i class="fas fa-download"></i> Download</a>
+                        </div>
+                    </div>
+                @endif
+
                 @foreach($galleries as $gallery)
                 <div class="slider-item">
                     <img class="m-b-2" src="{{ $gallery->image }}" alt="{{ $gallery->name }}">
@@ -22,6 +32,7 @@
                     </div>
                 </div>
                 @endforeach
+                
             </div>
         </div>
     </div>

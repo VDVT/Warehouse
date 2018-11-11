@@ -57,9 +57,19 @@ class GalleryController extends Controller
      */
     public function detailGalleryForm($id = null){
 
-        // if($id)
+        SeoHelper::setTitle( '' );
+        
         $galleries = $this->galleryRepository->all();
-        return Theme::scope('gallery.detail',compact('galleries'))->render();
+        
+        $gallery = $galleries->first(function($gallery, $key) use ($id){
+            return $gallery->id === (int)$id; //retun gallery with id
+        });
+
+        $galleries = $galleries->filter(function($gallery, $key) use ($id){
+            return $gallery->id !== (int)$id;
+        });
+
+        return Theme::scope('gallery.detail',compact('galleries','gallery'))->render();
     }
 
     /**
