@@ -31,7 +31,7 @@
         </div>
     </div>
 </div>
-<div class="bg_about_us_3 align-items-center">
+<!-- <div class="bg_about_us_3 align-items-center">
     <div class="row no-gutters">
         <div class="col-md-4 box-1 d-flex align-items-center" style="background: url('{{$source}}/about_us/rectangle3.png'); min-height: 620px;">
             <div class="overlight"></div>
@@ -89,4 +89,4 @@
         <div class="col-md-6"></div>
     </div>
 </div>
-</section>
+</section> -->
