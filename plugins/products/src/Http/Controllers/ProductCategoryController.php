@@ -147,10 +147,10 @@ class ProductCategoryController extends BaseController
                 abort(404);
             }
 
-            // if (!$category->is_default) {
-            //     $this->categoryRepository->delete($category);
-            //     do_action(BASE_ACTION_AFTER_DELETE_CONTENT, PRODUCT_CATEGORY_MODULE_SCREEN_NAME, $request, $category);
-            // }
+            if (!$category->is_default) {
+                $this->categoryRepository->delete($category);
+                do_action(BASE_ACTION_AFTER_DELETE_CONTENT, PRODUCT_CATEGORY_MODULE_SCREEN_NAME, $request, $category);
+            }
 
             return [
                 'error' => false,
@@ -181,11 +181,11 @@ class ProductCategoryController extends BaseController
 
         foreach ($ids as $id) {
             $category = $this->categoryRepository->findById($id);
-            // if (!$category->is_default) {
-            //     $this->categoryRepository->delete($category);
+            if (!$category->is_default) {
+                $this->categoryRepository->delete($category);
 
-            //     do_action(BASE_ACTION_AFTER_DELETE_CONTENT, PRODUCT_CATEGORY_MODULE_SCREEN_NAME, $request, $category);
-            // }
+                do_action(BASE_ACTION_AFTER_DELETE_CONTENT, PRODUCT_CATEGORY_MODULE_SCREEN_NAME, $request, $category);
+            }
         }
 
         return [

@@ -16,9 +16,9 @@
             <div class="gallery-slider">
                 @foreach($galleries as $gallery)
                 <div class="slider-item">
-                    <img class="m-b-2" src="/{{ $gallery->image }}" alt="{{ $gallery->name }}">
+                    <img class="m-b-2" src="{{ $gallery->image }}" alt="{{ $gallery->name }}">
                     <div class="text-center">
-                        <a href="/{{ $gallery->image }}" target="_blank" class="text-custom"><i class="fas fa-download"></i> Download</a>
+                        <a href="{{ $gallery->image }}" target="_blank" class="text-custom"><i class="fas fa-download"></i> Download</a>
                     </div>
                 </div>
                 @endforeach

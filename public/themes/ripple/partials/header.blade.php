@@ -26,7 +26,7 @@
                                 <li class="has-children">
                                     <a href="#">Customer Service</a>
                                     <ul class="sub-menu">
-                                        <li><a href="{{ route('public.page.career') }}">Carrer Oppotunities</a></li>
+                                        <li><a href="{{ route('public.page.career') }}">Career Opportunities</a></li>
                                         <li><a href="{{ route('public.services.customer-info') }}">Customer Info Form</a></li>
                                         <li><a href="{{ route('public.services.vendor-package') }}">New Vendor Packet Form</a></li>
                                     </ul>

@@ -1,9 +1,9 @@
 @extends('bases::layouts.master')
 @section('head')
     @parent
-    <style>
+    <!-- <style>
         .editor-action-item, #mceu_0, #mceu_14, #mceu_15, #mceu_16, #mceu_17{display: none;}
-    </style>
+    </style> -->
 @endsection
 @section('content')
     {!! Form::open(['route' => ['products.edit', $products->id]]) !!}

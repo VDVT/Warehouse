@@ -39,15 +39,25 @@ class GalleryController extends Controller
         $this->galleryRepository   = $gallery;
     }
 
-
+    /**
+     * Show Form Gallery.
+     * @param type|null $id 
+     * @return view
+     */
     public function showGalleryForm(){
 
         $galleries = $this->galleryRepository->all();
         return Theme::scope('gallery.index',compact('galleries'))->render();
     }
 
-    public function detailGalleryForm(){
+    /**
+     * Show FullScreen Gallery.
+     * @param type|null $id 
+     * @return view
+     */
+    public function detailGalleryForm($id = null){
 
+        // if($id)
         $galleries = $this->galleryRepository->all();
         return Theme::scope('gallery.detail',compact('galleries'))->render();
     }
