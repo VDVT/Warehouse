@@ -6,7 +6,9 @@
 	    </div>
     @endforeach
 </section>
-
+<style type="text/css">
+    .banner-img .banner-title { font-size: 49px }
+</style>
 <script type="text/javascript">
 	$(document).ready(function() {
         $('.banner-slider').slick({
