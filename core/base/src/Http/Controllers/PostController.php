@@ -23,7 +23,7 @@ class PostController extends Controller
         $posts = $this->postRepository->getAllPosts(7);
         /* custom css and js for page */
         Theme::asset()->usePath()->add('style-blog', 'css/page/blog/blog.css', ['style']);
-        // Theme::asset()->container('footer')->usePath()->add('js-aboutus-detail', 'js/page/aboutus/aboutus.js', ['gtt-main-js']);
+        Theme::asset()->usePath()->add('cm-style-blog', 'css/page/blog/blog-cm.css', ['style-blog']);
         return Theme::scope('post.list', compact('posts'))->render();
     }
 
