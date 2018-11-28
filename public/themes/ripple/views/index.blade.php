@@ -12,11 +12,13 @@
 <script type="text/javascript">
 	$(document).ready(function() {
         $('.banner-slider').slick({
-            dots: false,
-            infinite: true,
+            // dots: false,
+            // infinite: true,
             speed: 300,
             slidesToShow: 1,
-            adaptiveHeight: true
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 5000,
         });
     });
 </script>

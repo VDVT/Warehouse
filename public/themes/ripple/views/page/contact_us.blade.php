@@ -59,13 +59,13 @@
                         <form role="form" method="POST" action="{{ url('send-contact-us') }}">
                             {{ csrf_field() }}
                             <div class="row">
-                                <div class="col-md-7">
+                                <div class="col-md-9">
                                     <div class="form-group {{ $errors->has('department') ? 'has-error' : '' }}">
-                                        <select name="department" class="form-control combobox" id="exampleFormControlSelect1">
+                                        <select id="department" name="department" class="form-control combobox" id="exampleFormControlSelect1" style="color: #ffff;">
                                             <option value="">Please Select Department</option>
                                             <?php
                                                 foreach (config('theme.department') as $key => $value) {
-                                                    echo '<option value="'.$key.'">'.$value.'</option>';
+                                                    echo '<option style="color:#030a108c" value="'.$key.'">'.$value.'</option>';
                                                 }
                                             ?>
                                         </select>

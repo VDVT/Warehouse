@@ -192,3 +192,6 @@
         border-radius: 0;
         background-color: #fff;
         color: #e7661f; }
+#department:after{
+  color: #ffff
+}

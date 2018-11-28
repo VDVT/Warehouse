@@ -34,10 +34,11 @@ var BEditor = {
                             $('#upload_file').trigger('click');
                         }
                     },
-                    toolbar: 'styleselect bold italic underline | forecolor backcolor | alignleft aligncenter alignright | bullist numlist outdent indent | link image table youtube giphy | code',
+                    toolbar: 'sizeselect fontselect fontsizeselect | styleselect bold italic underline | forecolor backcolor | alignleft aligncenter alignright | bullist numlist outdent indent | link image table youtube giphy | code',
                     convert_urls: false,
                     image_caption: true,
-                    image_title: true
+                    image_title: true,
+                    fontsize_formats: "8pt 10pt 12pt 14pt 18pt 24pt 36pt",
                 });
             }
         }

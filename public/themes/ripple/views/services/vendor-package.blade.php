@@ -5,7 +5,7 @@
                 <li class="breadcrumb-item active" aria-current="page">Customer Services</li>
             </ol>
         </nav>
-        <h1 class="text-muted1 font-1-demi">New Vendor Packet Form</h1>
+        <h1 class="text-muted1 font-1-demi">New Vendor Form</h1>
     </div>
 </div>
 <div class="clearfix" style="background-color: #f7f7f7;">
