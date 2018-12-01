@@ -20,6 +20,21 @@ function add_youtube_video_shortcode ($shortcode) {
 
 shortcode()->setAdminConfig('youtube-video', Theme::partial('youtube-admin-config'));
 
+
+add_shortcode('editor-iframe', 'Iframe', 'Add new iframe', 'add_iframe_shortcode');
+
+shortcode()->setAdminConfig('editor-iframe', Theme::partial('iframe'));
+
+/**
+ * @param $shortcode
+ * @return mixed
+ * @author TrinhLe
+ */
+function add_iframe_shortcode ($shortcode) {
+    dd('vo ne');
+    return Theme::partial('iframe', ['address' => $shortcode->content]);
+}
+
 theme_option()->setSection([
     'title' => __('General'),
     'desc' => __('General settings'),

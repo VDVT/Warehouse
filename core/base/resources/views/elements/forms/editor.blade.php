@@ -97,13 +97,19 @@
                             content = contentElement.val();
                         }
 
+                        var newShortCode = '';
+                        if($short_code_key.val() != 'editor-iframe')
+                            newShortCode = `[${$short_code_key.val()}${attributes}]${content}[/${$short_code_key.val()}]`
+                        else
+                            newShortCode = `<iframe src="${content}" allowfullscreen></iframe>`
+
                         if ($('.editor-ckeditor').length > 0) {
-                            CKEDITOR.instances[$('.add_shortcode_btn_trigger').data('result')].insertHtml('[' + $short_code_key.val() + attributes + ']' + content + '[/' + $short_code_key.val() + ']');
+                            CKEDITOR.instances[$('.add_shortcode_btn_trigger').data('result')].insertHtml(newShortCode);
                         } else {
                             tinymce.get($('.add_shortcode_btn_trigger').data('result')).execCommand(
                                 'mceInsertContent',
                                 false,
-                                '[' + $short_code_key.val() + attributes + ']' + content + '[/' + $short_code_key.val() + ']'
+                                newShortCode
                             );
                         }
                         $(this).closest('.modal').modal('hide');
