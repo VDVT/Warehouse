@@ -7,13 +7,15 @@
     @endforeach
 </section>
 <style type="text/css">
-    .banner-img .banner-title { font-size: 49px }
+    .banner-img .banner-title { 
+        font-size: 49px;
+        background-color: rgba(79, 174, 212, 0.41);
+        visibility: visible;
+    }
 </style>
 <script type="text/javascript">
 	$(document).ready(function() {
         $('.banner-slider').slick({
-            // dots: false,
-            // infinite: true,
             speed: 300,
             slidesToShow: 1,
             slidesToScroll: 1,
