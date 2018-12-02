@@ -29,4 +29,15 @@ class ProductsCacheDecorator extends CacheAbstractDecorator implements ProductsI
         $this->repository = $repository;
         $this->cache = $cache;
     }
+
+    /**
+     * @param $slug
+     * @param $status
+     * @return mixed
+     * @author Sang Nguyen
+     */
+    public function getBySlug($slug, $status)
+    {
+        return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
+    }
 }

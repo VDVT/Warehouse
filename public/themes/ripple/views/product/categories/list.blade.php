@@ -31,7 +31,7 @@
                                         </div>
                                         <div class="product-title">{{ $product->name }}</div>
                                         <div class="product-backdrop">
-                                            <a href="{{ route('public.product_category.details', $product->slug) }}" class="btn btn-outline-custom-i btn-round">Detail <i class="fas fa-long-arrow-alt-right"></i></a>
+                                            <a href="{{ route('public.product.details', $product->slug) }}" class="btn btn-outline-custom-i btn-round">Detail <i class="fas fa-long-arrow-alt-right"></i></a>
                                         </div>
                                     </div>
                                 </div>

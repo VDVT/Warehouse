@@ -38,4 +38,20 @@ class ProductsRepository extends RepositoriesAbstract implements ProductsInterfa
 
         return $data->get();
     }
+
+    /**
+     * @param $slug
+     * @param $status
+     * @return mixed
+     * @author Sang Nguyen
+     */
+    public function getBySlug($slug, $status)
+    {
+        $data = $this->model->where(['products.status' => $status, 'products.slug' => $slug])
+            ->select('products.*')->first();
+        $data = apply_filters(BASE_FILTER_BEFORE_GET_BY_SLUG, $data, $this->model, PRODUCTS_MODULE_SCREEN_NAME);
+        $this->resetModel();
+        return $data;
+    }
+
 }

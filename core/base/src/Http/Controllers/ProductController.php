@@ -30,14 +30,21 @@ class ProductController extends Controller
         // return Theme::scope('product.list')->render();
     }
 
-	public function details()
+	public function details($slug)
     {
-        // $banners           = get_banners();
-        // $product_solutions = get_product_solutions();
-        // $testimonials      = get_testimonials();
-        // Theme::share('product_solutions', $product_solutions);
-        // Theme::breadcrumb()->add(__('Home'), route('public.index'));
-        // return Theme::scope('product.details', compact('product_solutions'))->render();
+        $product = $this->productRepository->getBySlug($slug, true);
+
+        if (empty($product)) abort(404);
+        $seo = get_meta_data($product->id, 'seo_meta', PRODUCTS_MODULE_SCREEN_NAME, true);
+        if(!empty($seo))
+            SeoHelper::setTitle($seo['seo_title'])->setDescription($seo['seo_description'])->setKeywords($seo['seo_keyword']);
+
+        Theme::breadcrumb()->add(__('Home'), route('public.index'));
+        /* custom css and js for page */
+        Theme::asset()->usePath()->add('style-product-detail', 'css/page/product/detail.css', ['style']);
+        Theme::asset()->container('footer')->usePath()->add('js-product-detail', 'js/page/product/detail.js', ['gtt-main-js']);
+        /* end custom css and js for page */
+        return Theme::scope('product.details', compact('product'))->render();
     }
 
     public function productCategoryList()
