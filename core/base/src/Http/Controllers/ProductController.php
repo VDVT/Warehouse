@@ -43,6 +43,7 @@ class ProductController extends Controller
     public function productCategoryList()
     {
         Theme::asset()->usePath()->add('style-product', 'css/page/product/product.css', ['style']);
+        Theme::asset()->container('footer')->usePath()->add('js-product', 'js/page/product/product.js', ['gtt-main-js']);
         $product_categories = $this->productCategoryRepository->getAllCategories(['parent_id'=>0, 'status'=>1]);
         return Theme::scope('product.categories.list', compact('product_categories'))->render();
     }

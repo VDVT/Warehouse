@@ -25,12 +25,33 @@ class Products extends Eloquent
 
     protected $dates = ['created_at', 'updated_at', 'deleted_at'];
 
-    protected $fillable = ['name', 'slug', 'description', 'availability', 'wholesale_price_a', 'wholesale_price_b', 'retail_price', 'list_price', 'weight', 'size', 'condition', 'length', 'color', 'width', 'thickness', 'height', 'face', 'capacity', 'depth', 'connector', 'step', 'baseplate'];
-
-    // public function product_solutions()
-    // {
-    //     return $this->belongsToMany(Productsolutions::class, 'product_solution_product');
-    // }
+    protected $fillable = [
+        'name',
+        'slug',
+        'description',
+        'availability',
+        'wholesale_price_a',
+        'wholesale_price_b',
+        'retail_price',
+        'list_price',
+        'weight',
+        'size',
+        'condition',
+        'length',
+        'color',
+        'width',
+        'thickness',
+        'height',
+        'face',
+        'capacity',
+        'depth',
+        'connector',
+        'step',
+        'baseplate',
+        'image',
+        'image1',
+        'image2'
+    ];
 
     public function product_categories()
     {

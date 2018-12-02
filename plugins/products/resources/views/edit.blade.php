@@ -17,7 +17,7 @@
                             {!! Form::text('name', $products->name, ['class' => 'form-control', 'id' => 'name', 'data-counter' => 120]) !!}
                             {!! Form::error('name', $errors) !!}
                         </div>
-                        <div class="form-group @if ($errors->has('slug')) has-error @endif" style="display: none;">
+                        <div class="form-group @if ($errors->has('slug')) has-error @endif">
                             {!! Form::permalink('slug', $products->slug, null, route('products.create.slug'), route('public.product.details', config('cms.slug.pattern')), url('/product/')) !!}
                             {!! Form::error('slug', $errors) !!}
                         </div>
@@ -183,6 +183,21 @@
                     'categories' => $categories,
                     'object' => $products
                 ])
+                <div class="widget meta-boxes">
+                    <div class="widget-title">
+                        <h4><span class="required">{{ trans('products::product_categories.featured_image') }}</span></h4>
+                    </div>
+                    <div class="widget-body">
+                        {!! Form::mediaImage('image', $products->image) !!}
+                        {!! Form::error('image', $errors) !!}
+
+                        {!! Form::mediaImage('image1', $products->image1) !!}
+                        {!! Form::error('image1', $errors) !!}
+
+                        {!! Form::mediaImage('image2', $products->image2) !!}
+                        {!! Form::error('image2', $errors) !!}
+                    </div>
+                </div>
                 @php do_action(BASE_ACTION_META_BOXES, PRODUCTS_MODULE_SCREEN_NAME, 'top', $products) @endphp
                 @php do_action(BASE_ACTION_META_BOXES, PRODUCTS_MODULE_SCREEN_NAME, 'side', $products) @endphp
             </div>

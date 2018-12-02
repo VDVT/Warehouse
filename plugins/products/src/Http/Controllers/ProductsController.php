@@ -99,16 +99,15 @@ class ProductsController extends BaseController
             abort(404);
         }
 
-
         page_title()->setTitle(trans('products::products.edit') . ' #' . $id);
 
         Assets::addAppModule(['slug']);
 
-        $selected_categories = [];
-        if ($products->categories != null) {
-            $selected_categories = $products->categories->pluck('id')->all();
-        }
+        $selected_categories = array();
 
+        $productCategories = $products->product_categories;
+        $selected_categories = $productCategories->pluck('id')->all();
+        
         $categories = get_product_categories_with_children();
 
         return view('products::edit', compact('products', 'categories', 'selected_categories'));
