@@ -5,19 +5,33 @@ namespace Botble\Base\Http\Controllers;
 use Illuminate\Routing\Controller;
 use SeoHelper;
 use Theme;
+use Botble\Tabcategory\Repositories\Interfaces\TabcategoryInterface;
 use Botble\Products\Repositories\Interfaces\ProductCategoryInterface;
 use Botble\Products\Repositories\Interfaces\ProductsInterface;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
+    /**
+     * @var TabcategoryInterface
+     */
+    protected $tabCategoryRepository;
+
+    /**
+     * @var ProductCategoryInterface
+     */
     protected $productCategoryRepository;
+
+    /**
+     * @var ProductsInterface
+     */
     protected $productRepository;
 
-    public function __construct(ProductCategoryInterface $productCategoryRepository, ProductsInterface $productRepository)
+    public function __construct(ProductCategoryInterface $productCategoryRepository, ProductsInterface $productRepository, TabcategoryInterface $tabCategoryRepository)
     {
         $this->productCategoryRepository = $productCategoryRepository;
         $this->productRepository = $productRepository;
+        $this->tabCategoryRepository = $tabCategoryRepository;
     }
 
 	public function getList()
@@ -51,8 +65,8 @@ class ProductController extends Controller
     {
         Theme::asset()->usePath()->add('style-product', 'css/page/product/product.css', ['style']);
         Theme::asset()->container('footer')->usePath()->add('js-product', 'js/page/product/product.js', ['gtt-main-js']);
-        $product_categories = $this->productCategoryRepository->getAllCategories(['parent_id'=>0, 'status'=>1]);
-        return Theme::scope('product.categories.list', compact('product_categories'))->render();
+        $tabs = $this->tabCategoryRepository->getAllTabs(['status'=>1]);
+        return Theme::scope('product.categories.list', compact('tabs'))->render();
     }
 
     public function productCategorydetails($slug)

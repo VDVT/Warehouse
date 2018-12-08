@@ -4,6 +4,7 @@ namespace Botble\Tabcategory\Models;
 
 use Eloquent;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Botble\Products\Models\ProductCategory;
 
 /**
  * Botble\Tabcategory\Models\Tabcategory
@@ -21,5 +22,17 @@ class Tabcategory extends Eloquent
      */
     protected $table = 'tabcategory';
 
-    protected $fillable = ['name'];
+    protected $fillable = [
+    	'name',
+        'status'
+    ];
+
+    /**
+     * @return mixed
+     * @author TrinhLe
+     */
+    public function categories()
+    {
+        return $this->hasMany(ProductCategory::class, 'tab_category_id');
+    }
 }

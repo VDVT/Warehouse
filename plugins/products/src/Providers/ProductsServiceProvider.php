@@ -94,6 +94,15 @@ class ProductsServiceProvider extends ServiceProvider
                     'icon' => null,
                     'url' => route('product_categories.list'),
                     'permissions' => ['product_categories.list'],
+                ])
+                ->registerItem([
+                    'id' => 'cms-plugins-product-tab-categories',
+                    'priority' => 2,
+                    'parent_id' => 'cms-plugins-products',
+                    'name' => trans('tabcategory::tabcategory.menu_name'),
+                    'icon' => null,
+                    'url' => route('tabcategory.list'),
+                    'permissions' => ['tabcategory.list'],
                 ]);
         });
 

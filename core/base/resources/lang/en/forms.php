@@ -42,4 +42,5 @@ return [
     'add_short_code' => 'Add a shortcode',
     'add' => 'Add',
     'link' => 'Link',
+    'tab' => 'Tab'
 ];

@@ -29,4 +29,14 @@ class TabcategoryCacheDecorator extends CacheAbstractDecorator implements Tabcat
         $this->repository = $repository;
         $this->cache = $cache;
     }
+
+    /**
+     * @param array $condition
+     * @return mixed
+     * @author Trinh Le
+     */
+    public function getAllTabs(array $condition = [])
+    {
+        return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
+    }
 }

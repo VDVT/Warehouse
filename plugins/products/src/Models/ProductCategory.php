@@ -5,6 +5,7 @@ namespace Botble\Products\Models;
 use Eloquent;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Botble\Productsolutions\Models\Productsolutions;
+use Botble\Tabcategory\Models\Tabcategory;
 
 class ProductCategory extends Eloquent
 {
@@ -51,7 +52,8 @@ class ProductCategory extends Eloquent
         // 'user_id',
         'image',
         'image1',
-        'image2'
+        'image2',
+        'tab_category_id'
     ];
 
     /**
@@ -84,5 +86,14 @@ class ProductCategory extends Eloquent
     public function product_solutions()
     {
         return $this->belongsToMany(Productsolutions::class, 'productsolutions_product_category');
+    }
+
+    /**
+     * @return mixed
+     * @author TrinhLe
+     */
+    public function tabcategory()
+    {
+        return $this->belongsTo(Tabcategory::class, 'tab_category_id');
     }
 }

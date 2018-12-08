@@ -8,7 +8,7 @@ use Botble\Products\Http\Requests\ProductCategoryRequest;
 use Assets;
 use Exception;
 use Illuminate\Http\Request;
-
+use Botble\Tabcategory\Repositories\Interfaces\TabcategoryInterface;
 use Botble\Products\Repositories\Interfaces\ProductCategoryInterface;
 
 class ProductCategoryController extends BaseController
@@ -19,13 +19,19 @@ class ProductCategoryController extends BaseController
     protected $categoryRepository;
 
     /**
+     * @var TabcategoryInterface
+     */
+    protected $tabCategoryRepository;
+
+    /**
      * ProductCategoryController constructor.
      * @param ProductsInterface $categoryRepository
      * @author Sang Nguyen
      */
-    public function __construct(ProductCategoryInterface $categoryRepository)
+    public function __construct(ProductCategoryInterface $categoryRepository, TabcategoryInterface $tabCategoryRepository)
     {
         $this->categoryRepository = $categoryRepository;
+        $this->tabCategoryRepository = $tabCategoryRepository;
     }
 
     /**
@@ -56,7 +62,9 @@ class ProductCategoryController extends BaseController
         $categories[0] = __('None');
         $categories = array_sort_recursive($categories);
 
-        return view('products::product_categories.create', compact('categories'));
+        $tabs = $this->tabCategoryRepository->pluck('name', 'id');
+
+        return view('products::product_categories.create', compact('categories','tabs'));
     }
 
     /**
@@ -103,7 +111,9 @@ class ProductCategoryController extends BaseController
         $categories[0] = __('None');
         $categories = array_sort_recursive($categories);
 
-        return view('products::product_categories.edit', compact('category', 'categories'));
+        $tabs = $this->tabCategoryRepository->pluck('name', 'id');
+
+        return view('products::product_categories.edit', compact('category', 'categories','tabs'));
     }
 
     /**

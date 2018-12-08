@@ -26,8 +26,8 @@ class HookServiceProvider extends ServiceProvider
             add_filter(LANGUAGE_FILTER_MODEL_USING_MULTI_LANGUAGE, [$this, 'addMultiLanguage'], 60, 1);
         }
 
-        add_shortcode('gallery', __('Gallery images'), __('Add a gallery'), [$this, 'render']);
-        shortcode()->setAdminConfig('gallery', view('gallery::partials.short-code-admin-config')->render());
+        // add_shortcode('gallery', __('Gallery images'), __('Add a gallery'), [$this, 'render']);
+        // shortcode()->setAdminConfig('gallery', view('gallery::partials.short-code-admin-config')->render());
     }
 
     /**
