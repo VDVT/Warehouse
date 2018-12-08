@@ -10,35 +10,35 @@
 <div class="clearfix" style="background-color: #f7f7f7;" >
      <div class="container">
         <div class="p-y-6">
-            <!-- <ul class="nav nav-custom nav-small nav-pills mb-3" id="pills-tab" role="tablist"> --> <!-- GT -->
-            <ul class="nav nav-custom nav-tabs nav-justified mb-3" id="pills-tab" role="tablist">
-                <div class="slider"></div>
-                @foreach($product_categories as $key => $category)
-                    <li class="nav-item">
-                        <a class="nav-link rounded {{ $key == 0 ? 'active' : '' }}" id="category-{{ $category->id }}-tab" data-toggle="tab" href="#category-{{ $category->id }}" role="tab" aria-controls="category-{{ $category->id }}" aria-selected="true"><i class="fas fa-home"></i> {{ $category->name }}</a>
-                    </li>
-                @endforeach
-            </ul>
-            <div class="tab-content" id="pills-tabContent">
-                @foreach($product_categories as $key => $category)
-                    <div class="tab-pane fade {{ $key == 0 ? 'show active' : '' }}" id="category-{{ $category->id }}" role="tabpanel" aria-labelledby="category-{{ $category->id }}-tab">
-                        <div class="row product-wrapper">
-                            @foreach($category->products as $product)
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="product-item">
-                                        <div class="card-ratio-1-1">
-                                            <img class="content" src="{{ $product->image }}" alt="{{ $product->name }}"/>
-                                        </div>
-                                        <div class="product-title">{{ $product->name }}</div>
-                                        <div class="product-backdrop">
-                                            <a href="{{ route('public.product.details', $product->slug) }}" class="btn btn-outline-custom-i btn-round">Detail <i class="fas fa-long-arrow-alt-right"></i></a>
+            <div class="nav-left">
+                <ul class="nav nav-pills-custom nav-small nav-fill with-icon" id="myTab" role="tablist">
+                    @foreach($product_categories as $key => $category)
+                        <li class="nav-item">
+                            <a class="nav-link rounded {{ $key == 0 ? 'active' : '' }}" id="category-{{ $category->id }}-tab" data-toggle="tab" href="#category-{{ $category->id }}" role="tab" aria-controls="category-{{ $category->id }}" aria-selected="true"><i class="fas fa-home"></i> {{ $category->name }}</a>
+                        </li>
+                    @endforeach
+                </ul>
+                <div class="tab-content pl-xl-4" id="pills-tabContent">
+                    @foreach($product_categories as $key => $category)
+                        <div class="tab-pane fade {{ $key == 0 ? 'show active' : '' }}" id="category-{{ $category->id }}" role="tabpanel" aria-labelledby="category-{{ $category->id }}-tab">
+                            <div class="row product-wrapper">
+                                @foreach($category->children as $product)
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="product-item">
+                                            <div class="card-ratio-1-1">
+                                                <img class="content" src="{{ $product->image }}" alt="{{ $product->name }}"/>
+                                            </div>
+                                            <div class="product-title">{{ $product->name }}</div>
+                                            <div class="product-backdrop">
+                                                <a href="{{ route('public.product_category.details', $product->slug) }}" class="btn btn-outline-custom-i btn-round">Detail <i class="fas fa-long-arrow-alt-right"></i></a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            @endforeach
+                                @endforeach
+                            </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
             </div>
         </div>
     </div>

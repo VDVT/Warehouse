@@ -4,24 +4,24 @@ register_page_template([
     'default' => __('Default')
 ]);
 
-add_shortcode('google-map', 'Google map', 'Custom map', 'add_google_map_shortcode');
+// add_shortcode('google-map', 'Google map', 'Custom map', 'add_google_map_shortcode');
 
-function add_google_map_shortcode ($shortcode) {
-    return Theme::partial('google-map', ['address' => $shortcode->content]);
-}
+// function add_google_map_shortcode ($shortcode) {
+//     return Theme::partial('google-map', ['address' => $shortcode->content]);
+// }
 
-shortcode()->setAdminConfig('google-map', Theme::partial('google-map-admin-config'));
+// shortcode()->setAdminConfig('google-map', Theme::partial('google-map-admin-config'));
 
-add_shortcode('youtube-video', 'Youtube video', 'Add youtube video', 'add_youtube_video_shortcode');
+// add_shortcode('youtube-video', 'Youtube video', 'Add youtube video', 'add_youtube_video_shortcode');
 
-function add_youtube_video_shortcode ($shortcode) {
-    return Theme::partial('video', ['url' => $shortcode->content]);
-}
+// function add_youtube_video_shortcode ($shortcode) {
+//     return Theme::partial('video', ['url' => $shortcode->content]);
+// }
 
-shortcode()->setAdminConfig('youtube-video', Theme::partial('youtube-admin-config'));
+// shortcode()->setAdminConfig('youtube-video', Theme::partial('youtube-admin-config'));
 
 
-add_shortcode('editor-iframe', 'Iframe', 'Add new iframe', 'add_iframe_shortcode');
+add_shortcode('editor-iframe', 'Iframe', 'Insert 360 photo', 'add_iframe_shortcode');
 
 shortcode()->setAdminConfig('editor-iframe', Theme::partial('iframe'));
 
@@ -31,7 +31,6 @@ shortcode()->setAdminConfig('editor-iframe', Theme::partial('iframe'));
  * @author TrinhLe
  */
 function add_iframe_shortcode ($shortcode) {
-    dd('vo ne');
     return Theme::partial('iframe', ['address' => $shortcode->content]);
 }
 
