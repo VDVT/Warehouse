@@ -1,0 +1,9 @@
+{
+    "name": "Tabcategory",
+    "provider": "Botble\\Tabcategory\\Providers\\TabcategoryServiceProvider",
+    "plugin": "Botble\\Tabcategory\\Plugin",
+    "author": "Sang Nguyen",
+    "url": "http://sangnguyen.info",
+    "version": "1.0",
+    "description": "Tabcategory"
+}
