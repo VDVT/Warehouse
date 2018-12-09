@@ -51,6 +51,19 @@
             <!-- end Modal -->
 
             <script>
+                var getContentIframe = function(formElement, formData, content){
+
+                    var styles = [];
+                    $.each(formData, function (index, item) {
+                        var element = formElement.find('*[name=' + item.name + ']');
+                        if (element.data('shortcode-attribute') != 'content') {
+                            styles.push(`${item.name}: ${item.value}px`);
+                        }
+                    });
+                    styles = styles.join(';');
+                    return  `<iframe src="${content}" allowfullscreen style="${styles}"></iframe>`
+                }
+
                 $(document).ready(function () {
                     var $short_code_key = $('.short_code_input_key');
 
@@ -100,8 +113,9 @@
                         var newShortCode = '';
                         if($short_code_key.val() != 'editor-iframe')
                             newShortCode = `[${$short_code_key.val()}${attributes}]${content}[/${$short_code_key.val()}]`
-                        else
-                            newShortCode = `<iframe src="${content}" allowfullscreen></iframe>`
+                        else{
+                            newShortCode = getContentIframe(formElement, formData, content);
+                        }
 
                         if ($('.editor-ckeditor').length > 0) {
                             CKEDITOR.instances[$('.add_shortcode_btn_trigger').data('result')].insertHtml(newShortCode);
