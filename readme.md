@@ -135,5 +135,7 @@ Well done! Now, you can login to the dashboard by access to your_domain_site/adm
 Username: botble
 Password: 159357
 ```
+mrminh - minh#@239197
+patricia - UnitedMH
 
 Enjoy!

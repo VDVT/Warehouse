@@ -14,20 +14,25 @@
                 <ul class="nav nav-pills-custom nav-small nav-fill with-icon" id="myTab" role="tablist">
                     @foreach($tabs as $key => $tab)
                         <li class="nav-item">
-                            <a class="nav-link rounded {{ $key == 0 ? 'active' : '' }}" id="tab-{{ $tab->id }}-tab" data-toggle="tab" href="#tab-{{ $tab->id }}" role="tab" aria-controls="tab-{{ $tab->id }}" aria-selected="true"><i class="fas fa-home"></i> {{ $tab->name }}</a>
+                            <a class="nav-link rounded {{ $key == 0 ? 'active' : '' }}" id="tab-{{ $tab->id }}-tab" data-toggle="tab" href="#tab-{{ $tab->id }}" role="tab" aria-controls="tab-{{ $tab->id }}" aria-selected="true">{{ $tab->name }}</a>
                         </li>
                     @endforeach
                 </ul>
                 <div class="tab-content pl-xl-4" id="pills-tabContent">
                     @foreach($tabs as $key => $tab)
                         <div class="tab-pane fade {{ $key == 0 ? 'show active' : '' }}" id="tab-{{ $tab->id }}" role="tabpanel" aria-labelledby="tab-{{ $tab->id }}-tab">
-                            <div class="row product-wrapper">
+                            <div class="row product-wrapper lht-products">
                                 @foreach($tab->categories as $category)
                                     <div class="col-md-3 col-sm-6">
-                                        <div class="product-item">
-                                            <div class="card-ratio-1-1">
-                                                <img class="content" src="{{ $category->image }}" alt="{{ $category->name }}"/>
+                                        <div class="product-item item-box">
+                                            <div class="box-image">
+                                                <a href="#">
+                                                    <img src="{{ $category->image }}" alt="{{ $category->name }}" width="100%">
+                                                </a>
                                             </div>
+                                            <!-- <div class="card-ratio-1-1">
+                                                <img class="content" src="{{ $category->image }}" alt="{{ $category->name }}"/>
+                                            </div> -->
                                             <div class="product-title">{{ $category->name }}</div>
                                             <div class="product-backdrop">
                                                 <a href="{{ route('public.product_category.details', $category->slug) }}" class="btn btn-outline-custom-i btn-round">Detail <i class="fas fa-long-arrow-alt-right"></i></a>

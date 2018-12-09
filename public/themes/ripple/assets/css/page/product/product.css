@@ -1,3 +1,21 @@
-.card-ratio-1-1>img {
+.product-wrapper .product-item {
+    padding: 20px 20px 6px 20px;
+}
+.product-wrapper .product-item .card-ratio-1-1>img {
     object-fit: fill;
+}
+.product-wrapper .product-item .product-title {
+	min-height: 112px;
+    font-size: 16px;
+}
+.nav-left .nav-pills-custom .nav-item .nav-link {
+    width: 180px;
+}
+
+.nav-left>.nav .nav-item .nav-link {
+    min-width: 180px;
+}
+.nav-left .tab-content {
+    flex: 0 0 calc(100% - 180px);
+    max-width: calc(100% - 180px);
 }
