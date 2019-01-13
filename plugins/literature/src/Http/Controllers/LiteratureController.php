@@ -202,4 +202,26 @@ class LiteratureController extends BaseController
             'message' => trans('bases::notices.update_success_message'),
         ];
     }
+
+    /**
+     * Show view order literature
+     * @author TrinhLe
+     * @param Request $request 
+     * @return View
+     */
+    public function getOrder(Request $request)
+    {
+        return view('literature::order', compact(''));
+    }
+
+    /**
+     * Update order literature
+     * @author TrinhLe
+     * @param Request $request 
+     * @return Response
+     */
+    public function postOrder(Request $request)
+    {
+
+    }
 }

@@ -1,0 +1,9 @@
+@extends('bases::layouts.master')
+@section('head')
+    @parent
+@endsection
+@section('content')
+@stop
+@section('javascript')
+    @parent
+@endsection

@@ -15,6 +15,18 @@ Route::group(['namespace' => 'Botble\Literature\Http\Controllers', 'middleware' 
                 'uses' => 'LiteratureController@getCreate',
             ]);
 
+            Route::get('/order', [
+                'as' => 'literature.order',
+                'uses' => 'LiteratureController@getOrder',
+                'permission' => 'literature.edit',
+            ]);
+
+            Route::post('/order', [
+                'as' => 'literature.order.post',
+                'uses' => 'LiteratureController@postOrder',
+                'permission' => 'literature.edit',
+            ]);
+
             Route::post('/create', [
                 'as' => 'literature.create',
                 'uses' => 'LiteratureController@postCreate',

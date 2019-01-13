@@ -97,10 +97,14 @@ class LiteratureDataTable extends DataTableAbstract
     public function buttons()
     {
         $buttons = [
+            'lorder' => [
+                'link' => route('literature.order'),
+                'text' => view('bases::elements.tables.actions.order')->render(),
+            ],
             'create' => [
                 'link' => route('literature.create'),
                 'text' => view('bases::elements.tables.actions.create')->render(),
-            ],
+            ]
         ];
         return apply_filters(BASE_FILTER_DATATABLES_BUTTONS, $buttons, LITERATURE_MODULE_SCREEN_NAME);
     }
