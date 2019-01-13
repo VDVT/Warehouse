@@ -2,14 +2,7 @@
 @section('head')
     @parent
     <link rel="stylesheet" href="{{ asset('assets/css/cmstyle.css') }}">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.17/css/uikit.min.css'>
-	<style 
-		class="cp-pen-styles">.send-list{
-		  	position: absolute;
-		  	right:10px;
-		  	top:15px;
-		}
-	</style>
+    <link rel="stylesheet" href="{{ asset('vendor/cm/css/uikit.css') }}">
 @endsection
 @section('content')
 	{!! Form::open(['route' => 'literature.order.post', 'id' => 'formOrder']) !!}
@@ -20,6 +13,55 @@
 	                    <div class="form-group">
 	                    	<h4 class="uk-text-uppercase uk-background-default uk-padding-small">{{ __('Order Literatures') }}</h4>
 	                    	<ul id="sortable" style="list-style-type: none">
+	                    		@foreach($literatures as $literature)
+	                    			<div class="uk-margin" rel="{{ $literature->name }}" id="{{ $literature->id }}">
+						                <div class="uk-card uk-card-hover uk-card-default uk-card-body uk-card-small">
+						                  <span class="uk-flex uk-flex-left uk-flex-middle">{{ $literature->name }}</span>
+						                </div>
+						            </div>
+	                    		@endforeach
+	                    		@foreach($literatures as $literature)
+	                    			<div class="uk-margin" rel="{{ $literature->name }}" id="{{ $literature->id }}">
+						                <div class="uk-card uk-card-hover uk-card-default uk-card-body uk-card-small">
+						                  <span class="uk-flex uk-flex-left uk-flex-middle">{{ $literature->name }}</span>
+						                </div>
+						            </div>
+	                    		@endforeach
+	                    		@foreach($literatures as $literature)
+	                    			<div class="uk-margin" rel="{{ $literature->name }}" id="{{ $literature->id }}">
+						                <div class="uk-card uk-card-hover uk-card-default uk-card-body uk-card-small">
+						                  <span class="uk-flex uk-flex-left uk-flex-middle">{{ $literature->name }}</span>
+						                </div>
+						            </div>
+	                    		@endforeach
+	                    		@foreach($literatures as $literature)
+	                    			<div class="uk-margin" rel="{{ $literature->name }}" id="{{ $literature->id }}">
+						                <div class="uk-card uk-card-hover uk-card-default uk-card-body uk-card-small">
+						                  <span class="uk-flex uk-flex-left uk-flex-middle">{{ $literature->name }}</span>
+						                </div>
+						            </div>
+	                    		@endforeach
+	                    		@foreach($literatures as $literature)
+	                    			<div class="uk-margin" rel="{{ $literature->name }}" id="{{ $literature->id }}">
+						                <div class="uk-card uk-card-hover uk-card-default uk-card-body uk-card-small">
+						                  <span class="uk-flex uk-flex-left uk-flex-middle">{{ $literature->name }}</span>
+						                </div>
+						            </div>
+	                    		@endforeach
+	                    		@foreach($literatures as $literature)
+	                    			<div class="uk-margin" rel="{{ $literature->name }}" id="{{ $literature->id }}">
+						                <div class="uk-card uk-card-hover uk-card-default uk-card-body uk-card-small">
+						                  <span class="uk-flex uk-flex-left uk-flex-middle">{{ $literature->name }}</span>
+						                </div>
+						            </div>
+	                    		@endforeach
+	                    		@foreach($literatures as $literature)
+	                    			<div class="uk-margin" rel="{{ $literature->name }}" id="{{ $literature->id }}">
+						                <div class="uk-card uk-card-hover uk-card-default uk-card-body uk-card-small">
+						                  <span class="uk-flex uk-flex-left uk-flex-middle">{{ $literature->name }}</span>
+						                </div>
+						            </div>
+	                    		@endforeach
 	                    		@foreach($literatures as $literature)
 	                    			<div class="uk-margin" rel="{{ $literature->name }}" id="{{ $literature->id }}">
 						                <div class="uk-card uk-card-hover uk-card-default uk-card-body uk-card-small">
