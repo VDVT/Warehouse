@@ -29,4 +29,24 @@ class LiteratureCacheDecorator extends CacheAbstractDecorator implements Literat
         $this->repository = $repository;
         $this->cache = $cache;
     }
+
+    /**
+     * Get Literatures be ordered
+     * @author TrinhLe
+     * @return collects
+     */
+    public function getLiteraturesOrder()
+    {
+        return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
+    }
+
+    /**
+     * Update order for Literatures
+     * @author TrinhLe
+     * @param array $literatures 
+     * @return mixed
+     */
+    public function updateOrderLiteratures(array $orders){
+        return $this->flushCacheAndUpdateData(__FUNCTION__, func_get_args());
+    }
 }

@@ -141,7 +141,7 @@
                 }
                 var action = span.data('action');
                 var url = span.data('href');
-                if (action === 'create' || action === 'lorder') {
+                if (action === 'create') {
                     window.location.href = url;
                 } else if (action === 'delete') {
                     $('#delete-many-entry').data('href', url);

@@ -21,5 +21,5 @@ class Literature extends Eloquent
      */
     protected $table = 'literature';
 
-    protected $fillable = ['name', 'description', 'file_id', 'file_name', 'file', 'status', 'image'];
+    protected $fillable = ['name', 'description', 'file_id', 'file_name', 'file', 'status', 'image', 'number_order'];
 }

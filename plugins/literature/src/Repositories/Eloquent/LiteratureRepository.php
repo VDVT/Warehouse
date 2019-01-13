@@ -32,4 +32,35 @@ class LiteratureRepository extends RepositoriesAbstract implements LiteratureInt
     {
         return $this->getLiteratures(2);
     }
+
+    /**
+     * Get Literatures be ordered
+     * @author TrinhLe
+     * @return collects
+     */
+    public function getLiteraturesOrder(){
+        #TODO
+        $queryData = $this->model
+                        ->select('name','id')
+                        ->orderBy('number_order', 'asc')
+                        ->orderBy('created_at', 'desc')
+                        ->get();
+        $this->resetModel();
+        return $queryData;
+    }
+
+    /**
+     * Update order for Literatures
+     * @author TrinhLe
+     * @param array $literatures 
+     */
+    public function updateOrderLiteratures(array $orders){
+        #TODO
+        foreach ($orders as $index => $literatureId) {
+            # code...
+            $literature = $this->findById($literatureId);
+            $literature->fill(['number_order' => $index]);
+            $this->createOrUpdate($literature);
+        }
+    }
 }

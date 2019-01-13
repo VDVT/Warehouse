@@ -138,7 +138,7 @@
                 }
                 let action = span.data('action');
                 let url = span.data('href');
-                if (action === 'create') {
+                if (action === 'create' || action === 'lorder') {
                     window.location.href = url;
                 } else if (action === 'delete') {
                     $('#delete-many-entry').data('href', url);

@@ -9,6 +9,7 @@ use Botble\Base\Http\Controllers\BaseController;
 use Illuminate\Http\Request;
 use MongoDB\Driver\Exception\Exception;
 use Botble\Literature\Http\DataTables\LiteratureDataTable;
+use Botble\Literature\Http\Requests\OrderLiteratureRequest;
 
 class LiteratureController extends BaseController
 {
@@ -211,7 +212,10 @@ class LiteratureController extends BaseController
      */
     public function getOrder(Request $request)
     {
-        return view('literature::order', compact(''));
+        Assets::addStylesheets(['jquery-ui']);
+        $literatures = $this->literatureRepository->getLiteraturesOrder();
+
+        return view('literature::order', compact('literatures'));
     }
 
     /**
@@ -220,8 +224,10 @@ class LiteratureController extends BaseController
      * @param Request $request 
      * @return Response
      */
-    public function postOrder(Request $request)
+    public function postOrder(OrderLiteratureRequest $request)
     {
-
+        $orders = $request->get('orders');
+        $this->literatureRepository->updateOrderLiteratures($orders);
+        return redirect()->route('literature.order')->with('success_msg', __('Order list literature success.'));
     }
 }
