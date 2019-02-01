@@ -95,7 +95,8 @@
             "Botble\\Projectcompletion\\": "plugins/projectcompletion/src",
             "Botble\\Vendors\\": "plugins/vendors/src",
             "Botble\\Customers\\": "plugins/customers/src",
-            "Botble\\Tabcategory\\": "plugins/tabcategory/src"
+            "Botble\\Tabcategory\\": "plugins/tabcategory/src",
+            "Botble\\Literaturecategory\\": "plugins/literaturecategory/src"
         }
     },
     "autoload-dev": {

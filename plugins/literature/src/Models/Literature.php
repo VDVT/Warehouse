@@ -4,6 +4,7 @@ namespace Botble\Literature\Models;
 
 use Eloquent;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Botble\Literaturecategory\Models\Literaturecategory;
 
 /**
  * Botble\Literature\Models\Literature
@@ -21,5 +22,14 @@ class Literature extends Eloquent
      */
     protected $table = 'literature';
 
-    protected $fillable = ['name', 'description', 'file_id', 'file_name', 'file', 'status', 'image', 'number_order'];
+    protected $fillable = ['name', 'description', 'file_id', 'file_name', 'file', 'status', 'image', 'number_order', 'tab_category_id'];
+
+    /**
+     * @return mixed
+     * @author TrinhLe
+     */
+    public function tabcategory()
+    {
+        return $this->belongsTo(Literaturecategory::class, 'tab_category_id');
+    }
 }

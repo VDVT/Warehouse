@@ -55,16 +55,46 @@ class LiteratureServiceProvider extends ServiceProvider
             $this->publishes([__DIR__ . '/../../config/literature.php' => config_path('literature.php')], 'config');
         }
 
+        // Event::listen(SessionStarted::class, function () {
+        //     dashboard_menu()->registerItem([
+        //         'id'          => 'cms-plugins-literature',
+        //         'priority'    => 120,
+        //         'parent_id'   => null,
+        //         'name'        => trans('literature::literature.menu'),
+        //         'icon'        => 'fa fa-leanpub',
+        //         'url'         => route('literature.list'),
+        //         'permissions' => ['literature.list'],
+        //     ]);
+        // });
+
         Event::listen(SessionStarted::class, function () {
             dashboard_menu()->registerItem([
-                'id'          => 'cms-plugins-literature',
-                'priority'    => 120,
-                'parent_id'   => null,
-                'name'        => trans('literature::literature.menu'),
-                'icon'        => 'fa fa-leanpub',
-                'url'         => route('literature.list'),
-                'permissions' => ['literature.list'],
-            ]);
+                    'id'          => 'cms-plugins-literature',
+                    'priority'    => 120,
+                    'parent_id'   => null,
+                    'name'        => trans('literature::literature.menu'),
+                    'icon'        => 'fa fa-leanpub',
+                    'url'         => route('literature.list'),
+                    'permissions' => ['literature.list'],
+                ])
+                ->registerItem([
+                    'id' => 'cms-plugins-literature-all',
+                    'priority' => 1,
+                    'parent_id' => 'cms-plugins-literature',
+                    'name' => trans('literature::literature.menu'),
+                    'icon' => null,
+                    'url' => route('literature.list'),
+                    'permissions' => ['literature.list'],
+                ])
+                ->registerItem([
+                    'id' => 'cms-plugins-literature-tab-categories',
+                    'priority' => 2,
+                    'parent_id' => 'cms-plugins-literature',
+                    'name' => trans('Category'),
+                    'icon' => null,
+                    'url' => route('literaturecategory.list'),
+                    'permissions' => ['literaturecategory.list'],
+                ]);
         });
     }
 }

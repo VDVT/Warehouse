@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use MongoDB\Driver\Exception\Exception;
 use Botble\Literature\Http\DataTables\LiteratureDataTable;
 use Botble\Literature\Http\Requests\OrderLiteratureRequest;
+use Botble\Literaturecategory\Repositories\Interfaces\LiteraturecategoryInterface;
 
 class LiteratureController extends BaseController
 {
@@ -19,13 +20,19 @@ class LiteratureController extends BaseController
     protected $literatureRepository;
 
     /**
+     * @var LiteraturecategoryInterface
+     */
+    protected $tabCategoryRepository;
+
+    /**
      * LiteratureController constructor.
      * @param LiteratureInterface $literatureRepository
      * @author Sang Nguyen
      */
-    public function __construct(LiteratureInterface $literatureRepository)
+    public function __construct(LiteratureInterface $literatureRepository, LiteraturecategoryInterface $tabCategoryRepository)
     {
         $this->literatureRepository = $literatureRepository;
+        $this->tabCategoryRepository = $tabCategoryRepository;
     }
 
     /**
@@ -51,7 +58,9 @@ class LiteratureController extends BaseController
     {
         page_title()->setTitle(trans('literature::literature.create'));
 
-        return view('literature::create');
+        $tabs = $this->tabCategoryRepository->pluck('name', 'id');
+
+        return view('literature::create', compact('tabs'));
     }
 
     /**
@@ -90,7 +99,9 @@ class LiteratureController extends BaseController
 
         page_title()->setTitle(trans('literature::literature.edit') . ' #' . $id);
 
-        return view('literature::edit', compact('literature'));
+        $tabs = $this->tabCategoryRepository->pluck('name', 'id');
+
+        return view('literature::edit', compact('literature','tabs'));
     }
 
     /**

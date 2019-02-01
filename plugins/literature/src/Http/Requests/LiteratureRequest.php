@@ -16,10 +16,11 @@ class LiteratureRequest extends Request
     public function rules()
     {
         return [
-            'name'        => 'required',
-            'description' => 'required',
-            'file'        => 'required',
-            'image'       => 'required',
+            'name'            => 'required',
+            'description'     => 'required',
+            'file'            => 'required',
+            'image'           => 'required',
+            'tab_category_id' => 'required',
         ];
     }
 }
