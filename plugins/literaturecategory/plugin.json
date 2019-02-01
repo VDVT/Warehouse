@@ -1,0 +1,9 @@
+{
+    "name": "Literaturecategory",
+    "provider": "Botble\\Literaturecategory\\Providers\\LiteraturecategoryServiceProvider",
+    "plugin": "Botble\\Literaturecategory\\Plugin",
+    "author": "Sang Nguyen",
+    "url": "http://sangnguyen.info",
+    "version": "1.0",
+    "description": "Literaturecategory"
+}
