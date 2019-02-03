@@ -97,12 +97,21 @@ class ProductsServiceProvider extends ServiceProvider
                 ])
                 ->registerItem([
                     'id' => 'cms-plugins-product-tab-categories',
-                    'priority' => 2,
+                    'priority' => 3,
                     'parent_id' => 'cms-plugins-products',
                     'name' => trans('tabcategory::tabcategory.menu_name'),
                     'icon' => null,
                     'url' => route('tabcategory.list'),
                     'permissions' => ['tabcategory.list'],
+                ])
+                 ->registerItem([
+                    'id' => 'cms-plugins-product-group-categories',
+                    'priority' => 4,
+                    'parent_id' => 'cms-plugins-products',
+                    'name' => __('Groups Category'),
+                    'icon' => null,
+                    'url' => route('groupproductcategory.list'),
+                    'permissions' => ['groupproductcategory.list'],
                 ]);
         });
 

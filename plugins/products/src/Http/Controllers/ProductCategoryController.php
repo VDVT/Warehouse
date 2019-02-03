@@ -10,6 +10,7 @@ use Exception;
 use Illuminate\Http\Request;
 use Botble\Tabcategory\Repositories\Interfaces\TabcategoryInterface;
 use Botble\Products\Repositories\Interfaces\ProductCategoryInterface;
+use Botble\Groupproductcategory\Repositories\Interfaces\GroupproductcategoryInterface;
 
 class ProductCategoryController extends BaseController
 {
@@ -24,14 +25,20 @@ class ProductCategoryController extends BaseController
     protected $tabCategoryRepository;
 
     /**
+     * @var GroupproductcategoryInterface
+     */
+    protected $groupRepository;
+
+    /**
      * ProductCategoryController constructor.
      * @param ProductsInterface $categoryRepository
      * @author Sang Nguyen
      */
-    public function __construct(ProductCategoryInterface $categoryRepository, TabcategoryInterface $tabCategoryRepository)
+    public function __construct(ProductCategoryInterface $categoryRepository, TabcategoryInterface $tabCategoryRepository, GroupproductcategoryInterface $groupRepository)
     {
-        $this->categoryRepository = $categoryRepository;
+        $this->categoryRepository    = $categoryRepository;
         $this->tabCategoryRepository = $tabCategoryRepository;
+        $this->groupRepository       = $groupRepository;
     }
 
     /**
@@ -63,8 +70,9 @@ class ProductCategoryController extends BaseController
         $categories = array_sort_recursive($categories);
 
         $tabs = $this->tabCategoryRepository->pluck('name', 'id');
+        $groups = $this->groupRepository->pluck('name', 'id');
 
-        return view('products::product_categories.create', compact('categories','tabs'));
+        return view('products::product_categories.create', compact('categories','tabs', 'groups'));
     }
 
     /**
@@ -112,8 +120,9 @@ class ProductCategoryController extends BaseController
         $categories = array_sort_recursive($categories);
 
         $tabs = $this->tabCategoryRepository->pluck('name', 'id');
+        $groups = $this->groupRepository->pluck('name', 'id');
 
-        return view('products::product_categories.edit', compact('category', 'categories','tabs'));
+        return view('products::product_categories.edit', compact('category', 'categories','tabs', 'groups'));
     }
 
     /**

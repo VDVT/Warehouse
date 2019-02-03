@@ -6,6 +6,7 @@ use Eloquent;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Botble\Productsolutions\Models\Productsolutions;
 use Botble\Tabcategory\Models\Tabcategory;
+use Botble\Groupproductcategory\Models\Groupproductcategory;
 
 class ProductCategory extends Eloquent
 {
@@ -53,7 +54,8 @@ class ProductCategory extends Eloquent
         'image',
         'image1',
         'image2',
-        'tab_category_id'
+        'tab_category_id',
+        'group_category_id'
     ];
 
     /**
@@ -95,5 +97,14 @@ class ProductCategory extends Eloquent
     public function tabcategory()
     {
         return $this->belongsTo(Tabcategory::class, 'tab_category_id');
+    }
+
+    /**
+     * @return mixed
+     * @author TrinhLe
+     */
+    public function groupcategory()
+    {
+        return $this->belongsTo(Groupproductcategory::class, 'group_category_id');
     }
 }

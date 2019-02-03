@@ -1,0 +1,9 @@
+{
+    "name": "Groupproductcategory",
+    "provider": "Botble\\Groupproductcategory\\Providers\\GroupproductcategoryServiceProvider",
+    "plugin": "Botble\\Groupproductcategory\\Plugin",
+    "author": "Sang Nguyen",
+    "url": "http://sangnguyen.info",
+    "version": "1.0",
+    "description": "Groupproductcategory"
+}

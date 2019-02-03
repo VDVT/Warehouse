@@ -164,6 +164,12 @@ Route::group(['namespace' => 'Botble\Base\Http\Controllers', 'middleware' => 'we
                 'as' => 'public.product_category.details',
                 'uses' => 'ProductController@productCategorydetails',
             ]);
+
+            Route::get('/group/{groupId}', [
+                'as' => 'public.product_category.group',
+                'uses' => 'ProductController@getProductByGroup',
+            ]);
+
         });
 
         // Route::group(['prefix' => 'product'], function () {

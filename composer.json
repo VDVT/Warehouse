@@ -96,7 +96,8 @@
             "Botble\\Vendors\\": "plugins/vendors/src",
             "Botble\\Customers\\": "plugins/customers/src",
             "Botble\\Tabcategory\\": "plugins/tabcategory/src",
-            "Botble\\Literaturecategory\\": "plugins/literaturecategory/src"
+            "Botble\\Literaturecategory\\": "plugins/literaturecategory/src",
+            "Botble\\Groupproductcategory\\": "plugins/groupproductcategory/src"
         }
     },
     "autoload-dev": {

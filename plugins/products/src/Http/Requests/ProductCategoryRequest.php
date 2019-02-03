@@ -16,11 +16,12 @@ class ProductCategoryRequest extends Request
     public function rules()
     {
         return [
-            'name'        => 'required|max:120',
-            // 'description' => 'max:400',
-            'slug'        => 'required',
-            'order'       => 'required|integer|min:0',
-            'image'       => 'required'
+            'name'              => 'required|max:120',
+            'slug'              => 'required',
+            'order'             => 'required|integer|min:0',
+            'image'             => 'required',
+            'group_category_id' => 'required',
+            'tab_category_id'   => 'required'
         ];
     }
 }

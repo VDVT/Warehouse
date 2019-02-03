@@ -5,10 +5,13 @@ namespace Botble\Base\Http\Controllers;
 use Illuminate\Routing\Controller;
 use SeoHelper;
 use Theme;
+use Botble\Groupproductcategory\Repositories\Interfaces\GroupproductcategoryInterface;
 use Botble\Tabcategory\Repositories\Interfaces\TabcategoryInterface;
 use Botble\Products\Repositories\Interfaces\ProductCategoryInterface;
 use Botble\Products\Repositories\Interfaces\ProductsInterface;
 use Illuminate\Http\Request;
+use Botble\Products\Models\ProductCategory;
+use Botble\Tabcategory\Models\Tabcategory;
 
 class ProductController extends Controller
 {
@@ -16,6 +19,11 @@ class ProductController extends Controller
      * @var TabcategoryInterface
      */
     protected $tabCategoryRepository;
+
+    /**
+     * @var GroupproductcategoryInterface
+     */
+    protected $groupRepository;
 
     /**
      * @var ProductCategoryInterface
@@ -27,11 +35,12 @@ class ProductController extends Controller
      */
     protected $productRepository;
 
-    public function __construct(ProductCategoryInterface $productCategoryRepository, ProductsInterface $productRepository, TabcategoryInterface $tabCategoryRepository)
+    public function __construct(ProductCategoryInterface $productCategoryRepository, ProductsInterface $productRepository, TabcategoryInterface $tabCategoryRepository, GroupproductcategoryInterface $groupRepository)
     {
         $this->productCategoryRepository = $productCategoryRepository;
-        $this->productRepository = $productRepository;
-        $this->tabCategoryRepository = $tabCategoryRepository;
+        $this->productRepository         = $productRepository;
+        $this->tabCategoryRepository     = $tabCategoryRepository;
+        $this->groupRepository           = $groupRepository;
     }
 
 	public function getList()
@@ -118,13 +127,6 @@ class ProductController extends Controller
         if($request->ajax()){
             $product = $this->productRepository->findById($request->product_id);
             if($product){
-                // $content = '';
-                // foreach ($products as $product) {
-                //     $content .= '<div class="item product-item" data-id="'.$product->id.'" data-availability="'.$product->availability.'">
-                //                 <p class="title">'.$product->name.'</p>
-                //                 <p class="des">'.$product->description.'</p>
-                //             </div>';
-                // }
                 return response()->json(
                     ['status'=>true, 'msg'=>'', 'product'=>$product]
                 );
@@ -134,5 +136,30 @@ class ProductController extends Controller
                 ['status'=>false, 'msg'=>'Product is not found']
             );
         }
+    }
+
+    /**
+     * Description
+     * @param type $groupId 
+     * @return type
+     */
+    public function getProductByGroup($groupId)
+    {
+        $groupProduct = $this->groupRepository->getFirstBy([
+            'status' => 1,
+            'id' => (int)$groupId
+        ]);
+        if (empty($groupProduct)) abort(404);
+
+        Theme::asset()->usePath()->add('style-product', 'css/page/product/product.css', ['style']);
+        Theme::asset()->container('footer')->usePath()->add('js-product', 'js/page/product/product.js', ['gtt-main-js']);
+        
+        $tabIds = ProductCategory::select('tab_category_id')
+                                        ->where('status', '=', true)
+                                        ->where('group_category_id','=', (int)$groupId)
+                                        ->get()->pluck('tab_category_id')->toArray();
+
+        $tabs = Tabcategory::whereIn('id', $tabIds ?? [])->where('status', '=', true)->orderBy('created_at', 'asc')->get();
+        return Theme::scope('product.categories.list', compact('tabs'))->render();
     }
 }
