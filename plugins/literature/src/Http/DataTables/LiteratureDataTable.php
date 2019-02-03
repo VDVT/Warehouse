@@ -97,10 +97,10 @@ class LiteratureDataTable extends DataTableAbstract
     public function buttons()
     {
         $buttons = [
-            'lorder' => [
-                'link' => route('literature.order'),
-                'text' => view('bases::elements.tables.actions.order')->render(),
-            ],
+            // 'lorder' => [
+            //     'link' => route('literature.order'),
+            //     'text' => view('bases::elements.tables.actions.order')->render(),
+            // ],
             'create' => [
                 'link' => route('literature.create'),
                 'text' => view('bases::elements.tables.actions.create')->render(),

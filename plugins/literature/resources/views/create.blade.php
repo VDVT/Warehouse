@@ -10,11 +10,11 @@
             <div class="col-md-9">
                 <div class="main-form">
                     <div class="form-body">
-                        <!-- <div class="form-group @if ($errors->has('tab_category_id')) has-error @endif">
+                        <div class="form-group @if ($errors->has('tab_category_id')) has-error @endif">
                             <label for="tab_category_id" class="control-label">{{ trans('bases::forms.tab') }}</label>
                             {!! Form::select('tab_category_id', $tabs, old('tab_category_id'), ['class' => 'select-search-full', 'id' => 'tab_category_id']) !!}
                             {!! Form::error('tab_category_id', $errors) !!}
-                        </div> -->
+                        </div>
                         <div class="form-group @if ($errors->has('name')) has-error @endif">
                             <label for="name" class="control-label required">{{ trans('literature::literature.forms.name') }}</label>
                             {!! Form::text('name', old('name'), ['class' => 'form-control', 'id' => 'name', 'placeholder' => trans('literature::literature.forms.name_placeholder'), 'data-counter' => 120]) !!}

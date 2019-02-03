@@ -29,4 +29,14 @@ class LiteraturecategoryCacheDecorator extends CacheAbstractDecorator implements
         $this->repository = $repository;
         $this->cache = $cache;
     }
+
+    /**
+     * @param array $condition
+     * @return mixed
+     * @author Trinh Le
+     */
+    public function getAllTabs(array $condition = [])
+    {
+        return $this->getDataIfExistCache(__FUNCTION__, func_get_args());
+    }
 }
