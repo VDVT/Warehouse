@@ -1,5 +1,5 @@
 <?php $source = Theme::asset()->url('images'); ?>
-<div class="bg_about_us_2 d-flex align-items-center" style="background: url('{{$source}}/about_us/rectangle2.png');">
+<div class="bg_about_us_2 d-flex align-items-center" style="background: url('{{$source}}/about_us/about_us.jpg');">
     <div class="container">
         <h2 class="title text-uppercase text-center">experience</h2>
         <div class="gap-50"></div>

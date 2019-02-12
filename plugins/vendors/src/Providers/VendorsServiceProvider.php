@@ -81,16 +81,16 @@ class VendorsServiceProvider extends ServiceProvider
                 'icon' => null,
                 'url' => route('applicationform.list'),
                 'permissions' => ['customers.list'],
-            ])
-            ->registerItem([
-                'id' => 'cms-plugins-services-vendor',
-                'priority' => 2,
-                'parent_id' => 'cms-plugins-services',
-                'name' => trans('Vendor Packet Form'),
-                'icon' => null,
-                'url' => route('vendors.list'),
-                'permissions' => ['vendors.list'],
             ]);
+            // ->registerItem([
+            //     'id' => 'cms-plugins-services-vendor',
+            //     'priority' => 2,
+            //     'parent_id' => 'cms-plugins-services',
+            //     'name' => trans('Vendor Packet Form'),
+            //     'icon' => null,
+            //     'url' => route('vendors.list'),
+            //     'permissions' => ['vendors.list'],
+            // ]);
         });
 
     }

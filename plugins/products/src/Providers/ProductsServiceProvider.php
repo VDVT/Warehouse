@@ -88,7 +88,7 @@ class ProductsServiceProvider extends ServiceProvider
                 ])
                 ->registerItem([
                     'id' => 'cms-plugins-product-categories',
-                    'priority' => 2,
+                    'priority' => 4,
                     'parent_id' => 'cms-plugins-products',
                     'name' => trans('products::product_categories.menu_name'),
                     'icon' => null,
@@ -106,7 +106,7 @@ class ProductsServiceProvider extends ServiceProvider
                 ])
                  ->registerItem([
                     'id' => 'cms-plugins-product-group-categories',
-                    'priority' => 4,
+                    'priority' => 2,
                     'parent_id' => 'cms-plugins-products',
                     'name' => __('Groups Category'),
                     'icon' => null,

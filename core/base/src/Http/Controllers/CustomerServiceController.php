@@ -11,6 +11,7 @@ use Botble\Customers\Repositories\Interfaces\CustomersInterface;
 use SeoHelper;
 use Theme;
 use App\Mail\CustomerSent;
+use App\Mail\VendorSent;
 use Mail;
 
 class CustomerServiceController extends Controller
@@ -93,6 +94,9 @@ class CustomerServiceController extends Controller
         /* end copy */
 
         $form = $this->vendorRepository->createOrUpdate($dataForm);
+
+        /* SendMail */
+        Mail::send(new VendorSent($form));
 
         return redirect()->route('public.services.vendor-package')
                     ->withSuccess(trans('New vendor form has been submitted successfully'));

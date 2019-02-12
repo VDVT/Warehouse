@@ -43,7 +43,7 @@
                                     <ul class="sub-menu">
                                         <li><a href="{{ route('public.page.career') }}">Career Opportunities</a></li>
                                         <li><a href="{{ route('public.services.customer-info') }}">New Customer Form</a></li>
-                                        <li><a href="{{ route('public.services.vendor-package') }}">New Vendor Form</a></li>
+                                        <!-- <li><a href="{{ route('public.services.vendor-package') }}">New Vendor Form</a></li> -->
                                     </ul>
                                 </li>
                                 <li class="logo"><a href="/"><img src="{{ url(theme_option('logo')) }}" alt="{{ setting('site_title') }}" style="max-width: 156px;"></a></li>

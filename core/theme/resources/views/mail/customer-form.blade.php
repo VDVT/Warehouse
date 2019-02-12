@@ -171,11 +171,11 @@
                 <tbody><tr>
                     <td align="center">
 
-                        <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="fullCenter">
+                        <table width="800" border="0" cellpadding="0" cellspacing="0" align="center" class="fullCenter">
                             <tbody><tr>
                                 <td width="100%">
 
-                                    <table width="550" border="0" cellpadding="0" cellspacing="0" align="center" class="fullCenter">
+                                    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="fullCenter">
                                         <tbody><tr>
                                             <td width="100%" height="110" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
                                         </tr>
@@ -199,12 +199,13 @@
                                         </tr>
                                         <!-- END Border Line -->
 
+                                        <!-- BUSINESS CONTACT INFORMATION 1 -->
                                         <tr>
                                             <td width="100%" align="center">
                                                 <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
                                                     <tbody>
                                                     <tr>
-                                                        <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 700; vertical-align: top; font-size: 18px; text-align: left; line-height: 24px;" class="fullCenter">Customer Information</td>
+                                                        <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 700; vertical-align: top; font-size: 18px; text-align: left; line-height: 24px;" class="fullCenter">BUSINESS CONTACT INFORMATION 1</td>
                                                     </tr>
                                                     </tbody>
                                                 </table>
@@ -215,8 +216,8 @@
                                         </tr>
 
                                         <td width="100%" align="center">
-                                            <!-- Form -->
-                                            <table width="250" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center; padding-right: 15px;" class="fullCenter">
+                                            <!-- BUSINESS CONTACT INFORMATION 1 -->
+                                            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center; padding-right: 15px;" class="fullCenter">
                                                 <tbody>
 
                                                 <tr>
@@ -239,6 +240,17 @@
                                                         <table width="50%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
                                                             <tbody>
                                                             <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Doing Business</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->do_business}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <table width="50%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
                                                                 <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Founded Year</td>
                                                             </tr>
                                                             <tr>
@@ -246,19 +258,7 @@
                                                             </tr>
                                                             </tbody>
                                                         </table>
-                                                        <table width="50%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
-                                                            <tbody>
-                                                            <tr>
-                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Phone</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td width="100%" style="color: #333333; font-family:
-                                                                Helvetica, Arial, sans-serif, 'Open Sans';
-                                                                font-weight: 400; vertical-align: top; font-size:
-                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->phone}}</td>
-                                                            </tr>
-                                                            </tbody>
-                                                        </table>
+                                                        
 
                                                         <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
                                                             <tr>
@@ -266,7 +266,7 @@
                                                             </tr>
                                                         </table>
 
-                                                        <table width="50%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
                                                             <tbody>
                                                             <tr>
                                                                 <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Fax</td>
@@ -279,7 +279,20 @@
                                                             </tr>
                                                             </tbody>
                                                         </table>
-                                                        <table width="50%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Phone</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->phone}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
                                                             <tbody>
                                                             <tr>
                                                                 <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Email</td>
@@ -298,66 +311,64 @@
                                                                 <td width="100%" height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
                                                             </tr>
                                                         </table>
-                                                    </td>
 
-                                                </tr>
-                                                <tr>
-                                                    <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-
-                                            <table width="250" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center; padding-left: 15px;" class="fullCenter">
-                                                <tbody>
-
-                                                <tr>
-                                                    <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Contact Name</td>
-                                                </tr>
-                                                <tr>
-                                                    <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->contact_name}}</td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td width="100%" height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
                                                         <table width="50%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
                                                             <tbody>
                                                             <tr>
-                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Contact Phone</td>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Main AP Contact Name</td>
                                                             </tr>
                                                             <tr>
-                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->contact_phone}}</td>
-                                                            </tr>
-                                                            </tbody>
-                                                        </table>
-                                                        <table width="50%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
-                                                            <tbody>
-                                                            <tr>
-                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Contact Fax</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->contact_fax}}</td>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->contact_name}}</td>
                                                             </tr>
                                                             </tbody>
                                                         </table>
 
+                                                        <table width="50%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Title</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->title}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
                                                         <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
                                                             <tr>
                                                                 <td width="100%" height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
                                                             </tr>
                                                         </table>
 
-                                                        <table width="50%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
                                                             <tbody>
                                                             <tr>
-                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Contact Email</td>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Fax</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->contact_fax}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Phone</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->contact_phone}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Email</td>
                                                             </tr>
                                                             <tr>
                                                                 <td width="100%" style="color: #333333; font-family:
@@ -367,15 +378,71 @@
                                                             </tr>
                                                             </tbody>
                                                         </table>
-                                                        <table width="50%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+
+
+                                        <!-- ######################### -->
+
+                                        <tr>
+                                            <td width="100%" align="center">
+                                                <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 700; vertical-align: top; font-size: 18px; text-align: left; line-height: 24px;" class="fullCenter">BUSINESS CONTACT INFORMATION 2</td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+
+                                        <tr>
+                                            <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                        </tr>
+
+                                        <td width="100%" align="center">
+                                            <!-- BUSINESS CONTACT INFORMATION 2 -->
+                                            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center; padding-right: 15px;" class="fullCenter">
+                                                <tbody>
+
+                                                <tr>
+                                                    <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
                                                             <tbody>
                                                             <tr>
-                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Contact Title</td>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Tax Identification Number</td>
                                                             </tr>
                                                             <tr>
-                                                                <td width="100%" style="color: #333333; font-family:
-                                                                Helvetica, Arial, sans-serif, 'Open Sans';
-                                                                font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->title}}</td>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->tax_number}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">DUNS</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->duns_number}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Resale Number</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->resale_numer}}</td>
                                                             </tr>
                                                             </tbody>
                                                         </table>
@@ -385,6 +452,675 @@
                                                                 <td width="100%" height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
                                                             </tr>
                                                         </table>
+
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Primary Business Address</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->address}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tr>
+                                                                <td width="100%" height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">City</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->city}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">State</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->state}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Zip</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->zip}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tr>
+                                                                <td width="100%" height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Phone</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->phone_1}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Fax</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->fax_1}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Email</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->email_1}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tr>
+                                                                <td width="100%" height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table width="50%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Bank Name</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->bank_name}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table width="50%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Bank Address</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->bank_address}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tr>
+                                                                <td width="100%" height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+
+
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Phone</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->phone_2}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Fax</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->fax_2}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Email</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->email_2}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tr>
+                                                                <td width="100%" height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Total amount of sales orders</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">
+                                                                    @if($customer->is_amount)
+                                                                        More than 50,000 USD
+                                                                    @else
+                                                                        Less than 50,000 USD
+                                                                    @endif
+                                                                </td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+
+                                        <!-- ##################################### -->
+                                        <tr>
+                                            <td width="100%" align="center">
+                                                <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                    <tbody>
+                                                    <tr>
+                                                        <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 700; vertical-align: top; font-size: 18px; text-align: left; line-height: 24px;" class="fullCenter">BUSINESS/TRADE REFERENCES
+                                                        </td>
+                                                    </tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+
+                                        <tr>
+                                            <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                        </tr>
+
+
+                                        <td width="100%" align="center">
+                                            <!-- BUSINESS/TRADE REFERENCES -->
+                                            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center; padding-right: 15px;" class="fullCenter">
+                                                <tbody>
+
+                                                <tr>
+                                                    <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Check if COD Customer</td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">
+                                                        @if($customer->is_check_cod)
+                                                            Yes
+                                                        @else
+                                                            No
+                                                        @endif
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <table width="50%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Company</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_1_company_name}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table width="50%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Type of Account</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_1_account_type}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tr>
+                                                                <td width="100%" height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Address</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_1_address}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tr>
+                                                                <td width="100%" height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">City</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_1_city}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">State</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_1_state}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Zip</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_1_zip}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tr>
+                                                                <td width="100%" height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Phone</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_1_phone}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Fax</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_1_fax}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Email</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_1_email}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="100%" height="1" style="font-size: 1px;line-height: 1px;background: rgba(0,0,0,.1);">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table width="50%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Company</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_2_company_name}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table width="50%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Type of Account</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_2_account_type}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tr>
+                                                                <td width="100%" height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Address</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_2_address}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tr>
+                                                                <td width="100%" height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">City</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_2_city}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">State</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_2_state}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Zip</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_2_zip}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tr>
+                                                                <td width="100%" height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Phone</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_2_phone}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Fax</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_2_fax}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Email</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_2_email}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="100%" height="1" style="font-size: 1px;line-height: 1px;background: rgba(0,0,0,.1);">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="100%" height="30" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <table width="50%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Company</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_3_company_name}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table width="50%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Type of Account</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_3_account_type}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tr>
+                                                                <td width="100%" height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Address</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_3_address}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tr>
+                                                                <td width="100%" height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">City</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_3_city}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">State</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_3_state}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Zip</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_3_zip}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+                                                        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tr>
+                                                                <td width="100%" height="15" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
+                                                            </tr>
+                                                        </table>
+
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Phone</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_3_phone}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Fax</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_3_fax}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <table width="33%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt; text-align: center;" class="fullCenter">
+                                                            <tbody>
+                                                            <tr>
+                                                                <td width="100%" style="color: #8b9aab; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-weight: 400; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter">Email</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="100%" style="color: #333333; font-family:
+                                                                Helvetica, Arial, sans-serif, 'Open Sans';
+                                                                font-weight: 400; vertical-align: top; font-size:
+                                                                14px; text-align: left; line-height: 24px;" class="fullCenter">{{$customer->trade_3_email}}</td>
+                                                            </tr>
+                                                            </tbody>
+                                                        </table>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -392,20 +1128,8 @@
                                                 </tr>
                                                 </tbody>
                                             </table>
-
                                         </td>
                                         </tr>
-                                        <tr>
-                                            <td width="100%" height="40" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" style="color: #000000; font-family: Open Sans, Arial, sans-serif, 'Open Sans'; vertical-align: top; font-size: 14px; text-align: left; line-height: 24px;" class="fullCenter raleway">
-                                                If you have any questions or see anything that is incorrect, please feel free to email us at <a href="mailto:support@umh.com" style="color: #2196F3;">support@umh.com</a>. Please include your confirmation number in the subject line of your email, and we will happily assist in any way we can.
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td height="110" width="100%" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-                                        </tr>
                                         </tbody></table>
 
                                 </td>
@@ -413,64 +1137,6 @@
                             </tbody></table>
 
                     </td>
-                </tr>
-                </tbody></table>
-
-        </td>
-    </tr>
-    </tbody></table>
-
-<table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full" bgcolor="#303030" style="background-color: #303030;">
-    <tbody><tr>
-        <td width="100%" valign="top" align="center">
-
-            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
-                <tbody><tr>
-                    <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
-                </tr>
-                </tbody></table>
-
-            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="mobile">
-                <tbody><tr>
-                    <td align="center">
-
-                        <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
-                            <tbody><tr>
-                                <td width="100%" align="center">
-
-
-                                    <table width="70%" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
-                                        <tbody><tr>
-                                            <td width="100%" style="text-align: left; color: #ffffff; font-family: Helvetica, Arial, sans-serif, 'Questrial'; font-size: 18px; line-height: 24px; font-weight: 400;" class="fullCenter questrial">
-                                                The Umh Team
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" height="30" class="h20"></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" style="text-align: left; font-family: Helvetica, Arial, sans-serif, 'Open Sans'; font-size: 12px; color: #ffffff; line-height: 24px; font-weight: 400;" class="fullCenter opensans">
-                                                Email: support@umh.com
-                                            </td>
-                                        </tr>
-                                        </tbody></table>
-
-                                    <table width="1" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="full">
-                                        <tbody><tr>
-                                            <td width="100%" height="40"></td>
-                                        </tr>
-                                        </tbody></table>
-                                </td>
-                            </tr>
-                            </tbody></table>
-
-                    </td>
-                </tr>
-                </tbody></table>
-
-            <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
-                <tbody><tr>
-                    <td width="100%" height="20" style="font-size: 1px; line-height: 1px;">&nbsp;</td>
                 </tr>
                 </tbody></table>
 

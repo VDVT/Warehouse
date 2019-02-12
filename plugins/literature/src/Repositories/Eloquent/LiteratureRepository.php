@@ -10,7 +10,7 @@ class LiteratureRepository extends RepositoriesAbstract implements LiteratureInt
 	public function getLiteratures($limit=false, $except=false)
 	{
 		$data = $this->model->where('literature.status', 1)
-            ->orderBy('number_order', 'asc')
+            // ->orderBy('number_order', 'asc')
             ->orderBy('literature.created_at', 'desc');
 
         if($except) $data->where('literature.id', '<>', (int)$except);
@@ -43,7 +43,7 @@ class LiteratureRepository extends RepositoriesAbstract implements LiteratureInt
         #TODO
         $queryData = $this->model
                         ->select('name','id')
-                        ->orderBy('number_order', 'asc')
+                        // ->orderBy('number_order', 'asc')
                         ->orderBy('created_at', 'desc')
                         ->get();
         $this->resetModel();
