@@ -145,7 +145,7 @@
       -webkit-border-radius: 2px;
       -moz-border-radius: 2px;
       border-radius: 2px;
-      background-color: #e7661f;
+      background-color: #bc3033;
       color: #fff;
       z-index: 999; }
       

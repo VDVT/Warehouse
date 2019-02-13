@@ -21,7 +21,7 @@
           left: 0;
           top: calc(50% - 40px); }
       .bg_about_us_2 .container .experience-item:hover {
-        background: #e7661f;
+        background: #bc3033;
         cursor: pointer; }
         .bg_about_us_2 .container .experience-item:hover .item-dinner .title {
           color: #fff; }
@@ -34,7 +34,7 @@
         .bg_about_us_2 .container .experience-item .item-dinner .title {
           font-family: 'FranklinGothic Demi';
           font-size: 32px;
-          color: #e7661f; }
+          color: #bc3033; }
 
 .bg_about_us_3 .box-1 .overlight {
   background: #ffffffa3;
@@ -60,7 +60,7 @@
       left: 3px;
       width: 70px;
       height: 3px;
-      background-color: #e7661f; }
+      background-color: #bc3033; }
 
 .bg_about_us_4 {
   background-size: cover !important; }
@@ -82,7 +82,7 @@
           left: 3px;
           width: 70px;
           height: 3px;
-          background-color: #e7661f; }
+          background-color: #bc3033; }
       .bg_about_us_4 .row .col-md-3 .card .card-body .content-strength {
         padding-top: 50px;
         font-size: 16px;
@@ -95,12 +95,12 @@
         top: -77px;
         right: -20px; }
         .bg_about_us_4 .row .col-md-3 .card .card-body .owl-nav .owl-prev {
-          background-color: #e7661f;
+          background-color: #bc3033;
           margin: 0;
           border-radius: 0;
           width: 30px; }
         .bg_about_us_4 .row .col-md-3 .card .card-body .owl-nav .owl-next {
-          background-color: #e7661f;
+          background-color: #bc3033;
           margin: 0;
           border-radius: 0;
           width: 30px; }
