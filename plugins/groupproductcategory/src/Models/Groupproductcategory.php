@@ -5,6 +5,7 @@ namespace Botble\Groupproductcategory\Models;
 use Eloquent;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Botble\Products\Models\ProductCategory;
+use Botble\Tabcategory\Models\Tabcategory;
 
 /**
  * Botble\Groupproductcategory\Models\Groupproductcategory
@@ -31,5 +32,14 @@ class Groupproductcategory extends Eloquent
     public function categories()
     {
         return $this->hasMany(ProductCategory::class, 'group_category_id');
+    }
+
+    /**
+     * @return mixed
+     * @author TrinhLe
+     */
+    public function tabs()
+    {
+        return $this->hasMany(Tabcategory::class, 'group_id');
     }
 }

@@ -6,7 +6,7 @@
     font-size: 30px;
     font-family: 'FranklinGothic Demi';
     margin-bottom: 60px;
-    color: #e7661f; }
+    color: #bc3033; }
   .contact_acc_manager .form-group .form-control {
     font-size: 14px;
     font-family: 'FranklinGothic Book';
@@ -23,8 +23,8 @@
     border-width: 2px;
     font-family: 'FranklinGothic Medium';
     font-size: 14px;
-    border-color: #e7661f;
-    color: #e7661f;
+    border-color: #bc3033;
+    color: #bc3033;
     padding-right: 25px;
     padding-left: 25px;
     text-transform: uppercase; }
@@ -32,7 +32,7 @@
     padding-left: 15px; }
 
 .title1 {
-  color: #e7661f;
+  color: #bc3033;
   font-size: 17px;
   margin-top: 20px;
   margin-bottom: 20px; }

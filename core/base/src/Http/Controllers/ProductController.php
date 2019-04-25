@@ -153,13 +153,7 @@ class ProductController extends Controller
 
         Theme::asset()->usePath()->add('style-product', 'css/page/product/product.css', ['style']);
         Theme::asset()->container('footer')->usePath()->add('js-product', 'js/page/product/product.js', ['gtt-main-js']);
-        
-        $tabIds = ProductCategory::select('tab_category_id')
-                                        ->where('status', '=', true)
-                                        ->where('group_category_id','=', (int)$groupId)
-                                        ->get()->pluck('tab_category_id')->toArray();
-
-        $tabs = Tabcategory::whereIn('id', $tabIds ?? [])->where('status', '=', true)->orderBy('created_at', 'asc')->get();
+        $tabs = Tabcategory::where('group_id', $groupProduct->id)->where('status', '=', true)->orderBy('created_at', 'asc')->get();
         return Theme::scope('product.categories.list', compact('tabs'))->render();
     }
 }

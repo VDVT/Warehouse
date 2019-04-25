@@ -9,6 +9,7 @@ use Botble\Base\Http\Controllers\BaseController;
 use Illuminate\Http\Request;
 use MongoDB\Driver\Exception\Exception;
 use Botble\Tabcategory\Http\DataTables\TabcategoryDataTable;
+use Botble\Groupproductcategory\Repositories\Interfaces\GroupproductcategoryInterface;
 
 class TabcategoryController extends BaseController
 {
@@ -18,13 +19,19 @@ class TabcategoryController extends BaseController
     protected $tabcategoryRepository;
 
     /**
+     * @var GroupproductcategoryInterface
+     */
+    protected $groupRepository;
+
+    /**
      * TabcategoryController constructor.
      * @param TabcategoryInterface $tabcategoryRepository
      * @author Sang Nguyen
      */
-    public function __construct(TabcategoryInterface $tabcategoryRepository)
+    public function __construct(TabcategoryInterface $tabcategoryRepository, GroupproductcategoryInterface $groupRepository)
     {
         $this->tabcategoryRepository = $tabcategoryRepository;
+        $this->groupRepository       = $groupRepository;
     }
 
     /**
@@ -49,8 +56,9 @@ class TabcategoryController extends BaseController
     public function getCreate()
     {
         page_title()->setTitle(trans('tabcategory::tabcategory.create'));
+        $groups = $this->groupRepository->pluck('name', 'id');
 
-        return view('tabcategory::create');
+        return view('tabcategory::create', compact('groups'));
     }
 
     /**
@@ -88,8 +96,9 @@ class TabcategoryController extends BaseController
         }
 
         page_title()->setTitle(trans('tabcategory::tabcategory.edit') . ' #' . $id);
+        $groups = $this->groupRepository->pluck('name', 'id');
 
-        return view('tabcategory::edit', compact('tabcategory'));
+        return view('tabcategory::edit', compact('tabcategory','groups'));
     }
 
     /**

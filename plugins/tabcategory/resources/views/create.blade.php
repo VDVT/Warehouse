@@ -6,6 +6,11 @@
             <div class="col-md-9">
                 <div class="main-form">
                     <div class="form-body">
+                        <div class="form-group @if ($errors->has('group_id')) has-error @endif">
+                            <label for="group_id" class="control-label">{{ __('Product Group') }}</label>
+                            {!! Form::select('group_id', $groups, old('group_id'), ['class' => 'select-search-full', 'id' => 'group_id']) !!}
+                            {!! Form::error('group_id', $errors) !!}
+                        </div>
                         <div class="form-group @if ($errors->has('name')) has-error @endif">
                             <label for="name" class="control-label required">{{ trans('bases::forms.name') }}</label>
                             {!! Form::text('name', old('name'), ['class' => 'form-control', 'id' => 'name', 'placeholder' => trans('bases::forms.name_placeholder'), 'data-counter' => 120]) !!}

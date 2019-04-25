@@ -25,7 +25,7 @@
       .list_blog .card .card-body .card-link {
         text-transform: uppercase;
         font-size: 14px;
-        color: #f7941d; }
+        color: #bc3033; }
   .list_blog .pagination {
     display: flow-root;
     padding-top: 30px;
@@ -53,7 +53,7 @@
         left: 0;
         top: 25px;
         display: inline-block;
-        background-color: #f7941d;
+        background-color: #bc3033;
         color: #fff;
         font-size: 13px;
         text-align: center;
@@ -81,14 +81,14 @@
       .bg_blog .card .card-body .card-link {
         text-transform: uppercase;
         font-size: 14px;
-        color: #f7941d; }
+        color: #bc3033; }
 
 .date {
   position: absolute;
   left: 0;
   top: 25px;
   display: inline-block;
-  background-color: #f7941d;
+  background-color: #bc3033;
   color: #fff;
   font-size: 13px;
   text-align: center;

@@ -70,9 +70,9 @@ class ProductCategoryController extends BaseController
         $categories = array_sort_recursive($categories);
 
         $tabs = $this->tabCategoryRepository->pluck('name', 'id');
-        $groups = $this->groupRepository->pluck('name', 'id');
+        // $groups = $this->groupRepository->pluck('name', 'id');
 
-        return view('products::product_categories.create', compact('categories','tabs', 'groups'));
+        return view('products::product_categories.create', compact('categories','tabs'));
     }
 
     /**
@@ -120,9 +120,9 @@ class ProductCategoryController extends BaseController
         $categories = array_sort_recursive($categories);
 
         $tabs = $this->tabCategoryRepository->pluck('name', 'id');
-        $groups = $this->groupRepository->pluck('name', 'id');
+        // $groups = $this->groupRepository->pluck('name', 'id');
 
-        return view('products::product_categories.edit', compact('category', 'categories','tabs', 'groups'));
+        return view('products::product_categories.edit', compact('category', 'categories','tabs'));
     }
 
     /**

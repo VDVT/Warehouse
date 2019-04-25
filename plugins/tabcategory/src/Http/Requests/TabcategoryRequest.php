@@ -16,7 +16,8 @@ class TabcategoryRequest extends Request
     public function rules()
     {
         return [
-            'name' => 'required',
+            'name'     => 'required',
+            'group_id' => 'required|numeric|exists:groupproductcategory,id'
         ];
     }
 }

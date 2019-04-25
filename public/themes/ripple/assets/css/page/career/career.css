@@ -4,7 +4,7 @@
   .bg_career_1 h4 {
     font-size: 40px;
     font-family: 'FranklinGothic Demi';
-    color: #e7661f; }
+    color: #bc3033; }
 
 .bg_career_2 .row-2 {
   margin: 80px 0; }
@@ -63,15 +63,15 @@
         border-width: 2px;
         font-family: 'FranklinGothic Medium';
         font-size: 14px;
-        border-color: #e7661f;
-        color: #e7661f;
+        border-color: #bc3033;
+        color: #bc3033;
         text-transform: uppercase; }
         @media (max-width: 980px) {
           .bg_career_2 .item .it-1 .col-md-3 .card .card-body .btn {
             width: 119px;
             height: 50px;
             line-height: 40px;
-            background: #e7661f;
+            background: #bc3033;
             color: #fff;
             border-radius: 0;
             font-weight: bold;
@@ -102,7 +102,7 @@
     width: 150px;
     height: 85px;
     line-height: 71px;
-    background: #e7661f;
+    background: #bc3033;
     color: #fff;
     border-radius: 0;
     font-weight: bold;
@@ -115,7 +115,7 @@
 .bg_career_2 .item:hover {
   cursor: pointer; }
   .bg_career_2 .item:hover .item-content {
-    border-bottom: 2px solid #e7661f; }
+    border-bottom: 2px solid #bc3033; }
     .bg_career_2 .item:hover .item-content .btn-apply {
       -webkit-transition: all .3s ease;
       -moz-transition: all .3s ease;
@@ -147,7 +147,7 @@
             padding: 10px 30px; } }
         .bg_career_3 .section-3 .col-right .box-option .box-left .title {
           font-size: 28px;
-          color: #e7661f; }
+          color: #bc3033; }
         .bg_career_3 .section-3 .col-right .box-option .box-left ul {
           list-style-type: none;
           padding-left: 0; }
@@ -156,14 +156,14 @@
             font-size: 18px;
             font-family: "FranklinGothic Medium"; }
             .bg_career_3 .section-3 .col-right .box-option .box-left ul li.choose {
-              border-left: 3px solid #e7661f;
+              border-left: 3px solid #bc3033;
               padding-left: 10px;
               -webkit-transition: all .3s ease;
               -moz-transition: all .3s ease;
               -ms-transition: all .3s ease;
               -o-transition: all .3s ease; }
             .bg_career_3 .section-3 .col-right .box-option .box-left ul li:hover {
-              border-left: 3px solid #e7661f;
+              border-left: 3px solid #bc3033;
               padding-left: 10px;
               -webkit-transition: padding .3s ease;
               -moz-transition: padding .3s ease;
@@ -171,7 +171,7 @@
               -o-transition: padding .3s ease;
               cursor: pointer; }
       .bg_career_3 .section-3 .col-right .box-option .box-right {
-        background-color: #e7661f;
+        background-color: #bc3033;
         width: 220px;
         height: 100%;
         min-height: 500px; }
@@ -204,7 +204,7 @@
       height: 20px;
       text-align: center;
       margin-right: 10px;
-      background-color: #e7661f;
+      background-color: #bc3033;
       color: #fff;
       display: inline-block;
       font: normal normal normal 14px/1 FontAwesome;
@@ -223,13 +223,13 @@
   .bg_career_4 .section-4 .box-item .box .des {
     display: none; }
   .bg_career_4 .section-4 .box-item .btn {
-    background-color: #e7661f;
+    background-color: #bc3033;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
     border-width: 2px;
     font-family: 'FranklinGothic Medium';
     font-size: 14px;
-    border-color: #e7661f;
+    border-color: #bc3033;
     color: #fff;
     display: block; }

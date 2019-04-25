@@ -12,11 +12,11 @@
             <div class="col-md-9">
                 <div class="main-form">
                     <div class="form-body">
-                        <div class="form-group @if ($errors->has('group_category_id')) has-error @endif">
+                        <!-- <div class="form-group @if ($errors->has('group_category_id')) has-error @endif">
                             <label for="group_category_id" class="control-label">{{ __('Product Group') }}</label>
                             {!! Form::select('group_category_id', $groups, $category->group_category_id, ['class' => 'select-search-full', 'id' => 'group_category_id']) !!}
                             {!! Form::error('group_category_id', $errors) !!}
-                        </div>
+                        </div> -->
 
                         <div class="form-group @if ($errors->has('tab_category_id')) has-error @endif">
                             <label for="tab_category_id" class="control-label">{{ trans('bases::forms.tab') }}</label>

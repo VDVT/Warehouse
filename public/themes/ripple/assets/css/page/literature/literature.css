@@ -2,7 +2,7 @@
   background: #f0f0f0; }
   .page_literature .bock_1 h1 {
     font-size: 40px;
-    color: #e7661f;
+    color: #bc3033;
     line-height: 160px;
     font-family: 'FranklinGothic Demi'; }
 .page_literature .bock_2 {
@@ -25,12 +25,12 @@
           font-size: 16px;
           font-family: "FranklinGothic Book"; }
         .page_literature .bock_2 .literatures .item .item-box .box-content .item-download {
-          color: #e7661f;
+          color: #bc3033;
           font-size: 16px;
           font-weight: bold;
           opacity: 0; }
           .page_literature .bock_2 .literatures .item .item-box .box-content .item-download a {
-            color: #e7661f; }
+            color: #bc3033; }
           .page_literature .bock_2 .literatures .item .item-box .box-content .item-download i {
             padding-right: 5px; }
       .page_literature .bock_2 .literatures .item:hover {
