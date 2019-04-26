@@ -7,6 +7,7 @@ use Botble\Support\Services\ProduceServiceInterface;
 use Exception;
 use Illuminate\Http\Request;
 use Sentinel;
+use Hash;
 
 class ChangePasswordService implements ProduceServiceInterface
 {
@@ -46,8 +47,9 @@ class ChangePasswordService implements ProduceServiceInterface
         }
 
         $user = $this->userRepository->findById($request->input('id', acl_get_current_user_id()));
-        Sentinel::getUserRepository()->update($user, [
-            'password' => $request->input('password'),
+
+        $this->userRepository->update(['id' => $user->id], [
+            'password' => Hash::make($request->input('password')),
         ]);
 
         do_action(USER_ACTION_AFTER_UPDATE_PASSWORD, USER_MODULE_SCREEN_NAME, $request, $user);
