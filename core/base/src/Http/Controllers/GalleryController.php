@@ -44,9 +44,9 @@ class GalleryController extends Controller
      * @param type|null $id 
      * @return view
      */
-    public function showGalleryForm(){
-
-        $galleries = $this->galleryRepository->all();
+    public function showGalleryForm()
+    {
+        $galleries = $this->galleryRepository->getAll();
         return Theme::scope('gallery.index',compact('galleries'))->render();
     }
 

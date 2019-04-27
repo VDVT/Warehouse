@@ -14,7 +14,7 @@
                 {!! Form::error('description', $errors) !!}
             </div>
 
-            <div class="form-group @if ($errors->has('is_staff')) has-error @endif">
+           <!--  <div class="form-group @if ($errors->has('is_staff')) has-error @endif">
                 <input type="checkbox" class="styled" name="is_staff" id="is_staff" value="1" checked="checked">
                 <label for="is_staff">{{ trans('acl::permissions.is_staff') }}</label>
                 {!! Form::error('is_staff', $errors) !!}
@@ -24,7 +24,7 @@
                 <input type="checkbox" class="styled" id="is_default" name="is_default" value="1" @if (old('is_default')) checked="checked" @endif>
                 <label for="is_default">{{ trans('bases::forms.is_default') }}</label>
                 {!! Form::error('is_default', $errors) !!}
-            </div>
+            </div> -->
         </div>
 
         <div class="widget">

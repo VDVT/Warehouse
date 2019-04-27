@@ -25,12 +25,12 @@
                             {!! Form::text('order', old('order', 0), ['class' => 'form-control', 'id' => 'order', 'placeholder' => trans('bases::forms.order_by_placeholder'), 'data-counter' => 60]) !!}
                             {!! Form::error('order', $errors) !!}
                         </div>
-                        <div class="form-group @if ($errors->has('featured')) has-error @endif">
+                        <!-- <div class="form-group @if ($errors->has('featured')) has-error @endif">
                             <input type="checkbox" class="styled" name="featured" id="featured" value="1"
                                    @if (old('featured') == 1) checked="checked" @endif>
                             <label for="featured">{{ trans('bases::forms.featured') }}</label>
                             {!! Form::error('featured', $errors) !!}
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 @php do_action(BASE_ACTION_META_BOXES, GALLERY_MODULE_SCREEN_NAME, 'advanced') @endphp

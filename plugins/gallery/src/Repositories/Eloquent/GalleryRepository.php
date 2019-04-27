@@ -40,7 +40,7 @@ class GalleryRepository extends RepositoriesAbstract implements GalleryInterface
      */
     public function getAll()
     {
-        $data = $this->model->where('galleries.status', '=', 1);
+        $data = $this->model->where('galleries.status', '=', 1)->orderBy('galleries.order', 'asc');
 
         $data = apply_filters(BASE_FILTER_BEFORE_GET_FRONT_PAGE_ITEM, $data, $this->model, GALLERY_MODULE_SCREEN_NAME)->get();
         $this->resetModel();

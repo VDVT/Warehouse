@@ -14,7 +14,7 @@
             {!! Form::error('description', $errors) !!}
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
             <input type="checkbox" id="is_staff" name="is_staff" value="1" @if ($role->is_staff) checked="checked" @endif>
             <label for="is_staff">{{ trans('acl::permissions.is_staff') }}</label>
             {!! Form::error('is_staff', $errors) !!}
@@ -24,7 +24,7 @@
             <input type="checkbox" id="is_default" name="is_default" value="1" @if ($role->is_default) checked="checked" @endif>
             <label for="is_default">{{ trans('bases::forms.is_default') }}</label>
             {!! Form::error('is_default', $errors) !!}
-        </div>
+        </div> -->
 
         <div class="form-actions text-right">
             <a href="{{ route('roles.list') }}" class="btn btn-default" id="cancelButton">{{ trans('acl::permissions.cancel') }}</a>
