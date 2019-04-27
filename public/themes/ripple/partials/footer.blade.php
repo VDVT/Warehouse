@@ -75,6 +75,8 @@
 
 <!-- JS Library-->
 {!! Theme::footer() !!}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/js/lightgallery-all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 
 <script type="text/javascript">
     setTimeout(function() {

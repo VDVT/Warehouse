@@ -48,4 +48,12 @@ class Gallery extends Eloquent
     {
         return $this->belongsTo(User::class);
     }
+
+    /**
+     * [getMetaImages description]
+     * @return [type] [description]
+     */
+    public function getMetaImages(){
+        return GalleryMeta::select('images')->where('content_id', $this->id)->where('reference', 'gallery')->get();
+    }
 }

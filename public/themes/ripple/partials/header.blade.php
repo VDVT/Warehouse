@@ -14,6 +14,7 @@
         };
         const _token = "{{ csrf_token() }}";
     </script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.min.css">
 </head>
 <body>
     {!! Theme::partial('sidebar-menu') !!}
