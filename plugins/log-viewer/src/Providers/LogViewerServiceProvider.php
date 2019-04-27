@@ -81,16 +81,16 @@ class LogViewerServiceProvider extends ServiceProvider
             $this->publishes([__DIR__ . '/../../config/log-viewer.php' => config_path('log-viewer.php')], 'config');
         }
 
-        Event::listen(SessionStarted::class, function () {
-            dashboard_menu()->registerItem([
-                'id' => 'cms-plugin-system-logs',
-                'priority' => 7,
-                'parent_id' => 'cms-core-platform-administration',
-                'name' => trans('log-viewer::log-viewer.menu_name'),
-                'icon' => null,
-                'url' => route('log-viewer::dashboard'),
-                'permissions' => ['log-viewer::dashboard'],
-            ]);
-        });
+        // Event::listen(SessionStarted::class, function () {
+        //     dashboard_menu()->registerItem([
+        //         'id' => 'cms-plugin-system-logs',
+        //         'priority' => 7,
+        //         'parent_id' => 'cms-core-platform-administration',
+        //         'name' => trans('log-viewer::log-viewer.menu_name'),
+        //         'icon' => null,
+        //         'url' => route('log-viewer::dashboard'),
+        //         'permissions' => ['log-viewer::dashboard'],
+        //     ]);
+        // });
     }
 }

@@ -218,14 +218,14 @@ abstract class DataTableAbstract extends DataTable
     public function getDefaultButtons()
     {
         return [
-            'export',
-            'print',
-            [
-                'link' => '#',
-                'text' => view('bases::elements.tables.filter')->render(),
-            ],
-            'reset',
-            'reload',
+            // 'export',
+            // 'print',
+            // [
+            //     'link' => '#',
+            //     'text' => view('bases::elements.tables.filter')->render(),
+            // ],
+            // 'reset',
+            // 'reload',
         ];
     }
 

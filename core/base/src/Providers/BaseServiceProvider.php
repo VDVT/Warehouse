@@ -269,15 +269,15 @@ class BaseServiceProvider extends ServiceProvider
                 'url' => null,
                 'permissions' => ['users.list'],
             ])
-            ->registerItem([
-                'id' => 'cms-core-feature-access-control',
-                'priority' => 1,
-                'parent_id' => 'cms-core-platform-administration',
-                'name' => trans('bases::layouts.feature_access_control'),
-                'icon' => null,
-                'url' => route('system.feature.list'),
-                'permissions' => ['system.feature.list'],
-            ])
+            // ->registerItem([
+            //     'id' => 'cms-core-feature-access-control',
+            //     'priority' => 1,
+            //     'parent_id' => 'cms-core-platform-administration',
+            //     'name' => trans('bases::layouts.feature_access_control'),
+            //     'icon' => null,
+            //     'url' => route('system.feature.list'),
+            //     'permissions' => ['system.feature.list'],
+            // ])
             ->registerItem([
                 'id' => 'cms-core-role-permission',
                 'priority' => 2,
@@ -295,24 +295,24 @@ class BaseServiceProvider extends ServiceProvider
                 'icon' => null,
                 'url' => route('users.list'),
                 'permissions' => ['users.list'],
-            ])
-            ->registerItem([
-                'id' => 'cms-core-user-super',
-                'priority' => 4,
-                'parent_id' => 'cms-core-platform-administration',
-                'name' => trans('bases::layouts.super_user_management'),
-                'icon' => null,
-                'url' => route('users-supers.list'),
-                'permissions' => ['users-supers.list'],
-            ])
-            ->registerItem([
-                'id' => 'cms-core-system-information',
-                'priority' => 5,
-                'parent_id' => 'cms-core-platform-administration',
-                'name' => trans('bases::layouts.system_information'),
-                'icon' => null,
-                'url' => route('system.info'),
-                'permissions' => ['system.info'],
             ]);
+            // ->registerItem([
+            //     'id' => 'cms-core-user-super',
+            //     'priority' => 4,
+            //     'parent_id' => 'cms-core-platform-administration',
+            //     'name' => trans('bases::layouts.super_user_management'),
+            //     'icon' => null,
+            //     'url' => route('users-supers.list'),
+            //     'permissions' => ['users-supers.list'],
+            // ])
+            // ->registerItem([
+            //     'id' => 'cms-core-system-information',
+            //     'priority' => 5,
+            //     'parent_id' => 'cms-core-platform-administration',
+            //     'name' => trans('bases::layouts.system_information'),
+            //     'icon' => null,
+            //     'url' => route('system.info'),
+            //     'permissions' => ['system.info'],
+            // ]);
     }
 }

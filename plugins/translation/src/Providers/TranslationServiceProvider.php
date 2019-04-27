@@ -62,16 +62,16 @@ class TranslationServiceProvider extends ServiceProvider
             $this->publishes([__DIR__ . '/../../public/assets' => public_path('vendor/core/plugins/translation')], 'assets');
         }
 
-        Event::listen(SessionStarted::class, function () {
-            dashboard_menu()->registerItem([
-                'id' => 'cms-plugin-translation',
-                'priority' => 6,
-                'parent_id' => 'cms-core-platform-administration',
-                'name' => trans('translations::translation.menu_name'),
-                'icon' => null,
-                'url' => route('translations.list'),
-                'permissions' => ['translations.list'],
-            ]);
-        });
+        // Event::listen(SessionStarted::class, function () {
+        //     dashboard_menu()->registerItem([
+        //         'id' => 'cms-plugin-translation',
+        //         'priority' => 6,
+        //         'parent_id' => 'cms-core-platform-administration',
+        //         'name' => trans('translations::translation.menu_name'),
+        //         'icon' => null,
+        //         'url' => route('translations.list'),
+        //         'permissions' => ['translations.list'],
+        //     ]);
+        // });
     }
 }
