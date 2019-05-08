@@ -29,7 +29,7 @@
                                 <li><a href="{{ route('public.page.aboutus') }}">About Us</a></li>
                                 <!-- <li><a href="{{ route('public.product_category.list') }}">Quick Ship Products</a></li> -->
                                 <li class="has-children">
-                                    <a href="#">Quick Ship Products</a>
+                                    <a href="#">Products</a>
                                     <ul class="sub-menu">
                                         @php
                                             $groupProduct = app(GroupproductcategoryInterface::class)->allBy(['status' => 1]);
@@ -42,7 +42,7 @@
                                 <li class="has-children">
                                     <a href="#">Customer Service</a>
                                     <ul class="sub-menu">
-                                        <li><a href="{{ route('public.page.career') }}">Career Opportunities</a></li>
+                                        <!-- <li><a href="{{ route('public.page.career') }}">Career Opportunities</a></li> -->
                                         <li><a href="{{ route('public.services.customer-info') }}">New Customer Form</a></li>
                                         <!-- <li><a href="{{ route('public.services.vendor-package') }}">New Vendor Form</a></li> -->
                                     </ul>

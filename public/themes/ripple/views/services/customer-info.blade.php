@@ -50,27 +50,27 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label class="col-sm-2 col-form-label text-dark">Phone / Fax / Email</label>
+                                    <label class="col-sm-2 col-form-label text-dark">Phone / Fax</label>
                                     <div class="col-sm-10">
                                         <div class="row">
-                                            <div class="col-sm-4 m-b-sm-2">
+                                            <div class="col-sm-6 m-b-sm-2">
                                                 <input type="text" value="{{ old('phone') }}" class="form-control @if($errors->has('phone')) is-invalid @endif" placeholder="*Phone" name="phone">
                                                 @if ($errors->has('phone'))
                                                     <span class="invalid-feedback">{{ $errors->first('phone') }}</span>
                                                 @endif
                                             </div>
-                                            <div class="col-sm-4 m-b-sm-2">
+                                            <div class="col-sm-6 m-b-sm-2">
                                                 <input type="text" value="{{ old('fax') }}" class="form-control @if($errors->has('fax')) is-invalid @endif" placeholder="*Fax" name="fax">
                                                 @if ($errors->has('fax'))
                                                     <span class="invalid-feedback">{{ $errors->first('fax') }}</span>
                                                 @endif
                                             </div>
-                                            <div class="col-sm-4 m-b-sm-2">
+                                            <!-- <div class="col-sm-4 m-b-sm-2">
                                                 <input type="text" value="{{ old('email') }}" class="form-control @if($errors->has('email')) is-invalid @endif" placeholder="*Email" name="email">
                                                 @if ($errors->has('email'))
                                                     <span class="invalid-feedback">{{ $errors->first('email') }}</span>
                                                 @endif
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -261,7 +261,7 @@
                                         <div class="row">
                                             <div class="col-sm-6 m-b-sm-2">
                                                 <div class="checkbox checkbox-circle checkbox-custom">
-                                                    <input id="checkbox-circle-0" name="is_amount" type="radio" checked="" value="true">
+                                                    <input id="checkbox-circle-0" name="is_amount" type="radio" {{ old('is_amount') === 'true' ? 'checked' : '' }} value="true">
                                                     <label for="checkbox-circle-0">
                                                         More than 50,000 USD
                                                     </label>
@@ -269,13 +269,16 @@
                                             </div>
                                             <div class="col-sm-6">
                                                 <div class="checkbox checkbox-circle checkbox-custom">
-                                                    <input id="checkbox-circle-1" name="is_amount" type="radio" value="false">
+                                                    <input id="checkbox-circle-1" {{ old('is_amount') === 'false' ? 'checked' : '' }} name="is_amount" type="radio" value="false">
                                                     <label for="checkbox-circle-1">
                                                         Less than 50,000 USD
                                                     </label>
                                                 </div>
                                             </div>
                                         </div>
+                                        @if ($errors->has('is_amount'))
+                                            <span class="invalid-feedback" style="display: block;">{{ $errors->first('is_amount') }}</span>
+                                        @endif
                                     </div>
                                 </form>
                             </div>
@@ -284,7 +287,7 @@
                             <div class="card-title d-sm-flex justify-content-between align-items-center">
                                 <h4 href="#" class="text-custom m-b-sm-1">BUSINESS/TRADE REFERENCES</h4>
                                 <div class="checkbox checkbox-circle checkbox-custom">
-                                    <input id="checkbox-circle-2" type="checkbox" checked name="is_check_cod" value="true">
+                                    <input id="checkbox-circle-2" type="checkbox" {{ old('is_check_cod') ? 'checked' : '' }} name="is_check_cod" value="true">
                                     <label for="checkbox-circle-2">
                                         Check if COD Customer
                                     </label>
@@ -527,6 +530,19 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-2 col-form-label text-dark">Amount</label>
+                                        <div class="col-sm-10">
+                                            <div class="row">
+                                                <div class="col-sm-4 m-b-sm-2">
+                                                    <input type="text" value="{{ old('credit_amount') }}" class="form-control @if($errors->has('credit_amount')) is-invalid @endif" placeholder="*Credit Amount" name="credit_amount">
+                                                    @if ($errors->has('credit_amount'))
+                                                        <span class="invalid-feedback">{{ $errors->first('credit_amount') }}</span>
+                                                    @endif
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <hr class="divide m-b-3">
                             </div>
                         </div>
@@ -537,7 +553,7 @@
                                     <div class="checkbox checkbox-circle checkbox-custom m-b-sm-1">
                                         <input id="checkbox-circle-03" class="@if($errors->has('check_terms')) is-invalid @endif" type="checkbox" name="check_terms" value="true" {{ old('check_terms') ? 'checked' : '' }}>
                                         <label for="checkbox-circle-03" class="mb-0">
-                                            <a target="_blank" href="http://umhwholesale.tinyprovider.us/uploads/4/1-umh-new-customer-form-updated.pdf">Check here if you agree with our terms and conditions*</a>
+                                            <a target="_blank" href="http://umhwholesale.tinyprovider.us/uploads/4/1-umh-new-customer-form-updated.pdf">Check here if to agree with our terms and conditions*</a>
                                         </label>
                                     </div>
                                 </div>
