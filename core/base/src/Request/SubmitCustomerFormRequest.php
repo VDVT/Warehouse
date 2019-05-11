@@ -40,7 +40,6 @@ class SubmitCustomerFormRequest extends FormRequest
             'bank_name'     => 'required|string|max:255',
             'bank_address'  => 'required|string|max:255',
             'phone_2'       => 'required',
-            'credit_amount' => 'required|numeric|min:0',
             'email_2'       => 'required|email',
             'check_terms'   => 'required|in:true,1',
             'is_amount'     => 'required|in:true,false',
@@ -75,6 +74,7 @@ class SubmitCustomerFormRequest extends FormRequest
                 'trade_3_phone'        => 'nullable|max:255',
                 'trade_3_fax'          => 'nullable|max:255',
                 'trade_3_email'        => 'nullable|email',
+                'credit_amount'        => 'required|numeric|min:0',
             ]);
 
     	return $baseRules;

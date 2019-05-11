@@ -312,6 +312,12 @@
                                     {!! Form::text('trade_3_email', $customers->trade_3_email, ['class' => 'form-control', 'disabled'=>'disabled']) !!}
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <label for="credit_amount" class="control-label">{{ trans('Requested Amount of Credit') }}</label>
+                                    {!! Form::text('credit_amount', $customers->credit_amount, ['class' => 'form-control', 'disabled'=>'disabled']) !!}
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

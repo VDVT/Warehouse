@@ -23,7 +23,7 @@
                                 <div class="form-group row">
                                     <label class="col-sm-2 col-form-label text-dark">Company Name</label>
                                     <div class="col-sm-10">
-                                        <input type="text" name="company_name" value="{{ old('company_name') }}" class="form-control @if($errors->has('company_name')) is-invalid @endif" placeholder="Company Name">
+                                        <input type="text" name="company_name" value="{{ old('company_name') }}" class="form-control @if($errors->has('company_name')) is-invalid @endif" placeholder="*Company Name">
                                         @if ($errors->has('company_name'))
                                             <span class="invalid-feedback">{{ $errors->first('company_name') }}</span>
                                         @endif
@@ -35,7 +35,7 @@
                                     <div class="col-sm-10">
                                         <div class="row">
                                             <div class="col-sm-6 m-b-sm-2">
-                                                <input type="text" value="{{ old('do_business') }}" class="form-control @if($errors->has('do_business')) is-invalid @endif" placeholder="*Doing Business As" name="do_business">
+                                                <input type="text" value="{{ old('do_business') }}" class="form-control @if($errors->has('do_business')) is-invalid @endif" placeholder="Doing Business As" name="do_business">
                                                 @if ($errors->has('do_business'))
                                                     <span class="invalid-feedback">{{ $errors->first('do_business') }}</span>
                                                 @endif
@@ -60,7 +60,7 @@
                                                 @endif
                                             </div>
                                             <div class="col-sm-6 m-b-sm-2">
-                                                <input type="text" value="{{ old('fax') }}" class="form-control @if($errors->has('fax')) is-invalid @endif" placeholder="*Fax" name="fax">
+                                                <input type="text" value="{{ old('fax') }}" class="form-control @if($errors->has('fax')) is-invalid @endif" placeholder="Fax" name="fax">
                                                 @if ($errors->has('fax'))
                                                     <span class="invalid-feedback">{{ $errors->first('fax') }}</span>
                                                 @endif
@@ -104,7 +104,7 @@
                                                 @endif
                                             </div>
                                             <div class="col-sm-4 m-b-sm-2">
-                                                <input type="text" value="{{ old('contact_fax') }}" class="form-control @if($errors->has('contact_fax')) is-invalid @endif" placeholder="*Fax" name="contact_fax">
+                                                <input type="text" value="{{ old('contact_fax') }}" class="form-control @if($errors->has('contact_fax')) is-invalid @endif" placeholder="Fax" name="contact_fax">
                                                 @if ($errors->has('contact_fax'))
                                                     <span class="invalid-feedback">{{ $errors->first('contact_fax') }}</span>
                                                 @endif
@@ -197,7 +197,7 @@
                                                     @endif
                                                 </div>
                                                 <div class="col-sm-4 m-b-sm-2">
-                                                    <input type="text" value="{{ old('fax_1') }}" class="form-control @if($errors->has('fax_1')) is-invalid @endif" placeholder="*Fax" name="fax_1">
+                                                    <input type="text" value="{{ old('fax_1') }}" class="form-control @if($errors->has('fax_1')) is-invalid @endif" placeholder="Fax" name="fax_1">
                                                     @if ($errors->has('fax_1'))
                                                         <span class="invalid-feedback">{{ $errors->first('fax_1') }}</span>
                                                     @endif
@@ -241,7 +241,7 @@
                                                     @endif
                                                 </div>
                                                 <div class="col-sm-4 m-b-sm-2">
-                                                    <input type="text" value="{{ old('fax_2') }}" class="form-control @if($errors->has('fax_2')) is-invalid @endif" placeholder="*Fax" name="fax_2">
+                                                    <input type="text" value="{{ old('fax_2') }}" class="form-control @if($errors->has('fax_2')) is-invalid @endif" placeholder="Fax" name="fax_2">
                                                     @if ($errors->has('fax_2'))
                                                         <span class="invalid-feedback">{{ $errors->first('fax_2') }}</span>
                                                     @endif
@@ -287,13 +287,13 @@
                             <div class="card-title d-sm-flex justify-content-between align-items-center">
                                 <h4 href="#" class="text-custom m-b-sm-1">BUSINESS/TRADE REFERENCES</h4>
                                 <div class="checkbox checkbox-circle checkbox-custom">
-                                    <input id="checkbox-circle-2" type="checkbox" {{ old('is_check_cod') ? 'checked' : '' }} name="is_check_cod" value="true">
-                                    <label for="checkbox-circle-2">
+                                    <input id="is_check_cod" type="checkbox" {{ old('is_check_cod') ? 'checked' : '' }} name="is_check_cod" value="true">
+                                    <label for="is_check_cod">
                                         Check if COD Customer
                                     </label>
                                 </div>
                             </div>
-                            <div class="card-body">
+                            <div class="card-body" id="form-reference">
                                     <div class="form-group row">
                                         <label class="col-sm-2 col-form-label text-dark">Company/ Type of Account </label>
                                         <div class="col-sm-10">
@@ -352,19 +352,19 @@
                                         <div class="col-sm-10">
                                             <div class="row">
                                                 <div class="col-sm-4 m-b-sm-2">
-                                                    <input type="text" value="{{ old('trade_1_phone') }}" class="form-control @if($errors->has('trade_1_phone')) is-invalid @endif" placeholder="*Phone" name="trade_1_phone">
+                                                    <input type="text" value="{{ old('trade_1_phone') }}" class="form-control @if($errors->has('trade_1_phone')) is-invalid @endif" placeholder="Phone" name="trade_1_phone">
                                                     @if ($errors->has('trade_1_phone'))
                                                         <span class="invalid-feedback">{{ $errors->first('trade_1_phone') }}</span>
                                                     @endif
                                                 </div>
                                                 <div class="col-sm-4 m-b-sm-2">
-                                                    <input type="text" value="{{ old('trade_1_fax') }}" class="form-control @if($errors->has('trade_1_fax')) is-invalid @endif" placeholder="*Fax" name="trade_1_fax">
+                                                    <input type="text" value="{{ old('trade_1_fax') }}" class="form-control @if($errors->has('trade_1_fax')) is-invalid @endif" placeholder="Fax" name="trade_1_fax">
                                                     @if ($errors->has('trade_1_fax'))
                                                         <span class="invalid-feedback">{{ $errors->first('trade_1_fax') }}</span>
                                                     @endif
                                                 </div>
                                                 <div class="col-sm-4 m-b-sm-2">
-                                                    <input type="text" value="{{ old('trade_1_email') }}" class="form-control @if($errors->has('trade_1_email')) is-invalid @endif" placeholder="*Email" name="trade_1_email">
+                                                    <input type="text" value="{{ old('trade_1_email') }}" class="form-control @if($errors->has('trade_1_email')) is-invalid @endif" placeholder="Email" name="trade_1_email">
                                                     @if ($errors->has('trade_1_email'))
                                                         <span class="invalid-feedback">{{ $errors->first('trade_1_email') }}</span>
                                                     @endif
@@ -431,19 +431,19 @@
                                         <div class="col-sm-10">
                                             <div class="row">
                                                 <div class="col-sm-4 m-b-sm-2">
-                                                    <input type="text" value="{{ old('trade_2_phone') }}" class="form-control @if($errors->has('trade_2_phone')) is-invalid @endif" placeholder="*Phone" name="trade_2_phone">
+                                                    <input type="text" value="{{ old('trade_2_phone') }}" class="form-control @if($errors->has('trade_2_phone')) is-invalid @endif" placeholder="Phone" name="trade_2_phone">
                                                     @if ($errors->has('trade_2_phone'))
                                                         <span class="invalid-feedback">{{ $errors->first('trade_2_phone') }}</span>
                                                     @endif
                                                 </div>
                                                 <div class="col-sm-4 m-b-sm-2">
-                                                    <input type="text" value="{{ old('trade_2_fax') }}" class="form-control @if($errors->has('trade_2_fax')) is-invalid @endif" placeholder="*Fax" name="trade_2_fax">
+                                                    <input type="text" value="{{ old('trade_2_fax') }}" class="form-control @if($errors->has('trade_2_fax')) is-invalid @endif" placeholder="Fax" name="trade_2_fax">
                                                     @if ($errors->has('trade_2_fax'))
                                                         <span class="invalid-feedback">{{ $errors->first('trade_2_fax') }}</span>
                                                     @endif
                                                 </div>
                                                 <div class="col-sm-4 m-b-sm-2">
-                                                    <input type="text" value="{{ old('trade_2_email') }}" class="form-control @if($errors->has('trade_2_email')) is-invalid @endif" placeholder="*Email" name="trade_2_email">
+                                                    <input type="text" value="{{ old('trade_2_email') }}" class="form-control @if($errors->has('trade_2_email')) is-invalid @endif" placeholder="Email" name="trade_2_email">
                                                     @if ($errors->has('trade_2_email'))
                                                         <span class="invalid-feedback">{{ $errors->first('trade_2_email') }}</span>
                                                     @endif
@@ -510,19 +510,19 @@
                                         <div class="col-sm-10">
                                             <div class="row">
                                                 <div class="col-sm-4 m-b-sm-2">
-                                                    <input type="text" value="{{ old('trade_3_phone') }}" class="form-control @if($errors->has('trade_3_phone')) is-invalid @endif" placeholder="*Phone" name="trade_3_phone">
+                                                    <input type="text" value="{{ old('trade_3_phone') }}" class="form-control @if($errors->has('trade_3_phone')) is-invalid @endif" placeholder="Phone" name="trade_3_phone">
                                                     @if ($errors->has('trade_3_phone'))
                                                         <span class="invalid-feedback">{{ $errors->first('trade_3_phone') }}</span>
                                                     @endif
                                                 </div>
                                                 <div class="col-sm-4 m-b-sm-2">
-                                                    <input type="text" value="{{ old('trade_3_fax') }}" class="form-control @if($errors->has('trade_3_fax')) is-invalid @endif" placeholder="*Fax" name="trade_3_fax">
+                                                    <input type="text" value="{{ old('trade_3_fax') }}" class="form-control @if($errors->has('trade_3_fax')) is-invalid @endif" placeholder="Fax" name="trade_3_fax">
                                                     @if ($errors->has('trade_3_fax'))
                                                         <span class="invalid-feedback">{{ $errors->first('trade_3_fax') }}</span>
                                                     @endif
                                                 </div>
                                                 <div class="col-sm-4 m-b-sm-2">
-                                                    <input type="text" value="{{ old('trade_3_email') }}" class="form-control @if($errors->has('trade_3_email')) is-invalid @endif" placeholder="*Email" name="trade_3_email">
+                                                    <input type="text" value="{{ old('trade_3_email') }}" class="form-control @if($errors->has('trade_3_email')) is-invalid @endif" placeholder="Email" name="trade_3_email">
                                                     @if ($errors->has('trade_3_email'))
                                                         <span class="invalid-feedback">{{ $errors->first('trade_3_email') }}</span>
                                                     @endif
@@ -531,7 +531,7 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-sm-2 col-form-label text-dark">Amount</label>
+                                        <label class="col-sm-2 col-form-label text-dark">Requested Amount of Credit</label>
                                         <div class="col-sm-10">
                                             <div class="row">
                                                 <div class="col-sm-4 m-b-sm-2">
@@ -553,7 +553,7 @@
                                     <div class="checkbox checkbox-circle checkbox-custom m-b-sm-1">
                                         <input id="checkbox-circle-03" class="@if($errors->has('check_terms')) is-invalid @endif" type="checkbox" name="check_terms" value="true" {{ old('check_terms') ? 'checked' : '' }}>
                                         <label for="checkbox-circle-03" class="mb-0">
-                                            <a target="_blank" href="http://umhwholesale.tinyprovider.us/uploads/4/1-umh-new-customer-form-updated.pdf">Check here if to agree with our terms and conditions*</a>
+                                            <a target="_blank" href="http://umhwholesale.tinyprovider.us/uploads/4/1-umh-new-customer-form-updated.pdf">Check here to agree with our terms and conditions*</a>
                                         </label>
                                     </div>
                                 </div>
@@ -572,5 +572,27 @@
     </div>
 </div>
 <script type="text/javascript">
-    
+
+    var changUIForm = function(checked){
+        if (checked) {
+            $('#form-reference').find('input, textarea, button, select').each(function () {
+                $(this).prop('disabled', true);
+                $(this).removeClass('is-invalid');
+                $(this).val('');
+            });
+        } else {
+            $('#form-reference').find('input, textarea, button, select').each(function () {
+                $(this).prop('disabled', false);
+            });
+        }
+    }
+
+    $(document).ready(function(){
+        const is_check_cod = document.getElementById('is_check_cod')
+        is_check_cod.addEventListener('change', (event) => {
+            changUIForm(event.target.checked)
+        })
+        changUIForm(is_check_cod.checked);
+    })
+        
 </script>
