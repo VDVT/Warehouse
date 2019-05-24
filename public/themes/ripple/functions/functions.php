@@ -116,12 +116,21 @@ theme_option()->setSection([
                 'value' => null,
             ],
         ],
+        // [
+        //     'id' => 'banner_homepage',
+        //     'type' => 'mediaImage',
+        //     'label' => __('Banner Homepage'),
+        //     'attributes' => [
+        //         'name' => 'banner_homepage',
+        //         'value' => null,
+        //     ],
+        // ],
         [
-            'id' => 'banner_homepage',
+            'id' => 'product_banner',
             'type' => 'mediaImage',
-            'label' => __('Banner Homepage'),
+            'label' => __('Product Banner'),
             'attributes' => [
-                'name' => 'banner_homepage',
+                'name' => 'product_banner',
                 'value' => null,
             ],
         ],
@@ -220,99 +229,99 @@ theme_option()->setSection([
 
 theme_option()->setArgs(['debug' => false]);
 
-theme_option()->setSection([
-    'title' => __('Social'),
-    'desc' => __('Social settings'),
-    'id' => 'opt-text-subsection-social',
-    'subsection' => true,
-    'icon' => 'fa fa-users',
-    'fields' => [
-        [
-            'id' => 'facebook',
-            'type' => 'text',
-            'label' => __('Facebook'),
-            'attributes' => [
-                'name' => 'facebook',
-                'value' => null,
-                'options' => [
-                    'class' => 'form-control',
-                    'placeholder' => 'https://www.facebook.com/',
-                    'data-counter' => 120,
-                ]
-            ],
-        ],
-        [
-            'id' => 'google_plus',
-            'type' => 'text',
-            'label' => __('Google+'),
-            'attributes' => [
-                'name' => 'google_plus',
-                'value' => null,
-                'options' => [
-                    'class' => 'form-control',
-                    'placeholder' => 'https://plus.google.com/',
-                    'data-counter' => 120,
-                ]
-            ],
-        ],
-        [
-            'id' => 'linkedin',
-            'type' => 'text',
-            'label' => __('Linkedin'),
-            'attributes' => [
-                'name' => 'linkedin',
-                'value' => null,
-                'options' => [
-                    'class' => 'form-control',
-                    'placeholder' => 'https://www.linkedin.com/',
-                    'data-counter' => 120,
-                ]
-            ],
-        ],
-        [
-            'id' => 'yelp',
-            'type' => 'text',
-            'label' => __('Yelp'),
-            'attributes' => [
-                'name' => 'yelp',
-                'value' => null,
-                'options' => [
-                    'class' => 'form-control',
-                    'placeholder' => 'https://www.yelp.com/',
-                    'data-counter' => 120,
-                ]
-            ],
-        ],
-        [
-            'id' => 'instagram',
-            'type' => 'text',
-            'label' => __('Instagram'),
-            'attributes' => [
-                'name' => 'instagram',
-                'value' => null,
-                'options' => [
-                    'class' => 'form-control',
-                    'placeholder' => 'https://www.instagram.com/',
-                    'data-counter' => 120,
-                ]
-            ],
-        ],
-        [
-            'id' => 'twitter',
-            'type' => 'text',
-            'label' => __('Twitter'),
-            'attributes' => [
-                'name' => 'twitter',
-                'value' => null,
-                'options' => [
-                    'class' => 'form-control',
-                    'placeholder' => 'https://twitter.com/',
-                    'data-counter' => 120,
-                ]
-            ],
-        ],
-    ],
-]);
+// theme_option()->setSection([
+//     'title' => __('Social'),
+//     'desc' => __('Social settings'),
+//     'id' => 'opt-text-subsection-social',
+//     'subsection' => true,
+//     'icon' => 'fa fa-users',
+//     'fields' => [
+//         [
+//             'id' => 'facebook',
+//             'type' => 'text',
+//             'label' => __('Facebook'),
+//             'attributes' => [
+//                 'name' => 'facebook',
+//                 'value' => null,
+//                 'options' => [
+//                     'class' => 'form-control',
+//                     'placeholder' => 'https://www.facebook.com/',
+//                     'data-counter' => 120,
+//                 ]
+//             ],
+//         ],
+//         [
+//             'id' => 'google_plus',
+//             'type' => 'text',
+//             'label' => __('Google+'),
+//             'attributes' => [
+//                 'name' => 'google_plus',
+//                 'value' => null,
+//                 'options' => [
+//                     'class' => 'form-control',
+//                     'placeholder' => 'https://plus.google.com/',
+//                     'data-counter' => 120,
+//                 ]
+//             ],
+//         ],
+//         [
+//             'id' => 'linkedin',
+//             'type' => 'text',
+//             'label' => __('Linkedin'),
+//             'attributes' => [
+//                 'name' => 'linkedin',
+//                 'value' => null,
+//                 'options' => [
+//                     'class' => 'form-control',
+//                     'placeholder' => 'https://www.linkedin.com/',
+//                     'data-counter' => 120,
+//                 ]
+//             ],
+//         ],
+//         [
+//             'id' => 'yelp',
+//             'type' => 'text',
+//             'label' => __('Yelp'),
+//             'attributes' => [
+//                 'name' => 'yelp',
+//                 'value' => null,
+//                 'options' => [
+//                     'class' => 'form-control',
+//                     'placeholder' => 'https://www.yelp.com/',
+//                     'data-counter' => 120,
+//                 ]
+//             ],
+//         ],
+//         [
+//             'id' => 'instagram',
+//             'type' => 'text',
+//             'label' => __('Instagram'),
+//             'attributes' => [
+//                 'name' => 'instagram',
+//                 'value' => null,
+//                 'options' => [
+//                     'class' => 'form-control',
+//                     'placeholder' => 'https://www.instagram.com/',
+//                     'data-counter' => 120,
+//                 ]
+//             ],
+//         ],
+//         [
+//             'id' => 'twitter',
+//             'type' => 'text',
+//             'label' => __('Twitter'),
+//             'attributes' => [
+//                 'name' => 'twitter',
+//                 'value' => null,
+//                 'options' => [
+//                     'class' => 'form-control',
+//                     'placeholder' => 'https://twitter.com/',
+//                     'data-counter' => 120,
+//                 ]
+//             ],
+//         ],
+//     ],
+// ]);
 
 /* theme option email of warehouse */
 theme_option()->setSection([

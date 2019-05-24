@@ -1,5 +1,5 @@
 <?php $source = Theme::asset()->url('images'); ?>
-<div class="bg_contact_us d-flex align-items-center" style="background: url('{{$source}}/rectangle-13.png');">
+<div class="bg_contact_us d-flex align-items-center" style="background: url('/themes/ripple/assets/images/about_us/about_us.jpg');">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

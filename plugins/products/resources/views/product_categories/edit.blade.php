@@ -1,9 +1,6 @@
 @extends('bases::layouts.master')
 @section('head')
     @parent
-    <!-- <style>
-        .editor-action-item, #mceu_0, #mceu_14, #mceu_15, #mceu_16, #mceu_17{display: none;}
-    </style> -->
 @endsection
 @section('content')
         {!! Form::open() !!}
@@ -12,12 +9,6 @@
             <div class="col-md-9">
                 <div class="main-form">
                     <div class="form-body">
-                        <!-- <div class="form-group @if ($errors->has('group_category_id')) has-error @endif">
-                            <label for="group_category_id" class="control-label">{{ __('Product Group') }}</label>
-                            {!! Form::select('group_category_id', $groups, $category->group_category_id, ['class' => 'select-search-full', 'id' => 'group_category_id']) !!}
-                            {!! Form::error('group_category_id', $errors) !!}
-                        </div> -->
-
                         <div class="form-group @if ($errors->has('tab_category_id')) has-error @endif">
                             <label for="tab_category_id" class="control-label">{{ trans('bases::forms.tab') }}</label>
                             {!! Form::select('tab_category_id', $tabs, $category->tab_category_id, ['class' => 'select-search-full', 'id' => 'tab_category_id']) !!}

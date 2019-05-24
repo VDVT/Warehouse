@@ -90,7 +90,7 @@ class ProductsServiceProvider extends ServiceProvider
                     'id' => 'cms-plugins-product-categories',
                     'priority' => 4,
                     'parent_id' => 'cms-plugins-products',
-                    'name' => trans('products::product_categories.menu_name'),
+                    'name' => trans('Products'),
                     'icon' => null,
                     'url' => route('product_categories.list'),
                     'permissions' => ['product_categories.list'],
