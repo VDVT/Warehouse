@@ -20,8 +20,6 @@ class ProductCategoryRequest extends Request
             'slug'              => 'required',
             'order'             => 'required|integer|min:0',
             'image'             => 'required',
-            // 'group_category_id' => 'required',
-            'tab_category_id'   => 'required'
         ];
     }
 }

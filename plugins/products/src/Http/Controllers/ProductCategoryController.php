@@ -65,13 +65,13 @@ class ProductCategoryController extends BaseController
 
         Assets::addAppModule(['slug']);
 
-        $categories = $this->categoryRepository->pluck('name', 'id');
-        $categories[0] = __('None');
-        $categories = array_sort_recursive($categories);
+        // $categories = $this->categoryRepository->pluck('name', 'id');
+        // $categories[0] = __('None');
+        // $categories = array_sort_recursive($categories);
 
-        $tabs = $this->tabCategoryRepository->pluck('name', 'id');
-        // $groups = $this->groupRepository->pluck('name', 'id');
+        // $tabs = $this->tabCategoryRepository->pluck('name', 'id');
 
+        $categories = $tabs = [];
         return view('products::product_categories.create', compact('categories','tabs'));
     }
 
@@ -115,13 +115,12 @@ class ProductCategoryController extends BaseController
 
         Assets::addAppModule(['slug']);
 
-        $categories = $this->categoryRepository->pluck('name', 'id');
-        $categories[0] = __('None');
-        $categories = array_sort_recursive($categories);
+        // $categories = $this->categoryRepository->pluck('name', 'id');
+        // $categories[0] = __('None');
+        // $categories = array_sort_recursive($categories);
 
-        $tabs = $this->tabCategoryRepository->pluck('name', 'id');
-        // $groups = $this->groupRepository->pluck('name', 'id');
-
+        // $tabs = $this->tabCategoryRepository->pluck('name', 'id');
+        $categories = $tabs = [];
         return view('products::product_categories.edit', compact('category', 'categories','tabs'));
     }
 
@@ -139,8 +138,6 @@ class ProductCategoryController extends BaseController
         }
 
         $category->fill($request->input());
-        // $category->featured = $request->input('featured', false);
-        // $category->is_default = $request->input('is_default', false);
 
         $this->categoryRepository->createOrUpdate($category);
 

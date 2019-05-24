@@ -68,7 +68,8 @@ class ProductsServiceProvider extends ServiceProvider
         }
 
         Event::listen(SessionStarted::class, function () {
-            dashboard_menu()->registerItem([
+            dashboard_menu()
+                ->registerItem([
                     'id'          => 'cms-plugins-products',
                     'priority'    => 120,
                     'parent_id'   => null,
@@ -77,15 +78,15 @@ class ProductsServiceProvider extends ServiceProvider
                     'url'         => route('products.list'),
                     'permissions' => ['products.list'],
                 ])
-                ->registerItem([
-                    'id' => 'cms-plugins-products-all',
-                    'priority' => 1,
-                    'parent_id' => 'cms-plugins-products',
-                    'name' => trans('products::products.all_posts'),
-                    'icon' => null,
-                    'url' => route('products.list'),
-                    'permissions' => ['products.list'],
-                ])
+                // ->registerItem([
+                //     'id' => 'cms-plugins-products-all',
+                //     'priority' => 1,
+                //     'parent_id' => 'cms-plugins-products',
+                //     'name' => trans('products::products.all_posts'),
+                //     'icon' => null,
+                //     'url' => route('products.list'),
+                //     'permissions' => ['products.list'],
+                // ])
                 ->registerItem([
                     'id' => 'cms-plugins-product-categories',
                     'priority' => 4,
@@ -94,25 +95,25 @@ class ProductsServiceProvider extends ServiceProvider
                     'icon' => null,
                     'url' => route('product_categories.list'),
                     'permissions' => ['product_categories.list'],
-                ])
-                ->registerItem([
-                    'id' => 'cms-plugins-product-tab-categories',
-                    'priority' => 3,
-                    'parent_id' => 'cms-plugins-products',
-                    'name' => trans('tabcategory::tabcategory.menu_name'),
-                    'icon' => null,
-                    'url' => route('tabcategory.list'),
-                    'permissions' => ['tabcategory.list'],
-                ])
-                 ->registerItem([
-                    'id' => 'cms-plugins-product-group-categories',
-                    'priority' => 2,
-                    'parent_id' => 'cms-plugins-products',
-                    'name' => __('Groups Category'),
-                    'icon' => null,
-                    'url' => route('groupproductcategory.list'),
-                    'permissions' => ['groupproductcategory.list'],
                 ]);
+                // ->registerItem([
+                //     'id' => 'cms-plugins-product-tab-categories',
+                //     'priority' => 3,
+                //     'parent_id' => 'cms-plugins-products',
+                //     'name' => trans('tabcategory::tabcategory.menu_name'),
+                //     'icon' => null,
+                //     'url' => route('tabcategory.list'),
+                //     'permissions' => ['tabcategory.list'],
+                // ])
+                //  ->registerItem([
+                //     'id' => 'cms-plugins-product-group-categories',
+                //     'priority' => 2,
+                //     'parent_id' => 'cms-plugins-products',
+                //     'name' => __('Groups Category'),
+                //     'icon' => null,
+                //     'url' => route('groupproductcategory.list'),
+                //     'permissions' => ['groupproductcategory.list'],
+                // ]);
         });
 
     }

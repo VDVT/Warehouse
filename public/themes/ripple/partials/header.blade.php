@@ -1,6 +1,3 @@
-<?php
-    use Botble\Groupproductcategory\Repositories\Interfaces\GroupproductcategoryInterface;
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,18 +24,7 @@
                             <ul>
                                 <li class="mobile"><a href="#" id="toggle-menu-mobile"><span class="fa fa-bars"></span></a></li>
                                 <li><a href="{{ route('public.page.aboutus') }}">About Us</a></li>
-                                <!-- <li><a href="{{ route('public.product_category.list') }}">Quick Ship Products</a></li> -->
-                                <li class="has-children">
-                                    <a href="#">Products</a>
-                                    <ul class="sub-menu">
-                                        @php
-                                            $groupProduct = app(GroupproductcategoryInterface::class)->allBy(['status' => 1]);
-                                        @endphp
-                                        @foreach($groupProduct as $group)
-                                            <li><a href="{{ route('public.product_category.group', ['groupId' => $group->id]) }}">{{ $group->name }}</a></li>
-                                        @endforeach
-                                    </ul>
-                                </li>
+                                <li><a href="{{ route('public.product_category.list') }}">Products</a></li>
                                 <li class="has-children">
                                     <a href="#">Customer Service</a>
                                     <ul class="sub-menu">
