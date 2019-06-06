@@ -1,0 +1,9 @@
+{
+    "name": "Mapsolution",
+    "provider": "Botble\\Mapsolution\\Providers\\MapsolutionServiceProvider",
+    "plugin": "Botble\\Mapsolution\\Plugin",
+    "author": "Sang Nguyen",
+    "url": "http://sangnguyen.info",
+    "version": "1.0",
+    "description": "Mapsolution"
+}

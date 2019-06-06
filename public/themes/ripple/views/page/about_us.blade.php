@@ -1,3 +1,29 @@
+@php
+    use Botble\Mapsolution\Repositories\Interfaces\MapsolutionInterface;
+    $mapItems = app(MapsolutionInterface::class)->allBy(['status' => true]);
+@endphp
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/maps.js"></script>
+<script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+<script src="https://www.amcharts.com/lib/4/geodata/usaLow.js"></script>
+
+<style type="text/css">
+    #chartdiv {
+      width: 100%;
+      height: 500px;
+    }
+    .modal-content .thumbnail {
+      display: flex;
+      width: 150px;
+      align-items: center;
+      flex-flow: wrap;
+    }
+    .modal-content .thumbnail > img {
+      width: 100%;
+    }
+   
+</style>
+
 <?php $source = Theme::asset()->url('images'); ?>
 <div class="bg_about_us_2 d-flex align-items-center" style="background: url('{{$source}}/about_us/about_us.jpg');">
     <div class="container">
@@ -31,62 +57,88 @@
         </div>
     </div>
 </div>
-<!-- <div class="bg_about_us_3 align-items-center">
-    <div class="row no-gutters">
-        <div class="col-md-4 box-1 d-flex align-items-center" style="background: url('{{$source}}/about_us/rectangle3.png'); min-height: 620px;">
-            <div class="overlight"></div>
-            <img src="{{$source}}/about_us/65-years.png" class="mx-auto">
-        </div>
-        <div class="col-md-8 box-2 d-flex align-items-center">
-            <div class="card">
-                <p class="title text-uppercase">history</p>
-                <div class="history">
-                    <p>We have over 65 years of combined experience solving material handling and storage problems, increasing personnel and warehouse efficiency and reducing companies operating costs.</p>
-                    <p>We are a leader in providing our customers with material handling products and services – all brands and styles of pallet rack, cantilever rack, selective rack... and services for engineering, permits, code compliance...</p>
-                </div>
+<div id="chartdiv"></div>
+
+@foreach($mapItems as $item)
+    <div class="modal-content d-none item-map-content-{{ $item->id }}">
+        <div class="modal-body px-s1">
+            <div class="text-uppercase text-custom mb-3">{{ $item->name}}</div>
+            <div class="mb-3">
+                <span>{{ $item->description }}</span>
             </div>
+            <div class="thumbnail"><img src="{{ url($item->image ?? '') }}" alt=""></div>
         </div>
     </div>
-</div>
-<div class="bg_about_us_4 align-items-center" style="background: url('{{$source}}/about_us/installation.png');">
-    <div class="row no-gutters">
-        <div class="col-md-1"></div>
-        <div class="col-md-3 col-sm-9 d-flex align-items-center justify-content-center wow left animated">
-            <div class="card">
-                <div class="card-body">
-                    <h4 class="card-title text-uppercase">CORE COMPETENCIES</h4>
-                    <div class="owl-carousel owl-theme">
-                        <div class="content-strength item" data="{{$source}}/about_us/installation.png">
-                            <p class="title">Installation Service</p>
-                            <p>Storage rack installations should be performed by trained personnel, experienced with proper rack assembly procedures. Incorrect rack assembly can not only cause poor performance of your system but can also pose a safety hazard in your facility.</p>
-                            
-                        </div>
-                        <div class="content-strength item" data="{{$source}}/about_us/Engineering.png">
-                            <p class="title">Engineering Service</p>
-                            <p>United Material Handling, Inc. understands all the details involving warehouse design projects. We help optimize your warehouse space by finding creative storage solutions that will work for you and your warehouse. United Material Handling, Inc. will work closely with your contractors, architects, management and inspectors to assure your project stays within time and budget</p>
-                            <p>We Offer the Following Engineering Services:</p>
-                            <p><ul>
-                                <li>Custom pallet rack retrofitting to meet your company’s warehouse needs</li>
-                                <li>Precise warehouse measurements to get the most efficiency</li>
-                                <li>Technical drawings to achieve the best layout design</li>
-                                <li>Design/Build turnkey systems</li>
-                                <li>Warehouse space planning using AutoCAD</li>
-                            </ul></p>
-                        </div>
-                        <div class="content-strength item" data="{{$source}}/about_us/Permitting.png">
-                            <p class="title">Permitting Service</p>
-                            <p>United Material Handling, Inc. provides turnkey distribution center, design and permitting services. Our in-house design team and strategic partners can assist in developing a new layout or improve your existing layout, for the most efficient usage of space, labor, equipment and energy.</p>
-                            <p>Our staff ensures that all city and fire requirements are followed through the design process.</p>
-                        </div>
-                        <div class="content-strength item" data="{{$source}}/about_us/Delivery.png">
-                            <p class="title">Delivery Service</p>
-                            <p>United Material Handling, Inc. carefully picks, stages, and checks all orders before they are loaded on the truck. We always assure you get the best freight rates when you are shopping for new pallet rack. Pallet rack is large, heavy, bulky, and costs a lot to ship via common carrier. With our fast and convenient service, we can offer faster turnaround time with less hassle.</p>
-                        </div>
-                    </div>                   
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6"></div>
-    </div>
-</div>
-</section> -->
+@endforeach
+
+<script type="text/javascript">
+    am4core.ready(function() {
+        /**
+         * ---------------------------------------
+         * This demo was created using amCharts 4.
+         *
+         * For more information visit:
+         * https://www.amcharts.com/
+         *
+         * Documentation is available at:
+         * https://www.amcharts.com/docs/v4/
+         * ---------------------------------------
+         */
+        // Create map instance
+        var chart = am4core.create("chartdiv", am4maps.MapChart);
+
+        // Set map definition
+        chart.geodata = am4geodata_usaLow;
+        chart.maxZoomLevel = 1;
+        chart.seriesContainer.draggable = false;
+        chart.seriesContainer.resizable = false;
+
+        // Set projection
+        chart.projection = new am4maps.projections.AlbersUsa();
+
+        // Create map polygon series
+        var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
+        polygonSeries.useGeodata = true;
+
+        // Configure series
+        var polygonTemplate = polygonSeries.mapPolygons.template;
+        polygonTemplate.tooltipText = "{name}";
+        polygonTemplate.fill = am4core.color("#74B266");
+
+        var colorSet = new am4core.ColorSet();
+        // take a color from color set
+        polygonTemplate.adapter.add("fill", function(fill, target) {
+          return colorSet.getIndex(target.dataItem.index + 1).saturate(0.2);
+        });
+
+        var imageSeries = chart.series.push(new am4maps.MapImageSeries());
+        var mapImage = imageSeries.mapImages.template;
+        var mapMarker = mapImage.createChild(am4core.Sprite);
+        mapMarker.path = "M4 12 A12 12 0 0 1 28 12 C28 20, 16 32, 16 32 C16 32, 4 20 4 12 M11 12 A5 5 0 0 0 21 12 A5 5 0 0 0 11 12 Z";
+        mapMarker.width = 32;
+        mapMarker.height = 32;
+        mapMarker.scale = 0.7;
+        mapMarker.fill = am4core.color("#3F4B3B");
+        mapMarker.fillOpacity = 0.8;
+        mapMarker.horizontalCenter = "middle";
+        mapMarker.verticalCenter = "bottom";
+
+        function addCity(coords) {
+            var city         = imageSeries.mapImages.create();
+            city.latitude    = coords.latitude;
+            city.longitude   = coords.longitude;
+            city.tooltipHTML = coords.html;
+            city.fill        = am4core.color("#f5f5f5");
+            return city;
+        }
+
+        @foreach($mapItems as $item)
+            var coords = {
+                latitude : parseFloat("{{ $item->latitude }}"),
+                longitude : parseFloat("{{ $item->longitude }}"),
+                html : $('.item-map-content-{{ $item->id }}').html()
+            }
+            addCity(coords);
+        @endforeach
+    })
+</script>
