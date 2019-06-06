@@ -132,6 +132,36 @@
             return city;
         }
 
+        // chart.events.on('ready', renderLabels)
+
+        // function renderLabels(){
+        //     var placeSeries                       = chart.series.push(new am4maps.MapImageSeries());
+        //     let place                             = placeSeries.mapImages.template;
+        //     place.nonScaling                      = true;
+        //     place.propertyFields.latitude         = "latitude";
+        //     place.propertyFields.longitude        = "longitude";
+        //     placeSeries.data                      = initLabelCountry();
+        //     let label                             = place.createChild(am4core.Label);
+        //     label.propertyFields.text             = "name";
+        //     label.propertyFields.horizontalCenter = "hcenter";
+        //     label.propertyFields.verticalCenter   = "vcenter";
+        // }
+
+        // function initLabelCountry(){
+        //     let labelList = [];
+        //     let defaultCountries = am4geodata_usaLow.features;
+        //     defaultCountries.forEach((defaultCountry, index) => {
+        //         labelList.push({
+        //             name: defaultCountry.properties.name,
+        //             latitude : defaultCountry.geometry.coordinates[0][0][1],
+        //             longitude : defaultCountry.geometry.coordinates[0][0][0],
+        //             hcenter: "middle",
+        //             vcenter: "bottom"
+        //         })
+        //     });
+        //    return labelList;
+        // }
+
         @foreach($mapItems as $item)
             var coords = {
                 latitude : parseFloat("{{ $item->latitude }}"),
