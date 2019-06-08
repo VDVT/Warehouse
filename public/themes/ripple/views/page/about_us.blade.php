@@ -57,8 +57,8 @@
         </div>
     </div>
 </div>
+<h1 style="text-align:center;">United Material Handling, Inc. Locations</h1>
 <div id="chartdiv"></div>
-
 @foreach($mapItems as $item)
     <div class="modal-content d-none item-map-content-{{ $item->id }}">
         <div class="modal-body px-s1">
@@ -86,81 +86,49 @@
          */
         // Create map instance
         var chart = am4core.create("chartdiv", am4maps.MapChart);
-
         // Set map definition
         chart.geodata = am4geodata_usaLow;
         chart.maxZoomLevel = 1;
         chart.seriesContainer.draggable = false;
         chart.seriesContainer.resizable = false;
-
         // Set projection
         chart.projection = new am4maps.projections.AlbersUsa();
-
         // Create map polygon series
         var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
         polygonSeries.useGeodata = true;
-
-        // Configure series
+        // // // Configure series
         var polygonTemplate = polygonSeries.mapPolygons.template;
         polygonTemplate.tooltipText = "{name}";
-        polygonTemplate.fill = am4core.color("#74B266");
-
-        var colorSet = new am4core.ColorSet();
-        // take a color from color set
-        polygonTemplate.adapter.add("fill", function(fill, target) {
-          return colorSet.getIndex(target.dataItem.index + 1).saturate(0.2);
-        });
-
-        var imageSeries = chart.series.push(new am4maps.MapImageSeries());
-        var mapImage = imageSeries.mapImages.template;
-        var mapMarker = mapImage.createChild(am4core.Sprite);
-        mapMarker.path = "M4 12 A12 12 0 0 1 28 12 C28 20, 16 32, 16 32 C16 32, 4 20 4 12 M11 12 A5 5 0 0 0 21 12 A5 5 0 0 0 11 12 Z";
-        mapMarker.width = 32;
-        mapMarker.height = 32;
-        mapMarker.scale = 0.7;
-        mapMarker.fill = am4core.color("#3F4B3B");
-        mapMarker.fillOpacity = 0.8;
-        mapMarker.horizontalCenter = "middle";
-        mapMarker.verticalCenter = "bottom";
+        polygonTemplate.fill = am4core.color("#ebebeb");
+        
+        // Create market
+        var imageSeries                               = chart.series.push(new am4maps.MapImageSeries());
+        var mapImage                                  = imageSeries.mapImages.template;
+        mapImage.tooltipPosition                      = "fixed";
+        var mapMarker                                 = mapImage.createChild(am4core.Sprite);
+        mapMarker.path                                = "M4 12 A12 12 0 0 1 28 12 C28 20, 16 32, 16 32 C16 32, 4 20 4 12 M11 12 A5 5 0 0 0 21 12 A5 5 0 0 0 11 12 Z";
+        mapMarker.width                               = 20;
+        mapMarker.height                              = 20;
+        mapMarker.scale                               = 0.7;
+        mapMarker.fill                                = am4core.color("#C3202F");
+        mapMarker.fillOpacity                         = 0.8;
+        mapMarker.horizontalCenter                    = "middle";
+        mapMarker.verticalCenter                      = "middle";
+        imageSeries.calculateVisualCenter             = true;
+        imageSeries.tooltip.label.interactionsEnabled = true;
+        imageSeries.tooltip.keepTargetHover           = true;
 
         function addCity(coords) {
-            var city         = imageSeries.mapImages.create();
-            city.latitude    = coords.latitude;
-            city.longitude   = coords.longitude;
-            city.tooltipHTML = coords.html;
-            city.fill        = am4core.color("#f5f5f5");
+            var city                               = imageSeries.mapImages.create();
+            city.latitude                          = coords.latitude;
+            city.longitude                         = coords.longitude;
+            city.tooltipHTML                       = coords.html;
+            city.fill                              = am4core.color("#f5f5f5");
+            city.calculateVisualCenter             = true;
+            city.tooltip.label.interactionsEnabled = true;
+            city.tooltip.keepTargetHover           = true;
             return city;
         }
-
-        // chart.events.on('ready', renderLabels)
-
-        // function renderLabels(){
-        //     var placeSeries                       = chart.series.push(new am4maps.MapImageSeries());
-        //     let place                             = placeSeries.mapImages.template;
-        //     place.nonScaling                      = true;
-        //     place.propertyFields.latitude         = "latitude";
-        //     place.propertyFields.longitude        = "longitude";
-        //     placeSeries.data                      = initLabelCountry();
-        //     let label                             = place.createChild(am4core.Label);
-        //     label.propertyFields.text             = "name";
-        //     label.propertyFields.horizontalCenter = "hcenter";
-        //     label.propertyFields.verticalCenter   = "vcenter";
-        // }
-
-        // function initLabelCountry(){
-        //     let labelList = [];
-        //     let defaultCountries = am4geodata_usaLow.features;
-        //     defaultCountries.forEach((defaultCountry, index) => {
-        //         labelList.push({
-        //             name: defaultCountry.properties.name,
-        //             latitude : defaultCountry.geometry.coordinates[0][0][1],
-        //             longitude : defaultCountry.geometry.coordinates[0][0][0],
-        //             hcenter: "middle",
-        //             vcenter: "bottom"
-        //         })
-        //     });
-        //    return labelList;
-        // }
 
         @foreach($mapItems as $item)
             var coords = {

@@ -104,13 +104,13 @@
             // Configure series
             var polygonTemplate = polygonSeries.mapPolygons.template;
             polygonTemplate.tooltipText = "{name}";
-            polygonTemplate.fill = am4core.color("#74B266");
-
-            var colorSet = new am4core.ColorSet();
-            // take a color from color set
-            polygonTemplate.adapter.add("fill", function(fill, target) {
-              return colorSet.getIndex(target.dataItem.index + 1).saturate(0.2);
-            });
+            // polygonTemplate.fill = am4core.color("#74B266");
+            polygonTemplate.fill = am4core.color("#ebebeb");
+            // var colorSet = new am4core.ColorSet();
+            // // take a color from color set
+            // polygonTemplate.adapter.add("fill", function(fill, target) {
+            //   return colorSet.getIndex(target.dataItem.index + 1).saturate(0.2);
+            // });
 
 
             var imageSeries = chart.series.push(new am4maps.MapImageSeries());
