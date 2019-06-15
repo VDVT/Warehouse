@@ -22,7 +22,8 @@ class PluginServiceProvider extends ServiceProvider
                     if (class_exists($plugin->provider)) {
                         $this->app->register($plugin->provider);
                     } else {
-                        $pluginRepository->deleteBy(['provider' => $plugin->provider]);
+                        // critical function make error site when deploy for production
+                        // $pluginRepository->deleteBy(['provider' => $plugin->provider]);
                     }
                 }
             }
