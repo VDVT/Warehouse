@@ -32,32 +32,32 @@
         <div class="row">
             <div class="col-md-3 experience-item active text-center">
                 <div class="item-dinner">
-                    <p class="title">Specialize</p>
-                    <span>United Material Handling, Inc. specializes in the selling of new storage products and systems to the material handling industry.</span>
+                    <p class="title">Teamwork</p>
+                    <span>Our success is attributed to working together towards a common vision.</span>
                 </div>
             </div>
             <div class="col-md-3 experience-item text-center">
                 <div class="item-dinner">
-                    <p class="title">Inventory</p>
-                    <span>United Material Handling, Inc. is your source for all material handling systems. We carry a large array of styles and sizes.</span>
+                    <p class="title">Integrity</p>
+                    <span>We are committed to excellence through superior work ethic and transparency.</span>
                 </div>
             </div>
             <div class="col-md-3 experience-item text-center">
                 <div class="item-dinner">
-                    <p class="title">Capability</p>
-                    <span>United Material Handling, Inc. also has the capability to retrofit all our pallet rack systems in our inventory to meet your specifications..</span>
+                    <p class="title">Innovation</p>
+                    <span>We are actively developing new products and solutions to increase efficiency for our customers.</span>
                 </div>
             </div>
             <div class="col-md-3 experience-item text-center">
                 <div class="item-dinner">
-                    <p class="title">Variety</p>
-                    <span>We carry a variety of accessories: end aisle guards, guide rails, personnel barriers, safety netting, j-bolts, dock equipment, hoppers, pallet jacks, metal cabinets, lockers, wire baskets, signage, rolling ladders, and more.</span>
+                    <p class="title">Accountability</p>
+                    <span>We take ownership of our actions to distinguish professional character.</span>
                 </div>
             </div>
         </div>
     </div>
 </div>
-<h1 style="text-align:center;">United Material Handling, Inc. Locations</h1>
+<!-- <h1 style="text-align:center;">United Material Handling, Inc. Locations</h1>
 <div id="chartdiv"></div>
 @foreach($mapItems as $item)
     <div class="modal-content d-none item-map-content-{{ $item->id }}">
@@ -139,4 +139,4 @@
             addCity(coords);
         @endforeach
     })
-</script>
+</script> -->

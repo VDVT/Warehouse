@@ -130,3 +130,11 @@
     </div>
 </div>
 </section>
+
+<script type="text/javascript">
+    window.onload = function() {
+        $('.form-group .form-control').on('focus blur', function (e) {
+            $(this).parents('.form-group').toggleClass('active', (e.type === 'focus' || this.value.length > 0));
+        }).trigger('blur');
+    };
+</script>

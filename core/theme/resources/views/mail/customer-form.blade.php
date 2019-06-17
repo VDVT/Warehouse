@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
     <link href='https://fonts.googleapis.com/css?family=Sarala:400,700|Opens+Sans:400,800italic,800,700italic,700,600italic,600,400italic,300italic,300|Raleway:400,200,100,300,500,600,700,800,900|Playfair+Display:400,400italic,700,700italic,900,900italic|Lato:400,100italic,100,300,300italic,400italic,700,700italic,900,900italic|Nunito|Questrial' rel='stylesheet' type='text/css'>
     <base target="_blank">
-    <title>Customer Form Submition</title>
+    <title>Customer Form Submition from UMH Wholesale Website</title>
     <style type="text/css">
 
         td[class].opensans {font-family: 'Open Sans', Arial, sans-serif !important}

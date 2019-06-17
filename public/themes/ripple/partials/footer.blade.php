@@ -79,12 +79,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 
 <script type="text/javascript">
-    setTimeout(function() {
+    $(document).ready(function($) {
         $('.newsletter-form .success').fadeOut('fast');
         $('.newsletter-form .error').fadeOut('fast');
-    }, 10000);
-    
-    $(document).ready(function($) {
 
         $('#email-send-newsletter').on('input',function(e){
             let email = $(this).val();
@@ -96,6 +93,8 @@
 
         $('#send-newsletter:enabled').click(function(event) {
             event.preventDefault();
+            $('.newsletter-form .success').fadeOut('fast');
+            $('.newsletter-form .error').fadeOut('fast');
             const self = this;
             const el = $(self);
             beginLoadingBtn(self, false);
@@ -112,12 +111,15 @@
                     if(data.status){
                         $('#email-send-newsletter').val('');
                         $('#send-newsletter').css("display","none");
+                        $('.newsletter-form .success').fadeIn('fast');
                         $('.newsletter-form .success').html(data.msg);
                     }else{
+                        $('.newsletter-form .error').fadeIn('fast');
                         $('.newsletter-form .error').html(data.msg);
                     }
                 },
                 error: function(xhr) { // if error occured
+                    $('.newsletter-form .error').fadeIn('fast');
                     $('.newsletter-form .error').html('Error! Try again or contact IT support.');
                 },
                 complete: function() {

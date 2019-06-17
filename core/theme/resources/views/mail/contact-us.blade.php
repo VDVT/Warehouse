@@ -2,7 +2,7 @@
 
 @section('content')
 <p style="font-size:12px; line-height:16px; margin:0 0 10px 0;">
-    {{ setting('site_title') }} just received a contact
+    {{ setting('site_title') }} just received a contact from UMH Wholesale Website
 </p>
 <p style="font-size:12px; line-height:16px; margin:0 0 7px 15px;">
     - Name: {{ $contact->name }}

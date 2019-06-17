@@ -2,7 +2,7 @@
 
 @section('content')
 <p style="font-size:12px; line-height:16px; margin:0 0 10px 0;">
-    {{ setting('site_title') }} just received a application submission
+    {{ setting('site_title') }} just received a application submission from UMH Wholesale Website
 </p>
 <p style="font-size:12px; line-height:16px; margin:0 0 7px 15px;">
     - First name: {{ $application->first_name }}
