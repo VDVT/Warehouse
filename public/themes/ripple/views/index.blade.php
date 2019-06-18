@@ -9,7 +9,7 @@
 <style type="text/css">
     .banner-img .banner-title { 
         font-size: 49px;
-        background-color: rgba(79, 174, 212, 0.41);
+        /*background-color: rgba(79, 174, 212, 0.41);*/
         visibility: visible;
     }
 </style>

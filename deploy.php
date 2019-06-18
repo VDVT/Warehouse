@@ -38,7 +38,7 @@ task('deploy:upload', function(){ //
        // 'app',
        // 'config',
        // 'bootstrap',
-       // 'core',
+       'core/theme/resources/views/mail',
        // 'database',
        // 'plugins',
        // 'public',
@@ -49,14 +49,9 @@ task('deploy:upload', function(){ //
     ];
 
     $files = [
-      // 'composer.json',
-      // '.env',
-      // '.editorconfig',
-      // '.htaccess',
-      // 'server.php',
-      // 'install.sh',
-      // '_ide_helper.php',
-      'public/themes/ripple/views/page/about_us.blade.php'
+      'public/themes/ripple/views/page/contact_us.blade.php',
+      'public/themes/ripple/partials/footer.blade.php',
+      'public/themes/ripple/assets/css/page/contactus/contactus.css'
     ];
     $path = get('deploy_path');
     
@@ -85,7 +80,10 @@ task('deploy:permission', function(){
     $permission = get('permission');
     $path = get('deploy_path');
     $folders = [
-        'public/themes/ripple/views/page/about_us.blade.php',
+        'public/themes/ripple/views/page/contact_us.blade.php',
+        'core/theme/resources/views/mail',
+        'public/themes/ripple/partials/footer.blade.php',
+        'public/themes/ripple/assets/css/page/contactus/contactus.css'
         // 'config',
         // 'bootstrap',
         // 'core',

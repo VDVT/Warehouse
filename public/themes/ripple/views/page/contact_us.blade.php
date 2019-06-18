@@ -3,8 +3,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="title text-uppercase text-center text-white">contact us</h3>
-                <p class="desc text-white text-center">United Material Handling, Inc. Headquarters is located in Southern California.</p>
+                <!-- <h3 class="title text-uppercase text-center text-white">contact us</h3> -->
+                <!-- <p class="desc text-white text-center">United Material Handling, Inc. Headquarters is located in Southern California.</p> -->
                 <div class="card">
                     <div class="card-body">
                         <div class="row">

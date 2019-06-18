@@ -7,12 +7,12 @@
                     <img src="{{ $posts[0]->image }}" alt="{{ $posts[0]->name }}" class="card-img-top img-fluid img-fit">
                     <div class="card-body d-flex align-items-center">
                         <div>
-                            <div class="date">
+                            <!-- <div class="date">
                                 <div>
                                     <span>{{ date("M",strtotime($posts[0]->created_at)) }}</span>
                                     {{ date("d",strtotime($posts[0]->created_at)) }}
                                 </div>
-                            </div>
+                            </div> -->
                             <h3 class="card-title text-uppercase">{{ $posts[0]->name }}</h3>
                             <p class="card-text">{{ $posts[0]->description }}</p>
                             <a href="{{ route('public.post.details', $posts[0]->slug) }}" class="card-link">read more</a>
@@ -36,12 +36,12 @@
                 <img src="{{ $posts[$i]->image }}" alt="{{ $posts[$i]->name }}" class="card-img-top img-fluid img-fit">
                 <div class="card-body d-flex align-items-center">
                     <div>
-                        <div class="date">
+                        <!-- <div class="date">
                             <div>
                                 <span>{{ date("M",strtotime($posts[$i]->created_at)) }}</span>
                                 {{ date("d",strtotime($posts[$i]->created_at)) }}
                             </div>
-                        </div>
+                        </div> -->
                         <h3 class="card-title text-uppercase">{{ $posts[$i]->name }}</h3>
                         <p class="card-text">{{ trunc($posts[$i]->description, 16) }}</p>
                         <a href="{{ route('public.post.details', $posts[$i]->slug) }}" class="card-link">read more</a>
