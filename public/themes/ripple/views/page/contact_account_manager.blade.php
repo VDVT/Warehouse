@@ -1,4 +1,4 @@
-<div class="donation" style="padding-bottom: 0">
+<!-- <div class="donation" style="padding-bottom: 0">
     <div class="container block-4" id="donation-form"> 
         <div class="row">
             <div class="col"></div>
@@ -7,10 +7,17 @@
     </div>
   <br>
 <br>
-</section>
+</section> -->
+<style type="text/css">
+    .btn-effect:hover {
+        background-color: #fff!important;
+        color: #c22026;
+        border: solid 2px #c22026;
+        cursor: pointer;
+    }
+</style>
 
-<!-- 
-<div class="contact_acc_manager">
+<div class="contact_acc_manager donation" style="padding-top: 20px">
     <div class="container">
         <h3 class="title text-uppercase text-center">get a quote</h3>
         <div class="row">
@@ -130,7 +137,7 @@
                             </div>
                         </div>
                         <div class="col-md-12">
-                            <button type="submit" id="sendContactAccountManager" class="btn btn-warning btn-effect btn-lg btn-block text-uppercase">send</button>
+                            <button type="submit" id="sendContactAccountManager" class="btn btn-outline-custom-i btn-effect btn-lg btn-block text-uppercase">send</button>
                         </div>
                     </div>
                 </form>
@@ -153,4 +160,4 @@
             }
         });
     });
-</script> -->
+</script>

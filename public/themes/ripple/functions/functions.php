@@ -346,6 +346,20 @@ theme_option()->setSection([
             ],
         ],
         [
+            'id' => 'contact_account_manager_email',
+            'type' => 'text',
+            'label' => __('Get a Quote Email (separated by ",")'),
+            'attributes' => [
+                'name' => 'contact_account_manager_email',
+                'value' => null,
+                'options' => [
+                    'class' => 'form-control',
+                    'placeholder' => '',
+                    'data-counter' => 120,
+                ]
+            ],
+        ],
+        [
             'id' => 'application_email',
             'type' => 'text',
             'label' => __('Application From Email (separated by ",")'),

@@ -5,7 +5,8 @@ $(document).ready(function() {
         nav_mobile_ul           = $('#nav-menu-mobile .offcanvas-menu ul'),
         nav_mobile_li           = $('#nav-menu-mobile .offcanvas-menu ul li'),
         offcanvas_container     = $('#nav-menu-mobile'),
-        toggle_menu             = $('#toggle-menu-mobile');
+        // toggle_menu             = $('#toggle-menu-mobile');
+        toggle_menu             = $('.navbar-toggler');
         
 
     var themeInit = {
@@ -19,59 +20,59 @@ $(document).ready(function() {
                 $(el).hasClass('mobile') || $(el).hasClass('logo') ? $(el) : $(el).clone().appendTo(nav_mobile_ul);
             });
 
-            $('.offcanvas-menu >.menu li').each(function(index, el) {
-                var div_submenu_toggle = '<span class="sub-menu-toggle"></span>',
-                back_btn = '<li class="back-btn"><a href="#">Back</a></li>';
+            // $('.offcanvas-menu >.menu li').each(function(index, el) {
+            //     var div_submenu_toggle = '<span class="sub-menu-toggle"></span>',
+            //     back_btn = '<li class="back-btn"><a href="#">Back</a></li>';
 
-                function addBackBtn(el){
-                    // Prepend 'span'
-                    el.prepend('<span></span>');
+            //     function addBackBtn(el){
+            //         // Prepend 'span'
+            //         el.prepend('<span></span>');
 
-                    var self_ul = el.children('ul'),
-                    first_span = el.find('span').first();
+            //         var self_ul = el.children('ul'),
+            //         first_span = el.find('span').first();
 
-                    // Append toogle button
-                    first_span.append(div_submenu_toggle);
+            //         // Append toogle button
+            //         first_span.append(div_submenu_toggle);
 
-                    if (self_ul.prev().hasClass('mega-menu-title') == true){
-                        // If if Mega Menu
-                        self_ul.prev().replaceWith($('<a href="#">' + self_ul.prev().text() + '</a>'));
-                        self_ul.prev().prependTo(first_span);
-                    }
-                    else{
-                        // Move 'a' to first 'span'
-                        el.find('a').first().prependTo(first_span);
-                    }
+            //         if (self_ul.prev().hasClass('mega-menu-title') == true){
+            //             // If if Mega Menu
+            //             self_ul.prev().replaceWith($('<a href="#">' + self_ul.prev().text() + '</a>'));
+            //             self_ul.prev().prependTo(first_span);
+            //         }
+            //         else{
+            //             // Move 'a' to first 'span'
+            //             el.find('a').first().prependTo(first_span);
+            //         }
 
-                    // IF 'span' is a icon Home THEN change text
-                    // first_span.find('a span').hasClass('fa-home') ? (first_span.find('a span').remove(), first_span.find('a').text('Trang chủ')) : first_span;
+            //         // IF 'span' is a icon Home THEN change text
+            //         // first_span.find('a span').hasClass('fa-home') ? (first_span.find('a span').remove(), first_span.find('a').text('Trang chủ')) : first_span;
 
-                    el.find('span.sub-menu-toggle').children().remove();
+            //         el.find('span.sub-menu-toggle').children().remove();
 
-                    self_ul.addClass('offcanvas-submenu');
-                    self_ul.removeClass('sub-menu');
-                    self_ul.prepend(back_btn);
-                }
+            //         self_ul.addClass('offcanvas-submenu');
+            //         self_ul.removeClass('sub-menu');
+            //         self_ul.prepend(back_btn);
+            //     }
 
-                if ($(el).hasClass('has-children') || $(el).hasClass('has-megamenu')) {
+            //     if ($(el).hasClass('has-children') || $(el).hasClass('has-megamenu')) {
 
-                    addBackBtn($(el));
+            //         addBackBtn($(el));
 
-                    var mega_ul = $(el).find('ul.mega-menu');
+            //         var mega_ul = $(el).find('ul.mega-menu');
 
-                    // If is Mega Menu
-                    if(mega_ul.hasClass('mega-menu')){
+            //         // If is Mega Menu
+            //         if(mega_ul.hasClass('mega-menu')){
 
-                        var mega_title = mega_ul.find('.mega-menu-title'),
-                            mega_li = mega_title.parent();
+            //             var mega_title = mega_ul.find('.mega-menu-title'),
+            //                 mega_li = mega_title.parent();
 
-                        mega_ul.removeClass('mega-menu');
-                        mega_li.addClass('has-children');
+            //             mega_ul.removeClass('mega-menu');
+            //             mega_li.addClass('has-children');
 
 
-                    }
-                }
-            });
+            //         }
+            //     }
+            // });
 
 
             function responsiveNavmenu() {
