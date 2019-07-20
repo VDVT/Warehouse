@@ -319,6 +319,17 @@
                                 </div>
                             </div>
                         </div>
+                        @if($customers->attachment)
+                        <div class="form-group">
+                            <label for="cv" class="control-label">{{ trans('vendors::vendors.forms.attachment') }}</label>
+                            <div>
+                                <a target="_blank" href="{{ url('/uploads/' . $customers->attachment) }}">
+                                    <i class="fa fa-download"></i> 
+                                    {{ str_replace('resume/', '', $customers->attachment) }}
+                                </a>
+                            </div>
+                        </div>
+                        @endif
                     </div>
                 </div>
                 @php do_action(BASE_ACTION_META_BOXES, CUSTOMERS_MODULE_SCREEN_NAME, 'advanced', $customers) @endphp

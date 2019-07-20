@@ -53,6 +53,15 @@ class CustomerServiceController extends Controller
         
         $dataForm = $request->all();
 
+        if($request->hasFile('attachment')){
+            /* copy create application form */
+            $cv   = $request->attachment;
+            $name = preg_replace('/\s+/', '', $request->vendor_name) . '_' . date('mdY') . '_' . time() . '.' . $cv->getClientOriginalExtension();
+            $path = $cv->storeAs('customers', $name);
+            $dataForm['attachment'] = $path;
+            /* end copy */
+        }
+
         $dataForm['is_amount'] = filter_var($request->get('is_amount'), FILTER_VALIDATE_BOOLEAN);
         $dataForm['is_check_cod'] = filter_var($request->get('is_check_cod'), FILTER_VALIDATE_BOOLEAN);
 
@@ -88,7 +97,7 @@ class CustomerServiceController extends Controller
 
         /* copy create application form */
         $cv = $request->attachment;
-        $name = $request->vendor_name . '_' . date('mdY') . '_' . time() . '.' . $cv->getClientOriginalExtension();
+        $name = $request->company_name . '_' . date('mdY') . '_' . time() . '.' . $cv->getClientOriginalExtension();
         $path = $cv->storeAs('customers', $name);
         $dataForm['attachment'] = $path;
         /* end copy */

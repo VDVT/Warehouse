@@ -12,7 +12,7 @@
     <div class="container">
         <div class="p-y-6">
             <div class="row justify-content-center">
-                <form role="form" method="POST">
+                <form role="form" method="POST"  enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <div class="col-sm-10">
                         <div class="card card-form m-b-3">
@@ -543,9 +543,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <hr class="divide m-b-3">
                             </div>
+                            <div class="form-group col-sm-12">
+                                <label class="text-custom text-uppercase mr-2">Upload Resale Certificate</label>
+                                <input type="file" id="attachment" name="attachment" class="form-control @if($errors->has('attachment')) is-invalid @endif">
+                                @if ($errors->has('attachment'))
+                                    <span class="invalid-feedback">{{ $errors->first('attachment') }}</span>
+                                @endif
+                            </div>
+                            <!-- <hr class="divide m-b-3"> -->
                         </div>
+
 
                         <div class="card card-form m-b-3">
                             <div class="card-body">

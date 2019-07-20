@@ -83,6 +83,7 @@ class Customers extends Eloquent
 		'trade_3_email',
 
 		'is_check_cod',
+		'attachment'
 
     ];
 }

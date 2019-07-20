@@ -35,13 +35,13 @@ task('deploy:start', function(){ //
 task('deploy:upload', function(){ // 
     writeln('Start upload');
     $folders = [
-       // 'app',
+       'app',
        // 'config',
        // 'bootstrap',
-       // 'core/theme/resources/views/mail',
+       'core/base/src/',
        // 'database',
-       // 'plugins',
-       'public/themes/ripple',
+       'plugins/customers',
+       'public/themes/ripple/views',
        // 'resources',
        // 'routes',
        // 'storage',
@@ -80,12 +80,12 @@ task('deploy:permission', function(){
     $permission = get('permission');
     $path = get('deploy_path');
     $folders = [
-        'public/themes/ripple'
+        // 'public/themes/ripple'
         // 'config',
         // 'bootstrap',
         // 'core',
         // 'database',
-        // 'plugins',
+        'plugins',
         // 'public',
         // 'resources',
         // 'routes',

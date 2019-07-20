@@ -46,10 +46,37 @@ class CustomerSent extends Mailable
                     : theme_option('admin_email');
         }
 
+        if($file = $this->includeAttachment())
+            return $this->subject( 'New Customer Submission' )
+                    ->from( config('mail.from.address'), setting('site_title') )
+                    ->to( $email )
+                    ->attach($file['path'], $file['option'])
+                    ->view('theme::mail.customer-form');
 
         return $this->subject( 'New Customer Submission' )
                     ->from( config('mail.from.address'), setting('site_title') )
                     ->to( $email )
                     ->view('theme::mail.customer-form');
+    }
+
+    /**
+     * Include attachment vendor form to email
+     * @param type $filePath 
+     * @return type
+     */
+    protected function includeAttachment()
+    {
+        $filePath = public_path('uploads/'.$this->customer->attachment);
+
+        if(file_exists($filePath))
+        {
+            return [
+                'path' => $filePath,
+                'option' => [
+                    'as' => pathinfo($filePath, PATHINFO_BASENAME),
+                    'mime' => mime_content_type($filePath)
+                ]
+            ];
+        }        
     }
 }
