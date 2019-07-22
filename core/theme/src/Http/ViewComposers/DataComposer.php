@@ -7,7 +7,7 @@ use Botble\Productsolutions\Repositories\Interfaces\ProductsolutionsInterface;
 use Botble\Industrials\Repositories\Interfaces\IndustrialsInterface;
 use Botble\Coreexpertises\Repositories\Interfaces\CoreexpertisesInterface;
 use Botble\Literature\Repositories\Interfaces\LiteratureInterface;
-
+use Botble\Products\Repositories\Interfaces\ProductCategoryInterface;
 class DataComposer
 {
     /**
@@ -26,13 +26,19 @@ class DataComposer
      * @param  UserRepository  $users
      * @return void
      */
-    public function __construct(ProductsolutionsInterface $productSolutionsRepository, IndustrialsInterface $industrialRepository, CoreexpertisesInterface $coreExpertisesRepository, LiteratureInterface $literatureRepository)
+    public function __construct(
+        ProductsolutionsInterface $productSolutionsRepository, 
+        IndustrialsInterface $industrialRepository, 
+        CoreexpertisesInterface $coreExpertisesRepository, 
+        ProductCategoryInterface $productCategoryRepository, 
+        LiteratureInterface $literatureRepository)
     {
         // Dependencies automatically resolved by service container...
         $this->productSolutionsRepository = $productSolutionsRepository;
         $this->industrialRepository       = $industrialRepository;
         $this->coreExpertisesRepository   = $coreExpertisesRepository;
-        $this->literatureRepository = $literatureRepository;
+        $this->literatureRepository       = $literatureRepository;
+        $this->productCategoryRepository  = $productCategoryRepository;
     }
 
     /**
@@ -44,10 +50,11 @@ class DataComposer
     public function compose(View $view)
     {
         $view->with([
-            'product_solutions' => $this->productSolutionsRepository->getProductSolutions(),
-            'industrials' => $this->industrialRepository->getIndustrials(),
-            'core_expertises' => $this->coreExpertisesRepository->getCoreExpertises(),
-            'list_literatures' => $this->literatureRepository->getLiteratures(2),
+            'product_solutions'      => $this->productSolutionsRepository->getProductSolutions(),
+            'industrials'            => $this->industrialRepository->getIndustrials(),
+            'core_expertises'        => $this->coreExpertisesRepository->getCoreExpertises(),
+            'list_literatures'       => $this->literatureRepository->getLiteratures(2),
+            'product_category_items' => $this->productCategoryRepository->getAllCategories(['parent_id'=>0, 'status'=>1])
         ]);
     }
 }

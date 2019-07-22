@@ -1,76 +1,100 @@
-<footer id="footer" class="footer">
-    <div class="container">
-        <div class="p-t-5 p-b-2 mb-2-i">
-            <div class="row justify-content-between">
-                <div class="col-md-6 m-b-md-3">
-                    <div class="footer-title">Stay In Touch</div>
-                    <div class="footer-content">
-                        <form class="newsletter-form">
-                            <div class="form-group">
-                                <input type="text" placeholder="Enter your email address" name="email" class="form-control no-line" id="email-send-newsletter">
-                            </div>
-                            <div class="noti success" style="font-size:13px;color:green;padding-top:5px;"></div>
-                            <div class="noti error" style="font-size:13px;color:red;padding-top:5px;"></div>
-                            <button class="btn btn-outline-custom-i btn-round" id="send-newsletter" style="display: none">Send</button>
-                        </form>
-                    </div>
+<footer id="footer">
+    <div class="block-contact-manager">
+        <div class="container">
+            <div class="row d-flex align-items-md-center">
+                <div class="col-md-7">
+                    <p class="desc">Our Manager will contact you to learn more about your <br> needs and provides you with a free quote</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="footer-title">Literature</div>
-                    <div class="footer-content">
-                        <div class="row">
-                            @foreach($list_literatures as $literature)
-                                <div class="col-6 m-b-sm-3">
-                                    <a target="_blank" title="{{ $literature->name }}" href="{{ $literature->file }}"><img src="{{ $literature->image }}" alt="{{ $literature->name }}" class="img-fluid"></a>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
+                <div class="col-md-5">
+                    <a href="{{ route('public.page.contactaccountmanager') }}" class="btn btn-primary btn-effect btn-lg text-uppercase">GET A QUOTE</a>
                 </div>
             </div>
         </div>
-        <div class="footer-bottom p-y-3">
-            <div class="row">
-                <div class="col-md-6 m-b-sm-3">
-                    <div class="footer-social">
-                        <a><i class="fas fa-map-marker-alt m-r-1"></i>{{ theme_option('address') }}</a>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3 class="title c1 text-uppercase">products</h3>
+                        <ul class="list-unstyled">
+                            <?php foreach ($product_category_items as $key => $product_category) {?>
+                                <li><a href="{{ route('public.product_category.details', $product_category->slug) }}"><?php echo $product_category->name; ?></a></li>
+                            <?php } ?>
+                        </ul>
                     </div>
-                    <!-- <div class="footer-social">
-                        <a target="_blank" href="{{ theme_option('instagram') }}"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                        <a target="_blank" href="{{ theme_option('twitter') }}"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                        <a target="_blank" href="{{ theme_option('facebook') }}"><i class="fab fa-facebook-f"></i></a>
-                        <a target="_blank" href="{{ theme_option('google_plus') }}"><i class="fab fa-google-plus-g"></i></a>
-                        <a target="_blank" href="{{ theme_option('linkedin') }}"><i class="fab fa-linkedin-in"></i></a>
-                        <a target="_blank" href="{{ theme_option('yelp') }}"><i class="fab fa-yelp"></i></a>
-                    </div> -->
+                    <div class="col-md-4">
+                        <h3 class="title c1 text-uppercase">Customer services</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="{{ route('public.services.customer-info') }}">New Customer Form</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="title c1 text-uppercase">resources</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="{{ route('public.page.aboutus') }}">About Us</a></li>
+                            <li><a href="{{ route('public.literature.list') }}">Literature</a></li>
+                            <li><a href="{{ route('public.gallery.index') }}">Gallery</a></li>
+                            <li><a href="{{ route('public.post.list') }}">News</a></li>
+                            <li><a href="{{ route('public.page.contactus') }}">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="flex">
+                    <div>
+                        <h3 class="title c2 text-uppercase">stay in touch</h3>
+                        <form class="newsletter-form">
+                            <div class="form-group">
+                                <input type="email" placeholder="Enter your email address" name="email" class="form-control no-line" id="email-send-newsletter">
+                            </div>
+                            <div class="noti success" style="font-size:13px;color:green;padding-top:5px;"></div>
+                            <div class="noti error" style="font-size:13px;color:red;padding-top:5px;"></div>
+                            <button type="submit" class="btn btn-primary btn-effect" id="send-newsletter" style="display: none">SEND</button>
+                        </form>
+                    </div>
+                </div>
+                <h3 class="title c3 text-uppercase">literature</h3>
+                <div class="row">
+                    @foreach($list_literatures as $literature)
+                        <div class="col-md-4 col-4 text-center">
+                            <a target="_blank" title="{{ $literature->name }}" href="{{ $literature->file }}">
+                                <img src="{{ $literature->image }}" alt="{{ $literature->name }}" class="img-fluid">
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+        <div class="menu-bottom">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="social">
+                    </div>
+                    <span class="location">{{ theme_option('address') }}</span>
                 </div>
                 <div class="col-md-6">
-                    <ul class="footer-link">
-                        <li>
-                            <a href="#">Terms &amp; Conditions</a>
+                    <ul class="nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="pdf/Terms_Conditions.pdf">Terms & Conditions</a>
                         </li>
-                        <li>
-                            <a href="#">Shipping &amp; Return</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="pdf/Shipping_Return.pdf">Shipping & Return</a>
                         </li>
-                        <li>
-                            <a href="#">Privacy Policy</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Privacy Policy</a>
                         </li>
-                        <li>
-                            <a href="#">FAQ</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="faq.php">FAQ</a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <!-- <div class="row">
-                <div class="col-md-6 m-b-sm-3">
-                    <div class="footer-social">
-                        <a><i class="fas fa-map-marker-alt m-r-1"></i>{{ theme_option('address') }}</a>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
 </footer>
+
 <div class="go-up" style="right: -60px"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
 
 <!-- JS Library-->
