@@ -89,4 +89,68 @@
                     </nav>
                 </div>
             </div>
+             @if (Session::has('success'))
+                <div id="close-alert" class="notification notification-custom-overlay notification-header fadeInLeft">
+                    <div class="container">
+                        <div class="content">
+                            <div class="text-content">{{ Session::get('success') }}</div>
+                    </div>
+                        <a href="#" class="close-notification close-alert"><i class="fa fa-times"></i></a>
+                    </div>
+                </div>
+            @endif
+
+            @if (Session::has('error'))
+                <div id="close-alert" class="notification notification-custom-overlay notification-header fadeInLeft">
+                    <div class="container">
+                        <div class="content">
+                            <div class="text-content">{{ Session::get('error') }}</div>
+                    </div>
+                        <a href="#" class="close-notification close-alert"><i class="fa fa-times"></i></a>
+                    </div>
+                </div>
+            @endif
+
+            @if (Session::has('warning'))
+                <div id="close-alert" class="notification notification-custom-overlay notification-header fadeInLeft">
+                    <div class="container">
+                        <div class="content">
+                            <div class="text-content">{{ Session::get('warning') }}</div>
+                    </div>
+                        <a href="#" class="close-notification close-alert"><i class="fa fa-times"></i></a>
+                    </div>
+                </div>
+            @endif
+
+            <style type="text/css">
+                .notification.notification-custom-overlay {
+                    background: #bc3033ab;
+                }
+                .notification {
+                    position: relative;
+                    width: 100%;
+                    color: #fff;
+                    padding: 30px 50px 30px 30px;
+                }
+                .fadeInLeft {
+                    -webkit-animation-name: fadeInLeft;
+                    animation-name: fadeInLeft;
+                }
+                .notification-header .content {
+                    position: relative;
+                }
+                .notification .close-notification {
+                    position: absolute;
+                    right: 25px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    color: #fff;
+                }
+            </style>
+            <script type="text/javascript">
+                $('.close-alert').on('click', function(event) {
+                   event.preventDefault();
+                   $(this).closest('#close-alert').hide("slow");
+                });
+            </script>
         </header>

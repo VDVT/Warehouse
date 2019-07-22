@@ -35,13 +35,13 @@ task('deploy:start', function(){ //
 task('deploy:upload', function(){ // 
     writeln('Start upload');
     $folders = [
-       'app/Mail',
+       // 'app/Mail',
        // 'config',
        // 'bootstrap',
-       // 'core/base/src/',
+       'core/theme/src/',
        // 'database',
        // 'plugins/customers',
-       // 'public/themes/ripple/views',
+       'public/themes/ripple/',
        // 'resources',
        // 'routes',
        // 'storage',
